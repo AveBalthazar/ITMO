@@ -5,7 +5,7 @@ import moves.Pineco.Rest;
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 
-public class Pineco extends Pokemon {
+public class Pineco extends Forretress {
     public Pineco(String name, int level) {
         super(name, level);
         super.setType(Type.BUG);
