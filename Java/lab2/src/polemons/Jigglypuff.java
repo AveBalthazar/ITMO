@@ -5,7 +5,7 @@ import moves.Jigglypuff.Pound;
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 
-public class Jigglypuff extends Pokemon {
+public class Jigglypuff extends Wigglytuff {
     public Jigglypuff(String name, int level) {
         super(name, level);
         super.setType(Type.NORMAL, Type.FAIRY);
