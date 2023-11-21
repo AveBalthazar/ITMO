@@ -1,7 +1,7 @@
 package polemons;
-import moves.Pineco.Bulldoze;
-import moves.Pineco.Facade;
-import moves.Pineco.Rest;
+import moves.Forretress.Bulldoze;
+import moves.Forretress.Facade;
+import moves.Forretress.Rest;
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 
