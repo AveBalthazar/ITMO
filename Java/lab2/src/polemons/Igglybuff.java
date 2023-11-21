@@ -1,14 +1,10 @@
 package polemons;
-import moves.Forretress.FlashCannon;
-import moves.Forretress.Rest;
 import moves.Igglybuff.DefenseCurl;
 import moves.Igglybuff.ShadowBall;
-import moves.Pineco.Bulldoze;
-import moves.Pineco.Facade;
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 
-public class Igglybuff extends Pokemon {
+public class Igglybuff extends Jigglypuff {
     public Igglybuff(String name, int level) {
         super(name, level);
         super.setType(Type.NORMAL, Type.FAIRY);
