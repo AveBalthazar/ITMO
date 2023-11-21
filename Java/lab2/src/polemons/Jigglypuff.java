@@ -1,7 +1,7 @@
 package polemons;
-import moves.Igglybuff.DefenseCurl;
-import moves.Igglybuff.ShadowBall;
-import moves.Jigglypuff.Pound;
+import moves.Wigglytuff.DefenseCurl;
+import moves.Wigglytuff.ShadowBall;
+import moves.Wigglytuff.Pound;
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 
