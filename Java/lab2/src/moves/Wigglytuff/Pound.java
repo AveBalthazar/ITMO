@@ -8,9 +8,4 @@ public class Pound extends PhysicalMove {
         super(Type.NORMAL, pow, acc);
     }
 
-    @Override
-    protected String describe() {
-        String[] rezhem = this.getClass().toString().split("\\.");
-        return "применяет " + rezhem[rezhem.length-1];
-    }
 }
