@@ -11,10 +11,4 @@ public class Nuzzle extends PhysicalMove {
         super.applyOppEffects(p);
         Effect.paralyze(p);
     }
-
-    @Override
-    protected String describe() {
-        String[] rezhem = this.getClass().toString().split("\\.");
-        return "применяет " + rezhem[rezhem.length-1];
-    }
 }
