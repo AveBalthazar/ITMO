@@ -14,9 +14,4 @@ public class Agility extends StatusMove {
         p.addEffect(e);
     }
 
-    @Override
-    protected String describe() {
-        String[] rezhem = this.getClass().toString().split("\\.");
-        return "применяет " + rezhem[rezhem.length-1];
-    }
 }
