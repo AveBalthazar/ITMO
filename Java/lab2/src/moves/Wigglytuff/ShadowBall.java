@@ -14,10 +14,4 @@ public class ShadowBall extends SpecialMove {
 
         p.addEffect(e);
     }
-
-    @Override
-    protected String describe() {
-        String[] rezhem = this.getClass().toString().split("\\.");
-        return "применяет " + rezhem[rezhem.length-1];
-    }
 }
