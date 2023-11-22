@@ -16,9 +16,4 @@ public class Thunderbolt extends SpecialMove {
         }
     }
 
-    @Override
-    protected String describe() {
-        String[] rezhem = this.getClass().toString().split("\\.");
-        return "применяет " + rezhem[rezhem.length-1];
-    }
 }
