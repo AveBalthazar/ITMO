@@ -1,13 +1,10 @@
 import Exceptions.CannotAddThisAmount;
 import Exceptions.CannotDieTwice;
 import Exceptions.CannotDoThisAction;
-import Interfaces.Catchable;
-import Objects.Character;
 import Objects.WinnieThePooh;
 import Objects.Heffalump;
 import Objects.Piglet;
-import Objects.Trap.*;
-import Objects.Trap;
+import Objects.TrapSystem;
 import Objects.Place;
 import Enums.*;
 public class Main {
@@ -16,8 +13,9 @@ public class Main {
         Piglet piglet = new Piglet();
         Heffalump elephant = new Heffalump();
 
-        HoneyTrap honeyTrap = new HoneyTrap();
-        NutsTrap nutsTrap = new NutsTrap();
+        //*анонимный класс
+        TrapSystem nutsTrap = new TrapSystem.NutsTrap();
+        TrapSystem honeyTrap = new TrapSystem.HoneyTrap();
 
         Place forest = new Place("Дремучий лес", 0);
         Place six_trees = new Place("Шесть сосен", 20);
@@ -33,12 +31,17 @@ public class Main {
         puh.setWannaScratch(head);
         System.out.println(puh.getBodyPartsToScratch());
 
+        //обработка исключения, связанного с Reflections
         try {
             puh.scratch(nose);
         } catch (NoSuchFieldException | IllegalAccessException e) {
             e.printStackTrace();
         }
-        System.out.println(puh.getBodyPartsToScratch());
+        try {
+            puh.scratch(nose);
+        } catch (NoSuchFieldException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
         honeyTrap.setDistance(Distance.VeryClose);
         nutsTrap.setDistance(Distance.Near);
         puh.push_friend(piglet, honeyTrap);
@@ -68,6 +71,6 @@ public class Main {
         } catch (CannotDieTwice e) {
             System.out.println(e.getMessage());
         }
-        //*анонимный класс
+
     }
 }
