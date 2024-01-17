@@ -27,6 +27,7 @@ public abstract class TrapSystem {
     }
 
     public abstract void Catch(Heffalump c) throws CannotDieTwice;
+
     //локальный класс
     public void toggleBait() {
         class Bait {
@@ -42,11 +43,9 @@ public abstract class TrapSystem {
         Bait bait = new Bait();
         bait.interact();
     }
-
-    //Вложенные static
     public static class NutsTrap extends TrapSystem {
         public NutsTrap() {
-            super("Лукошко с орехами [Ловушка]", TrapType.Nuts, 25);
+            super("Лукошко с орехами", TrapType.Nuts, 25);
         }
         @Override
         public void Catch(Heffalump c) throws CannotDieTwice, CannotDoThisAction {
@@ -62,7 +61,7 @@ public abstract class TrapSystem {
     }
     public static class HoneyTrap extends TrapSystem {
         public HoneyTrap() {
-            super("Горшок с мёдом [Ловушка]", TrapType.Honey, 15);
+            super("Горшок с мёдом", TrapType.Honey, 15);
         }
         @Override
         public void Catch(Heffalump c) throws CannotDieTwice, CannotDoThisAction {
@@ -76,5 +75,4 @@ public abstract class TrapSystem {
             }
         }
     }
-
 }
