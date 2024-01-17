@@ -8,15 +8,15 @@ import Exceptions.CannotDoThisAction;
 public class HoneyTrap extends TrapSystem {
     public Honey honey;
     public Integer damage;
-    public Integer honeyQuantity;
     public HoneyTrap(Integer damage, Integer honeyQuantity) {
         super("Горшок с мёдом", TrapType.Honey, damage);
-        Honey honey = new Honey(honeyQuantity);
+        honey = new Honey(honeyQuantity);
+        this.damage = damage;
     }
     @Override
     public void Catch(Heffalump c) throws CannotDieTwice, CannotDoThisAction {
         if (((c.getCondition() == null) | (c.getCondition() == ConditionAfterFall.NotCatched)) && this.isActive) {
-            honey.giveDamage(c, this.damage);
+            honey.giveDamage(c, damage);
             c.setCondition(ConditionAfterFall.InHoneyTrap);
             System.out.println(c.getName() + " угодил в медовую ловушку, Пятачку повезло!");
         }

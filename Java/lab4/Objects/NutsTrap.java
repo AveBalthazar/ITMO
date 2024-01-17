@@ -10,12 +10,13 @@ public class NutsTrap extends TrapSystem {
     public Integer damage;
     public NutsTrap(Integer damage, Integer nutsQuantity) {
         super("Лукошко с орехами", TrapType.Nuts, damage);
-        Nuts nuts = new Nuts(nutsQuantity);
+        nuts = new Nuts(nutsQuantity);
+        this.damage = damage;
     }
     @Override
     public void Catch(Heffalump c) throws CannotDieTwice, CannotDoThisAction {
         if (((c.getCondition() == null) | (c.getCondition() == ConditionAfterFall.NotCatched)) && this.isActive) {
-            nuts.giveDamage(c, this.damage);
+            nuts.giveDamage(c, damage);
             c.setCondition(ConditionAfterFall.InNutsTrap);
             System.out.println(c.getName() + " угодил в ореховую ловушку, Пятачку повезло!");
         }

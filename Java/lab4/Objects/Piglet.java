@@ -4,9 +4,9 @@ import Enums.ConditionAfterFall;
 import Enums.Gender;
 import Exceptions.CannotDieTwice;
 import Exceptions.CannotDoThisAction;
-import Interfaces.Catchable;
+import Interfaces.Grabbable;
 
-public class Piglet extends Character implements Catchable {
+public class Piglet extends Character implements Grabbable {
     public Piglet() {
         super("Пятачок", Gender.Male);
     }

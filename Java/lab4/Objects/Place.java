@@ -20,7 +20,7 @@ public class Place {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Place place = (Place) o;
-        return (place.name == this.name) && (place.exploredScore == this.exploredScore);
+        return (Objects.equals(place.name, this.name)) && (Objects.equals(place.exploredScore, this.exploredScore));
     }
     public void addExploredScore(int score) throws CannotAddThisAmount{
         if (score > 0){

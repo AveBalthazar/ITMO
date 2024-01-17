@@ -47,12 +47,13 @@ public class Main {
 
         TrapSystem nutsTrap = new NutsTrap(40, 10);
         TrapSystem honeyTrap = new HoneyTrap(20, 15);
+        nutsTrap.toggleBait();
 
         elephant.move(forest);
         piglet.move(meadow);
         puh.move(meadow);
 
-
+        piglet.grab(puh, nutsTrap);
         honeyTrap.setDistance(Distance.VeryClose);
         nutsTrap.setDistance(Distance.Near);
         puh.push_friend(piglet, honeyTrap);

@@ -4,8 +4,8 @@ import Enums.ConditionAfterFall;
 import Enums.Gender;
 
 import Exceptions.CannotDoThisAction;
-import Interfaces.Catchable;
-public class WinnieThePooh extends Character implements Catchable {
+import Interfaces.Grabbable;
+public class WinnieThePooh extends Character implements Grabbable {
     public BodyPart nose;
     public BodyPart head;
     public WinnieThePooh() {
