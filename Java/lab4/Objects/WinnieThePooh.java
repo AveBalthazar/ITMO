@@ -3,33 +3,18 @@ package Objects;
 import Enums.ConditionAfterFall;
 import Enums.Gender;
 
-import java.lang.reflect.Field;
-import java.util.ArrayList;
-
 import Exceptions.CannotDoThisAction;
 import Interfaces.Catchable;
 public class WinnieThePooh extends Character implements Catchable {
-    public ArrayList<BodyPart> wannaScratch = new ArrayList<>();
     public WinnieThePooh() {
         super("Винни Пух", Gender.Male);
     }
-    public String getBodyPartsToScratch() {
-        final String[] result = {""};
-        this.wannaScratch.forEach(part -> result[0] += part.getName() + " ");
-        return result[0];
-    }
-    public void setWannaScratch(BodyPart bodyPart) {
-        this.wannaScratch.add(bodyPart);
-    }
-    public void scratch(BodyPart body_part) throws NoSuchFieldException, IllegalAccessException {
-        Field field = body_part.getClass().getDeclaredField("is_scratched");
+    public void scratch(BodyPart body_part) {
         if (body_part.getCondition() == Boolean.FALSE) {
             System.out.println(getName() + " почесал " + body_part.getName());
-            this.wannaScratch.remove(body_part);
-            field.set(body_part, Boolean.TRUE);
             body_part.is_scratched = Boolean.TRUE;
         } else {
-            System.out.println("Эта часть тела у Винни Пуха уже почесана. Сейчас он хочет почесать следующие части тела: " + this.getBodyPartsToScratch());
+            System.out.println("Эта часть тела у Винни Пуха уже почесана, сейчас он не хочет её чесать.");
         }
     }
     @Override
