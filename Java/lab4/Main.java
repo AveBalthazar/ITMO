@@ -7,6 +7,8 @@ import Objects.Heffalump;
 import Objects.Piglet;
 import Objects.TrapSystem;
 import Objects.Place;
+import Objects.NutsTrap;
+import Objects.HoneyTrap;
 import Enums.*;
 
 import java.util.Arrays;
@@ -43,8 +45,8 @@ public class Main {
 
         scoreMinimumFind.min(Arrays.asList(forest, six_trees, meadow));
 
-        TrapSystem nutsTrap = new TrapSystem.NutsTrap();
-        TrapSystem honeyTrap = new TrapSystem.HoneyTrap();
+        TrapSystem nutsTrap = new NutsTrap(40, 10);
+        TrapSystem honeyTrap = new HoneyTrap(20, 15);
 
         elephant.move(forest);
         piglet.move(meadow);
