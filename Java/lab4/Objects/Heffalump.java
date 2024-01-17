@@ -26,7 +26,7 @@ public class Heffalump extends Character {
             return ConditionAfterFall.Dead;
         }
     }
-    public void fall(Trap trap) throws CannotDieTwice {
+    public void fall(TrapSystem trap) throws CannotDieTwice {
         if (this.getCondition() != ConditionAfterFall.NotCatched) {
             System.out.println(this.name + " упал в " + trap.getName());
             this.hurt(30);
