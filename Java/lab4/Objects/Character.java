@@ -128,7 +128,7 @@ public abstract class Character implements Moveable {
         }
     }
 
-    public void push_friend(Character c, Trap trap) throws CannotDieTwice, CannotAddThisAmount, CannotDoThisAction {
+    public void push_friend(Character c, TrapSystem trap) throws CannotDieTwice, CannotAddThisAmount, CannotDoThisAction {
         if (hp != 0) {
             if (trap.distance.getName() != null) {
                 System.out.println(this.name + " толкает " + c.getName() + " в " + trap.getName() + ", эта ловушка находится " + trap.distance.getName() + "!");
