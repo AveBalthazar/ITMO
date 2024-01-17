@@ -30,20 +30,19 @@ public class Main {
         //анонимный класс
         PlaceFunction scoreMinimumFind = new PlaceFunction() {
             @Override
-            public void min(List<Place> exploredList) {
+            public void min(Place[] places) {
                 Function<Place, Integer> scoreMinimumFunction = Place::getExploredScore;
-                List<Integer> score = exploredList.stream().map(scoreMinimumFunction).toList();
-                int min = score.get(0);
-                for (int j = 1; j < score.size(); j++) {
-                    if (score.get(j) < min) {
-                        min = score.get(j);
+                int min = places[0].exploredScore;
+                for (Place score : places) {
+                    if (score.exploredScore < min) {
+                        min = score.exploredScore;
                     }
                 }
                 System.out.println("Самое пугающее место исследовано на " + min + " процентов.");
             }
         };
-
-        scoreMinimumFind.min(Arrays.asList(forest, six_trees, meadow));
+        Place [] list = {forest, six_trees, meadow};
+        scoreMinimumFind.min(list);
 
         TrapSystem nutsTrap = new NutsTrap(40, 10);
         TrapSystem honeyTrap = new HoneyTrap(20, 15);
