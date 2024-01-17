@@ -1,25 +1,49 @@
 import Exceptions.CannotAddThisAmount;
 import Exceptions.CannotDieTwice;
 import Exceptions.CannotDoThisAction;
+import Interfaces.PlaceFunction;
 import Objects.WinnieThePooh;
 import Objects.Heffalump;
 import Objects.Piglet;
 import Objects.TrapSystem;
 import Objects.Place;
 import Enums.*;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Function;
+
+
 public class Main {
     public static void main(String[] args) throws CannotAddThisAmount, CannotDieTwice, CannotDoThisAction {
         WinnieThePooh puh = new WinnieThePooh();
         Piglet piglet = new Piglet();
         Heffalump elephant = new Heffalump();
 
-        //*анонимный класс
-        TrapSystem nutsTrap = new TrapSystem.NutsTrap();
-        TrapSystem honeyTrap = new TrapSystem.HoneyTrap();
-
         Place forest = new Place("Дремучий лес", 0);
         Place six_trees = new Place("Шесть сосен", 20);
         Place meadow = new Place("Полянка", 85);
+
+        //анонимный класс
+        PlaceFunction scoreMinimumFind = new PlaceFunction() {
+            @Override
+            public void min(List<Place> exploredList) {
+                Function<Place, Integer> scoreMinimumFunction = Place::getExploredScore;
+                List<Integer> score = exploredList.stream().map(scoreMinimumFunction).toList();
+                int min = score.get(0);
+                for (int j = 1; j < score.size(); j++) {
+                    if (score.get(j) < min) {
+                        min = score.get(j);
+                    }
+                }
+                System.out.println("Самое пугающее место исследовано на " + min + " процентов.");
+            }
+        };
+
+        scoreMinimumFind.min(Arrays.asList(forest, six_trees, meadow));
+
+        TrapSystem nutsTrap = new TrapSystem.NutsTrap();
+        TrapSystem honeyTrap = new TrapSystem.HoneyTrap();
 
         elephant.move(forest);
         piglet.move(meadow);
@@ -27,21 +51,9 @@ public class Main {
 
         WinnieThePooh.BodyPart nose = puh.new BodyPart("Нос");
         WinnieThePooh.BodyPart head = puh.new BodyPart("Затылок");
-        puh.setWannaScratch(nose);
-        puh.setWannaScratch(head);
-        System.out.println(puh.getBodyPartsToScratch());
 
-        //обработка исключения, связанного с Reflections
-        try {
-            puh.scratch(nose);
-        } catch (NoSuchFieldException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
-        try {
-            puh.scratch(nose);
-        } catch (NoSuchFieldException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
+        puh.scratch(nose);
+        puh.scratch(nose);
         honeyTrap.setDistance(Distance.VeryClose);
         nutsTrap.setDistance(Distance.Near);
         puh.push_friend(piglet, honeyTrap);
