@@ -6,7 +6,7 @@ import Exceptions.CannotDieTwice;
 import java.util.Objects;
 public class Place {
     private final String name;
-    private Integer exploredScore;
+    public Integer exploredScore;
     public Place(String name, Integer exploredScore) {
         this.name = name;
         this.exploredScore = exploredScore;
@@ -40,6 +40,9 @@ public class Place {
             System.out.println("Место " + this.getName() + " полностью исследовано.");
         }
         System.out.println("Место " + this.getName() + " исследовано на " + this.exploredScore + "%");
+    }
+    public Integer getExploredScore() {
+        return this.exploredScore;
     }
     public void scare(Character c) throws CannotDieTwice {
         System.out.println("Место " + this.getName() + " испугало персонажа " + c.getName());
