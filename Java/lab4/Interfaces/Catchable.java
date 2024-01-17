@@ -1,8 +1,8 @@
 package Interfaces;
 
 import Objects.Character;
-import Objects.Trap;
+import Objects.TrapSystem;
 
 public interface Catchable {
-    void grab(Character c, Trap trap);
+    void grab(Character c, TrapSystem trap);
 }

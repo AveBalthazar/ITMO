@@ -17,6 +17,7 @@ import java.util.function.Function;
 public class Main {
     public static void main(String[] args) throws CannotAddThisAmount, CannotDieTwice, CannotDoThisAction {
         WinnieThePooh puh = new WinnieThePooh();
+        puh.scratch(puh.nose);
         Piglet piglet = new Piglet();
         Heffalump elephant = new Heffalump();
 
@@ -49,11 +50,7 @@ public class Main {
         piglet.move(meadow);
         puh.move(meadow);
 
-        WinnieThePooh.BodyPart nose = puh.new BodyPart("Нос");
-        WinnieThePooh.BodyPart head = puh.new BodyPart("Затылок");
 
-        puh.scratch(nose);
-        puh.scratch(nose);
         honeyTrap.setDistance(Distance.VeryClose);
         nutsTrap.setDistance(Distance.Near);
         puh.push_friend(piglet, honeyTrap);

@@ -6,8 +6,12 @@ import Enums.Gender;
 import Exceptions.CannotDoThisAction;
 import Interfaces.Catchable;
 public class WinnieThePooh extends Character implements Catchable {
+    public BodyPart nose;
+    public BodyPart head;
     public WinnieThePooh() {
         super("Винни Пух", Gender.Male);
+        nose = new BodyPart("Нос");
+        head = new BodyPart("Затылок");
     }
     public void scratch(BodyPart body_part) {
         if (body_part.getCondition() == Boolean.FALSE) {
@@ -30,7 +34,7 @@ public class WinnieThePooh extends Character implements Catchable {
             throw new CannotDoThisAction();
         }
     }
-    //Вложенный non-static
+    //Вложенный внутренний
     public class BodyPart {
         private String name;
         private Boolean is_scratched;
