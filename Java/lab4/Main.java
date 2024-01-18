@@ -60,6 +60,8 @@ public class Main {
             nutsTrap.Catch(elephant);
         } catch (CannotDoThisAction e) {
             System.out.println(e.getMessage());
+        } finally {
+            System.out.println("попытались поймать Слонопотама");
         }
         piglet.freeze();
         piglet.warn(nutsTrap);
@@ -67,6 +69,8 @@ public class Main {
             piglet.addKarmaPoints(0);
         } catch (CannotAddThisAmount e) {
             System.out.println(e.getMessage());
+        } finally {
+            System.out.println("попытались добавить карму Пятачку");
         }
 
         puh.hurt(100);
