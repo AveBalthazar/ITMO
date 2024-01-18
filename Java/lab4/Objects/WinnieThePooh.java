@@ -45,7 +45,7 @@ public class WinnieThePooh extends Character implements Grabbable {
         }
 
         private String getName() {
-            return this.name;
+            return this.name + " персонажа " + WinnieThePooh.this.name;
         }
 
         private Boolean getCondition() {
