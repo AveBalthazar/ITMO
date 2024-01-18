@@ -14,11 +14,12 @@ public class NutsTrap extends TrapSystem {
         this.damage = damage;
     }
     @Override
-    public void Catch(Heffalump c) throws CannotDieTwice, CannotDoThisAction {
+    public void grab(Heffalump c) throws CannotDieTwice, CannotDoThisAction {
         if (((c.getCondition() == null) | (c.getCondition() == ConditionAfterFall.NotCatched)) && this.isActive) {
             nuts.giveDamage(c, damage);
             c.setCondition(ConditionAfterFall.InNutsTrap);
-            System.out.println(c.getName() + " угодил в ореховую ловушку, Пятачку повезло!");
+            System.out.println(c.getName() + " угодил в ореховую ловушку, но съел все орехи и сам выбрался из ловушки невредимым. Пятачку сегодня не повезло!");
+            c.setCondition(ConditionAfterFall.NoDifference);
         }
         else {
             throw new CannotDoThisAction();
@@ -34,6 +35,7 @@ public class NutsTrap extends TrapSystem {
         }
         public void giveDamage(Heffalump c, Integer damage) {
             c.hurt(damage*this.quantity);
+            this.quantity = 0;
         }
     }
 }

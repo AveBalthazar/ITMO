@@ -14,7 +14,7 @@ public class HoneyTrap extends TrapSystem {
         this.damage = damage;
     }
     @Override
-    public void Catch(Heffalump c) throws CannotDieTwice, CannotDoThisAction {
+    public void grab(Heffalump c) throws CannotDieTwice, CannotDoThisAction {
         if (((c.getCondition() == null) | (c.getCondition() == ConditionAfterFall.NotCatched)) && this.isActive) {
             honey.giveDamage(c, damage);
             c.setCondition(ConditionAfterFall.InHoneyTrap);

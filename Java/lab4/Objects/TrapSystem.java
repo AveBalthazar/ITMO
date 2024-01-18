@@ -24,7 +24,7 @@ public abstract class TrapSystem {
         return this.trapType;
     }
 
-    public abstract void Catch(Heffalump c) throws CannotDieTwice;
+    public abstract void grab(Heffalump c) throws CannotDieTwice;
 
     //локальный класс
     public void toggleBait() {
