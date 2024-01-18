@@ -58,7 +58,7 @@ public class Main {
 
         try {
             nutsTrap.Catch(elephant);
-        } catch (CannotDoThisAction e) {
+        } catch (CannotDoThisAction|CannotDieTwice e) {
             System.out.println(e.getMessage());
         } finally {
             System.out.println("попытались поймать Слонопотама");
