@@ -11,11 +11,6 @@ import Objects.NutsTrap;
 import Objects.HoneyTrap;
 import Enums.*;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.function.Function;
-
-
 public class Main {
     public static void main(String[] args) throws CannotAddThisAmount, CannotDieTwice, CannotDoThisAction {
         WinnieThePooh puh = new WinnieThePooh();
@@ -31,14 +26,13 @@ public class Main {
         PlaceFunction scoreMinimumFind = new PlaceFunction() {
             @Override
             public void min(Place[] places) {
-                Function<Place, Integer> scoreMinimumFunction = Place::getExploredScore;
-                int min = places[0].exploredScore;
+                int minExplored = places[0].exploredScore;
                 for (Place score : places) {
-                    if (score.exploredScore < min) {
-                        min = score.exploredScore;
+                    if (score.exploredScore < minExplored) {
+                        minExplored = score.exploredScore;
                     }
                 }
-                System.out.println("Самое пугающее место исследовано на " + min + " процентов.");
+                System.out.println("Самое пугающее место исследовано на " + minExplored + " процентов.");
             }
         };
         Place [] list = {forest, six_trees, meadow};
