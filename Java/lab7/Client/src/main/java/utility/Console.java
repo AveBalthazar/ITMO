@@ -8,7 +8,7 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 /**
- * Класс для работы с вводом пользователя и консолью
+ * Class to works with user's input and console
  */
 public class Console implements ConsoleInterface {
 

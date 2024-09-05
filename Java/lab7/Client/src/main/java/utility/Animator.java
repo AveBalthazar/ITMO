@@ -24,7 +24,7 @@ public class Animator {
                 if (aResponse.getInformation().get("1") == null) {
                     aResponse.getInformation().
                             forEach((key, value) -> sb.append("\t")
-                                    .append(key)
+                                    .append(TextFormatting.getGreenText(key))
                                     .append(" : ")
                                     .append(value.toUpperCase())
                                     .append("\n\n"));
@@ -36,7 +36,7 @@ public class Animator {
                             .sorted(Integer::compareTo)
                             .map(String::valueOf)
                             .forEach(key -> sb.append("\t")
-                                    .append((key))
+                                    .append(TextFormatting.getGreenText(key))
                                     .append(" : ")
                                     .append(aResponse.getInformation().get(key).toUpperCase())
                                     .append("\n\n"));
@@ -52,11 +52,11 @@ public class Animator {
                         .append("\n");
             }
             if (aResponse.getCount() != null) {
-                sb.append("\tЧисло элементов: ")
-                        .append(String.valueOf(aResponse.getCount()))
+                sb.append("\tAmount of elements: ")
+                        .append(TextFormatting.getGreenText(String.valueOf(aResponse.getCount())))
                         .append("\n");
             }
-            if (sb.toString().equals("\n")) return ("\n\tAction processed successful!\n");
+            if (sb.toString().equals("\n")) return TextFormatting.getGreenText("\n\tAction processed successful!\n");
         } else {
             switch (aResponse.getStatus()) {
                 case OBJECTNOTEXIST:

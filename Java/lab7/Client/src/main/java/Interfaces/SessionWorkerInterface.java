@@ -7,7 +7,7 @@ import java.io.IOException;
 public interface SessionWorkerInterface {
 
     /**
-     * Получение сессии
+     * Get Username and Password from console
      */
     Session getSession() throws IOException;
 }

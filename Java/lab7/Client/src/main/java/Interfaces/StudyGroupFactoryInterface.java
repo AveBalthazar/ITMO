@@ -5,7 +5,7 @@ import data.StudyGroup;
 public interface StudyGroupFactoryInterface {
 
     /**
-     * Метод, создающий новый объект Data.StudyGroup
+     * Method creates new Data.StudyGroup object
      */
     StudyGroup createStudyGroup();
 }

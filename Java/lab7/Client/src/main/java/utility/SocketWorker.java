@@ -8,6 +8,9 @@ import java.net.SocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
 
+/**
+ * Class to work with client's socket
+ */
 public class SocketWorker implements SocketWorkerInterface {
 
     private DatagramChannel datagramChannel;
@@ -20,7 +23,7 @@ public class SocketWorker implements SocketWorkerInterface {
             datagramChannel.configureBlocking(false);
             datagramChannel.connect(aSocketAddress);
         } catch (IOException e) {
-            Console.getInstance().print("Проверьте соединение с сетью!");
+            Console.getInstance().print("Some problem's with network!");
         }
     }
 

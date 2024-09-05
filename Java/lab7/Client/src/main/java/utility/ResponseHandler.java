@@ -8,6 +8,9 @@ import java.io.InvalidClassException;
 import java.io.ObjectInputStream;
 import java.nio.ByteBuffer;
 
+/**
+ * Class to response processing
+ */
 public class ResponseHandler implements ResponseHandlerInterface {
 
     private static ResponseHandler instance;

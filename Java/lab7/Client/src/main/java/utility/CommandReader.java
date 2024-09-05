@@ -8,6 +8,9 @@ import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * The class that read and parse strings from input to Command objects
+ */
 public class CommandReader implements CommandReaderInterface {
 
     private final ConsoleInterface console;
@@ -24,7 +27,7 @@ public class CommandReader implements CommandReaderInterface {
             if (!RequestHandler.getInstance().getSocketStatus()) return false;
 
             String line;
-            console.print("Введите команду: ");
+            console.print("Enter the command: ");
             try {
                 line = console.read();
             } catch (IOException exception) {
@@ -34,12 +37,12 @@ public class CommandReader implements CommandReaderInterface {
             Command newCommand = readCommand(line);
             if (newCommand != null) {
                 if (newCommand.getCommand().equals("exit") && newCommand.getArg() == null) {
-                    console.print("\tВсего хорошего!\n");
+                    console.print(TextFormatting.getGreenText("\tHave a nice day!\n"));
                     return true;
                 }
                 commandManager.transferCommand(newCommand);
             } else {
-                console.print(TextFormatting.getRedText("\tКоманда введена неверно!\n"));
+                console.print(TextFormatting.getRedText("\tCommand entered incorrectly!\n"));
             }
         }
     }

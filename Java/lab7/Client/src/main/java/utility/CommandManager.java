@@ -8,6 +8,9 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * The class that serves the command
+ */
 public class CommandManager implements CommandManagerInterface {
 
     private final CommandReaderInterface commandReader;
@@ -30,9 +33,9 @@ public class CommandManager implements CommandManagerInterface {
     @Override
     public void transferCommand(Command aCommand) {
 
-        if (aCommand == null) console.print(TextFormatting.getRedText("\n\tКоманда введена неверно!\n"));
+        if (aCommand == null) console.print(TextFormatting.getRedText("\n\tCommand entered incorrectly!\n"));
 
-        else if (validator.nonObjectArgumentCommands(aCommand))
+        else if (validator.notObjectArgumentCommands(aCommand))
             console.print(requestHandler.send(aCommand) + "\n");
 
         else if (validator.objectArgumentCommands(aCommand))
@@ -40,7 +43,7 @@ public class CommandManager implements CommandManagerInterface {
 
         else if (validator.validateScriptArgumentCommand(aCommand)) executeScript(aCommand.getArg());
 
-        else console.print(TextFormatting.getRedText("\tКоманда введена неверно!\n"));
+        else console.print(TextFormatting.getRedText("\tCommand entered incorrectly!\n"));
     }
 
     private void executeScript(String scriptName) {
@@ -54,26 +57,26 @@ public class CommandManager implements CommandManagerInterface {
                 try {
                     scriptReader.read();
 
-                    System.out.println("\nСкрипт " + scriptName
-                            + " успешно выполнен!\n");
+                    System.out.println(TextFormatting.getGreenText("\nThe script " + scriptName
+                            + " was processed successfully!\n"));
                 } catch (IOException exception) {
 
                     usedScripts.remove(scriptName);
 
-                    if (usedScripts.isEmpty()) console.setExeStatus(false);
+                    if (usedScripts.size() == 0) console.setExeStatus(false);
 
                     if (!new File(scriptName).exists()) console.print(
-                            TextFormatting.getRedText("\n\tЭтот скрипт не найден!\n\n"));
+                            TextFormatting.getRedText("\n\tThe script does not exist!\n\n"));
                     else if (!new File(scriptName).canRead()) console.print(
-                            TextFormatting.getRedText("\n\tНет привилегий для чтения файла!\n\n"));
-                    else console.print("\n\tПроизошла неизвестная ошибка при чтении скрипта!\n\n");
+                            TextFormatting.getRedText("\n\tThe system does not have permission to read the file!\n\n"));
+                    else console.print("\n\tWe have some problem's with script!\n\n");
                 }
                 usedScripts.remove(scriptName);
-                if (usedScripts.isEmpty()) console.setExeStatus(false);
+                if (usedScripts.size() == 0) console.setExeStatus(false);
             } catch (FileNotFoundException e) {
-                console.print("\n\tСкрипт не найден!\n");
+                console.print("\n\tScript not found!\n");
             }
-        } else console.print(TextFormatting.getRedText("\nПри запуске " + scriptName +
-                " возникнет рекурсия, скрипт не может быть выполнен!\n"));
+        } else console.print(TextFormatting.getRedText("\nRecursion has been detected! Script " + scriptName +
+                " will not be ran!\n"));
     }
 }

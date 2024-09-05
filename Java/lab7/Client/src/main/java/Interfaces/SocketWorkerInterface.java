@@ -1,9 +1,11 @@
 package Interfaces;
 
+import utility.Command;
+
 public interface SocketWorkerInterface {
 
     /**
-     * Отправка сокета к серверу
+     * Send Request to the server
      */
     String sendRequest(byte[] serializedRequest);
 }

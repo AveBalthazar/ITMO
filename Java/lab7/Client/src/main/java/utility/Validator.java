@@ -1,9 +1,10 @@
 package utility;
 
 import Interfaces.ValidatorInterface;
+import utility.Command;
 
 /**
- * Класс, осуществляющий проверку команд
+ * Class to validate commands
  */
 public class Validator implements ValidatorInterface {
 
@@ -22,7 +23,7 @@ public class Validator implements ValidatorInterface {
     }
 
     @Override
-    public boolean nonObjectArgumentCommands(Command aCommand) {
+    public boolean notObjectArgumentCommands(Command aCommand) {
         return validateNoArgumentCommand(aCommand) ||
                 validateNumArgumentCommands(aCommand) ||
                 validateStringArgumentCommands(aCommand);
