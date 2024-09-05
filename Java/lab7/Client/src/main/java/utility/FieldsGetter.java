@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.Arrays;
 
 /**
- * Class is used to receive fields
+ * Класс для получения полей коллекции от пользователя
  */
 public class FieldsGetter implements FieldsReceiver {
 
@@ -18,7 +18,7 @@ public class FieldsGetter implements FieldsReceiver {
     }
 
     /**
-     * @return null - if end of script or empty String
+     * @return null - если достигнут конец скрипта или введена пустая строка
      */
     private Object workWithTypes(String line, TypeOfArgument type, boolean minExist, boolean nullAvailable) {
 
@@ -74,9 +74,9 @@ public class FieldsGetter implements FieldsReceiver {
         do {
             StringBuilder sb = new StringBuilder();
             sb.append("\t").append(TextFormatting.getRedText(TextFormatting.capitalize(requestField))).
-                    append(TextFormatting.getRedText(" should be ")).append(TextFormatting.getRedText(options)).
+                    append(TextFormatting.getRedText(" должно быть ")).append(TextFormatting.getRedText(options)).
                     append(TextFormatting.getRedText("!\n"));
-            sb.append("Enter ").append(requestField).append(" again: ");
+            sb.append("Введите ").append(requestField).append(" снова: ");
             console.print(sb, true);
 
             String line;
@@ -93,7 +93,7 @@ public class FieldsGetter implements FieldsReceiver {
 
         StringBuilder sb = new StringBuilder();
         //if (nullAvailable) sb.append("\t");
-        sb.append("Enter ").append(requestField).append(": ");
+        sb.append("Введите ").append(requestField).append(": ");
         console.print(sb, true);
 
         String line;
@@ -104,7 +104,7 @@ public class FieldsGetter implements FieldsReceiver {
         }
 
         if (line == null) return null;
-        else if (line.trim().equals("")) line = null;
+        else if (line.trim().isEmpty()) line = null;
 
         Object firstRequest = workWithTypes(line, type, minExist, nullAvailable);
 
@@ -132,9 +132,9 @@ public class FieldsGetter implements FieldsReceiver {
     private String getFirstEnumRequest(String requestField, String enumerateList, Console console) {
 
         StringBuilder sb = new StringBuilder();
-        sb.append("\nAvailable ").append(requestField).append(": ");
-        sb.append(TextFormatting.getGreenText(enumerateList));
-        sb.append("\nEnter ").append(requestField).append(": ");
+        sb.append("\nДоступные ").append(requestField).append(": ");
+        sb.append(enumerateList);
+        sb.append("\nВведите ").append(requestField).append(": ");
         console.print(sb, true);
 
         try {
@@ -147,9 +147,9 @@ public class FieldsGetter implements FieldsReceiver {
     private String getUniversalEnumRequest(String requestField, Console console) {
 
         StringBuilder sb = new StringBuilder();
-        sb.append(TextFormatting.getRedText("\tIt's incorrect ")).
+        sb.append(TextFormatting.getRedText("\tНеверный ")).
                 append(TextFormatting.getRedText(requestField)).append(TextFormatting.getRedText("!"));
-        sb.append("\nEnter ").append(requestField).append(" again: ");
+        sb.append("\nВведите ").append(requestField).append(" снова: ");
         console.print(sb, true);
 
         try {

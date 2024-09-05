@@ -8,9 +8,6 @@ import java.net.SocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
 
-/**
- * Class to work with client's socket
- */
 public class SocketWorker implements SocketWorkerInterface {
 
     private DatagramChannel datagramChannel;
@@ -23,7 +20,7 @@ public class SocketWorker implements SocketWorkerInterface {
             datagramChannel.configureBlocking(false);
             datagramChannel.connect(aSocketAddress);
         } catch (IOException e) {
-            Console.getInstance().print("Some problem's with network!");
+            Console.getInstance().print("Проверьте соединение с сетью!");
         }
     }
 
@@ -57,8 +54,10 @@ public class SocketWorker implements SocketWorkerInterface {
                 }
             } else {
                 RequestHandler.getInstance().setSocketStatus(false);
-                return TextFormatting.getRedText("\n\tServer isn't available at the moment! " +
+                String error = TextFormatting.getRedText("\n\tServer isn't available at the moment! " +
                         "Please, select another remote host!\n\n");
+                System.out.println(error);
+                return error;
             }
         }
     }

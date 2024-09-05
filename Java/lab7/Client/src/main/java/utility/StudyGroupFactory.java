@@ -4,14 +4,13 @@ import data.*;
 import Interfaces.FieldsReceiver;
 
 /**
- * Class for creating Study groups without id and Date
+ * Класс для создания объектов Study groups без id и Date
  */
 public class StudyGroupFactory implements Interfaces.StudyGroupFactoryInterface {
 
     private final FieldsReceiver fieldsReceiver;
 
     public StudyGroupFactory() {
-
         fieldsReceiver = new FieldsGetter(Console.getInstance());
     }
 

@@ -8,37 +8,37 @@ import data.Semester;
 public interface FieldsReceiver {
 
     /**
-     * Method get group's name
+     * Метод для получения поля name
      */
     String getName();
 
     /**
-     * Method get group coordinates
+     * Метод для получения поля coordinates
      */
     Coordinates getCoordinates();
 
     /**
-     * Method get students count in group
+     * Метод для получения поля students count
      */
     Integer getStudentsCount();
 
     /**
-     * Method get average mark in group
+     * Метод для получения поля average mark
      */
     Double getAverageMark();
 
     /**
-     * Method get form of group's education
+     * Метод для получения поля form of education
      */
     FormOfEducation getFormOfEducation();
 
     /**
-     * Method get group's semester
+     * Метод для получения поля semester
      */
     Semester getSemester();
 
     /**
-     * Method get group admin
+     * Метод для получения поля admin
      */
     Person getGroupAdmin();
 }

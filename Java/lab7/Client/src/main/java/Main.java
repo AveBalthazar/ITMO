@@ -21,19 +21,18 @@ public class Main {
                 try {
                     getRequestHandlerProperties(scanner, InetAddress.getLocalHost());
                 } catch (UnknownHostException e) {
-                    System.out.println(TextFormatting.getRedText("\nYour computer has problems with the network, " +
-                            "run the application again!"));
+                    System.out.println(TextFormatting.getRedText("\nПроверьте соединение с сетью и перезапустите приложение!"));
                     return;
                 }
                 RequestHandler.getInstance().setSocketStatus(true);
                 try {
                     sessionStatus = getSession();
                 } catch (IOException e) {
-                    System.out.println(TextFormatting.getRedText("Client can't get authorization on server, try again!"));
+                    System.out.println(TextFormatting.getRedText("Не получилось авторизоваться на сервере, попробуйте снова"));
                     return;
                 }
-                if (!sessionStatus.equals(TextFormatting.getGreenText("\n\tAction processed successful!\n"))) {
-                    System.out.println(TextFormatting.getRedText(sessionStatus));
+                if (!sessionStatus.equals("\n\tAction processed successful!\n")) {
+                    System.out.println("Успешно выполнено!");
                     continue;
                 }
 
@@ -46,7 +45,7 @@ public class Main {
     }
 
     private static String getEntryInformation() {
-        return TextFormatting.getGreenText("\nWelcome to Lab7 Client!");
+        return "\n ";
     }
 
     private static boolean requestTypeOfAddress(Scanner aScanner) {
@@ -54,8 +53,8 @@ public class Main {
         String answer;
 
         do {
-            System.out.print(TextFormatting.getGreenText("Do you want to specify the address of the remote host?" +
-                    "[\"y\", \"n\"]: "));
+            System.out.print("Изменить адрес сервера?" +
+                    "[\"y\", \"n\"]: ");
 
             answer = aScanner.nextLine();
 
@@ -69,7 +68,7 @@ public class Main {
         Pattern remoteHostPortPattern = Pattern.compile("^\\s*\\b(\\d{1,5})\\b\\s*");
 
         do {
-            System.out.print(TextFormatting.getGreenText("Please, enter remote host port(1-65535): "));
+            System.out.print("Пожалуйста, введите порт (1-65535): ");
             arg = scanner.nextLine();
         } while (!remoteHostPortPattern.matcher(arg).find() || (Integer.parseInt(arg.trim()) >= 65536)
                 || (Integer.parseInt(arg.trim()) <= 0));
@@ -87,7 +86,7 @@ public class Main {
             Pattern hostAddress = Pattern.compile("^\\s*([\\w.]+)\\s*");
 
             do {
-                System.out.print("\nPlease, enter remote host address! (Example: 5.18.215.199): ");
+                System.out.print("\nВведите адрес сервера (Example: 5.18.215.199): ");
                 arg = scanner.nextLine();
             }
             while (!hostAddress.matcher(arg).find());
@@ -96,8 +95,8 @@ public class Main {
                 remoteHostAddress = InetAddress.getByName(arg.trim());
             } catch (UnknownHostException e) {
                 System.out.println(TextFormatting.getRedText(
-                        "\nThe program could not find the server by the specified address!\n " +
-                                "The default address(localhost) will be used!"));
+                        "\nНе получилось найти сервер по указанному адресу\n " +
+                                "Будет использован стандартный адрес (localhost)!"));
             }
         }
         RequestHandler.getInstance().setRemoteHostSocketAddress(

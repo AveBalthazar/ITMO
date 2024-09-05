@@ -6,9 +6,6 @@ import Interfaces.SessionWorkerInterface;
 import java.io.IOException;
 import java.util.regex.Pattern;
 
-/**
- * Class that helps to get session settings from console
- */
 public class SessionWorker implements SessionWorkerInterface {
 
     private final ConsoleInterface console;
@@ -19,22 +16,22 @@ public class SessionWorker implements SessionWorkerInterface {
 
     @Override
     public Session getSession() throws IOException {
-        console.print(TextFormatting.getBlueText("\nAuthorization(Registration): \n"));
+        console.print(("\nАвторизация | Регистрация... \n"));
         boolean sessionStatus = getSessionStatus();
         return sessionStatus ? new Session(getUsername(), getUserPassword(), TypeOfSession.Login)
                 : new Session(getUsername(), getUserPassword(), TypeOfSession.Register);
     }
 
     /**
-     * Type of Session
+     * Тип сессии
      *
-     * @return true if login, false if register
+     * @return true если происходит авторизация, false - если регистрация
      */
     private boolean getSessionStatus() throws IOException{
         String answer;
 
         do {
-            System.out.print(TextFormatting.getGreenText("\tDo you register or login? [\"r\", \"l\"]: "));
+            System.out.print(("\tВведите r, если регистрируетесь, или l, если входите по существующим данным: "));
                 answer = console.read();
         } while (answer == null || !answer.equals("r") && !answer.equals("l"));
 
@@ -47,10 +44,10 @@ public class SessionWorker implements SessionWorkerInterface {
         Pattern usernamePattern = Pattern.compile("^\\s*\\b(\\w+)\\b\\s*");
 
         while (true) {
-            console.print(TextFormatting.getGreenText("\tPlease, enter username! (Example: Lololoshka1337): "));
+            console.print(("\tВведите имя пользователя: "));
             username = console.read();
             if (username != null && usernamePattern.matcher(username).find()) break;
-            console.print(TextFormatting.getRedText("\tUsername should be not empty string of letters and digits!\n"));
+            console.print(TextFormatting.getRedText("\tИмя пользователя не должно быть пустым, допустимы только цифры и буквы!\n"));
         }
 
         return username.trim();
@@ -61,22 +58,22 @@ public class SessionWorker implements SessionWorkerInterface {
             String password;
             Pattern passwordPattern = Pattern.compile("^\\s*([\\d\\w]*)\\s*");
             while (true) {
-                console.print(TextFormatting.getGreenText("\tPlease, enter password! " +
-                        "(You can skip this by keeping field in empty state): "));
+                console.print(("\tВведите пароль: " +
+                        "(Или нажмите enter, если хотите входить без пароля): "));
                 password = console.read();
                 if (password != null && passwordPattern.matcher(password).find()) break;
-                console.print(TextFormatting.getRedText("\tPassword should be string of letters and digits!\n"));
+                console.print(TextFormatting.getRedText("\tВ пароле допустимы только цифры и буквы!\n"));
             }
             return password.trim();
         } else {
             String password;
             Pattern passwordPattern = Pattern.compile("^\\s*([\\d\\w]*)\\s*");
             while (true) {
-                console.print(TextFormatting.getGreenText("\tPlease, enter password! " +
-                        "(You can skip this by keeping field in empty state): "));
+                console.print(("\tВведите пароль: \" +\n" +
+                        "                        \"(Или нажмите enter, если хотите входить без пароля): \" "));
                 password = new String(System.console().readPassword());
                 if (passwordPattern.matcher(password).find()) break;
-                console.print(TextFormatting.getRedText("\tPassword should be string of letters and digits!\n"));
+                console.print(TextFormatting.getRedText("\tВ пароле допустимы только цифры и буквы!\n"));
             }
             return password.trim();
         }

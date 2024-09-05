@@ -9,9 +9,6 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.InetSocketAddress;
 
-/**
- * Class to completing requests
- */
 public class RequestHandler implements RequestHandlerInterface {
 
     private static RequestHandler instance;
@@ -36,7 +33,7 @@ public class RequestHandler implements RequestHandlerInterface {
             session.setTypeOfSession(TypeOfSession.Login);
             return socketWorker.sendRequest(byteArrayOutputStream.toByteArray());
         } catch (IOException e) {
-            return TextFormatting.getRedText("\tRequest can't be serialized, call programmer!\n");
+            return TextFormatting.getRedText("\tОшибка при сериализации запроса!\n");
         }
     }
 
@@ -46,7 +43,7 @@ public class RequestHandler implements RequestHandlerInterface {
         if (studyGroup != null) {
             aCommand.addStudyGroup(studyGroup);
             return send(aCommand);
-        } else return TextFormatting.getRedText("\tStudy group isn't exist, try again!\n");
+        } else return TextFormatting.getRedText("\tStudy group не существует, попробуйте снова!\n");
     }
 
     @Override
@@ -57,9 +54,9 @@ public class RequestHandler implements RequestHandlerInterface {
     @Override
     public String getInformation() {
 
-        return TextFormatting.getGreenText("\nConnection status:\n\n") +
-                "Remote host address:\t" + TextFormatting.getGreenText(String.valueOf(socketAddress.getAddress())) + "\n" +
-                "Remote host port:\t" + TextFormatting.getGreenText(String.valueOf(socketAddress.getPort())) + "\n";
+        return "\nСтатус соединения:\n\n" +
+                "Адрес:\t" + String.valueOf(socketAddress.getAddress()) + "\n" +
+                "Порт:\t" + String.valueOf(socketAddress.getPort()) + "\n";
     }
 
     @Override

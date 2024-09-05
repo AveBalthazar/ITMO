@@ -7,7 +7,7 @@ import Interfaces.ScriptReaderInterface;
 import java.io.*;
 
 /**
- * Class for reading script
+ * Класс для чтения скрипта из файла
  */
 public class ScriptReader implements ScriptReaderInterface {
 
