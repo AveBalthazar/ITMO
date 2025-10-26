@@ -5,7 +5,17 @@
 \contentsline {section}{\numberline {3}Задача слежения для системы с астатизмом нулевого порядка (П-регулятор)}{8}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Стационарная желаемая функция}{8}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Функция с постоянной скоростью}{10}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Выводы}{11}{subsection.3.3}%
 \contentsline {section}{\numberline {4}Задача слежения для системы с астатизмом первого порядка (И-регулятор)}{12}{section.4}%
-\contentsline {section}{\numberline {5}Задача слежения для системы с астатизмом первого порядка (ПИ-регулятор)}{12}{section.5}%
-\contentsline {section}{\numberline {6}Задача слежения за гармоническим сигналом (регулятор общего вида)}{12}{section.6}%
-\contentsline {section}{\numberline {7}Приложение А. Код для выполнения заданий}{12}{section.7}%
+\contentsline {subsection}{\numberline {4.1}Стационарный режим работы, $g(t) = 1$}{12}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Режим движения с постоянной скоростью ($g(t) = t$)}{14}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Режим движения с постоянным ускорением при $g(t) = 0.45t^2$}{16}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Выводы}{18}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Задача слежения для системы с астатизмом первого порядка (ПИ-регулятор)}{19}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Исследование режима движения с постоянной скоростью}{19}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Исследование режима слежения за гармоническим сигналом}{21}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Выводы}{23}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Задача слежения за гармоническим сигналом (регулятор общего вида)}{23}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Выводы}{25}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Вывод по работе}{25}{section.7}%
+\contentsline {section}{\numberline {8}Приложение А. Код для выполнения заданий}{25}{section.8}%

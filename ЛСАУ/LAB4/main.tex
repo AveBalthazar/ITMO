@@ -259,7 +259,7 @@ $$\
     \caption{Движение системы, замкнутой регулятором}
 \end{figure}\
 
-Видим, что теперь система асимптотически устойчива с установившимся значением $y_{\text{уст}} = 0$, таким образом получилось стабилизировать неустойчивую систему.
+Видим, что теперь система асимптотически устойчива с установившимся значением $y_{\text{уст}} = 0$, таким образом получилось стабилизировать неустойчивую разомкнутую систему действием на неё регулятора.
 
 \section{Задача стабилизации с реальным дифференцирующим звеном}\
 
@@ -345,27 +345,11 @@ $$\
 Приведём к общему знаменателю \(T > 0\):
 
 \[
-\frac{2(1 - T) - 6T^2}{T} > 0.
-\]
-
-Числитель:
-
-\[
-2(1 - T) - 6T^2 = 2 - 2T - 6T^2.
-\]
-
-Неравенство:
-
-\[
+\frac{2(1 - T) - 6T^2}{T} > 0\Leftrightarrow
 \frac{-6T^2 - 2T + 2}{T} > 0.
-\]
+\]\
 
-Рассмотрим числитель:  
-\[
--6T^2 - 2T + 2 = -2(3T^2 + T - 1).
-\]
-
-Корни уравнения \(3T^2 + T - 1 = 0\):
+Корни числителя:
 
 \[
 T_{1, 2} = \frac{-1 \pm \sqrt{13}}{6}.
@@ -391,7 +375,7 @@ T_{1, 2} = \frac{-1 \pm \sqrt{13}}{6}.
 
 Видно, что траектория движения системы больше походит на устойчивую по Ляпунову, чем на асимптотическую.
 
-\subsection{Вывод}
+\subsection{Вывод}\
 
 Я понял, что добавление в регулятор дифференцирующего звена меняет его передаточную функцию, и понял, как определить устойчивость системы исходя из параметра добавленного звена. 
 
@@ -407,7 +391,7 @@ T_{1, 2} = \frac{-1 \pm \sqrt{13}}{6}.
 
 Передаточная функция системы --- $W_s(s) = \frac{5}{s^2+5s+6}$, регулятором выступает $H(s) = k$. Для значения параметра регулятора был выбран набор значений $[1, 3, 7]$.\ 
 
-\subsection{Стационарная желаемая функция}
+\subsection{Стационарная желаемая функция}\
 
 Исследование стационарного режима работы проводится с задающим воздействием $g(t) = 1$. Для этого режима при выбранной передаточной функции объекта управления и регулятора можно будет найти установившееся значение ошибки (система обладает нулевым порядком астатизма, а значит, при $t \to \infty$ между траекторией движения системы и задающим воздействием будет фиксированная величина $e_\text{уст}$).\ 
 
@@ -437,7 +421,7 @@ $$\
 Пользуясь теоремой о конечном значении, можем вычислить непосредственно установившуюся ошибку:
 
 $$
-e_{\text{уст}} = \lim_{t\to \infty} e(t) = \lim_{s\to 0} sE(s) = \lim_{s\to 0}\frac{\cancel{s}\left(s^2+5s+6\right)}{\cancel{s}\left(s^2+5s+6+5k\right)} = \frac{\cancelto{0}{s^2}+5\cancelto{0}{s}+6}{\cancelto{0}{s^2}+5\cancelto{0}{s}+6+5k} =\frac{6}{6+5k}
+e_{\text{уст}} = \lim_{t\to +\infty} e(t) = \lim_{s\to 0} sE(s) = \lim_{s\to 0}\frac{\cancel{s}\left(s^2+5s+6\right)}{\cancel{s}\left(s^2+5s+6+5k\right)} = \frac{\cancelto{0}{s^2}+5\cancelto{0}{s}+6}{\cancelto{0}{s^2}+5\cancelto{0}{s}+6+5k} =\frac{6}{6+5k}
 $$\ 
 
 Тогда для $k = 1$ $e_{\text{уст}} = \frac{6}{11}$, для $k = 3$: $e_{\text{уст}} = \frac{6}{21}$, для $k = 7$: $e_{\text{уст}} = \frac{6}{41}$.\ 
@@ -449,12 +433,11 @@ $$\
 \begin{figure}[H]
     \begin{minipage}{0.5\textwidth}
         \centering \includegraphics[width=\textwidth]{ex3/k1_g_a.eps}
-        \caption{Сопоставление графиков выхода и входа для}
-        \centerline{$k=1$, $g=1$}
+        \caption{Графики входа и выхода при $k=1$, $g=1$}
     \end{minipage}\hfill
     \begin{minipage}{0.5\textwidth}
         \centering \includegraphics[width=\textwidth]{ex3/k1_g_a_error.eps}
-        \caption{График ошибки для $k=1$, $g=1$}
+        \caption{График ошибки при $k=1$, $g=1$}
         % \centerline{лягушки}
     \end{minipage}\\[1em]
 \end{figure}\noindent\
@@ -464,12 +447,11 @@ $$\
 \begin{figure}[H]
     \begin{minipage}{0.5\textwidth}
         \centering \includegraphics[width=\textwidth]{ex3/k3_g_a.eps}
-        \caption{Сопоставление графиков выхода и входа для}
-        \centerline{$k=3$, $g=1$}
+        \caption{Графики входа и выхода при $k=3$, $g=1$}
     \end{minipage}\hfill
     \begin{minipage}{0.5\textwidth}
         \centering \includegraphics[width=\textwidth]{ex3/k3_g_a_error.eps}
-        \caption{График ошибки для $k=3$, $g=1$}
+        \caption{График ошибки при $k=3$, $g=1$}
         % \centerline{лягушки}
     \end{minipage}\\[1em]
 \end{figure}\noindent\
@@ -479,12 +461,11 @@ $$\
 \begin{figure}[H]
     \begin{minipage}{0.5\textwidth}
         \centering \includegraphics[width=\textwidth]{ex3/k7_g_a.eps}
-        \caption{Сопоставление графиков выхода и входа для}
-        \centerline{$k=7$, $g=1$}
+        \caption{Графики входа и выхода при $k=7$, $g=1$}
     \end{minipage}\hfill
     \begin{minipage}{0.5\textwidth}
         \centering \includegraphics[width=\textwidth]{ex3/k7_g_a_error.eps}
-        \caption{График ошибки для $k=7$, $g=1$}
+        \caption{График ошибки при $k=7$, $g=1$}
         % \centerline{лягушки}
     \end{minipage}\\[1em]
 \end{figure}\noindent\
@@ -495,17 +476,16 @@ $$\
 
 \subsection{Функция с постоянной скоростью}\
 
-В этой части задания на вход подаётся линейно растущее воздействие -- $g(t) = t$. В этом случае из-за низкого порядка астатизма система не сможет ни свести ошибку слежения к 0, ни прийти к установившемуся значению этой ошибки: 
+В этой части задания на вход подаётся линейно растущее воздействие -- $g(t) = t$. Из-за низкого порядка астатизма система не сможет ни свести ошибку слежения к 0, ни прийти к установившемуся значению этой ошибки: 
 
 \begin{figure}[H]
     \begin{minipage}{0.5\textwidth}
         \centering \includegraphics[width=\textwidth]{ex3/k1_g_vt.eps}
-        \caption{Сопоставление графиков выхода и входа для}
-        \centerline{$k=1$, $g=t$}
+        \caption{Графики входа и выхода при $k=1$, $g(t)=1$}
     \end{minipage}\hfill
     \begin{minipage}{0.5\textwidth}
         \centering \includegraphics[width=\textwidth]{ex3/k1_g_vt_error.eps}
-        \caption{График ошибки для $k=1$, $g=t$}
+        \caption{График ошибки при $k=1$, $g(t)=t$}
         % \centerline{лягушки}
     \end{minipage}\\[1em]
 \end{figure}\noindent\
@@ -513,12 +493,11 @@ $$\
 \begin{figure}[H]
     \begin{minipage}{0.5\textwidth}
         \centering \includegraphics[width=\textwidth]{ex3/k3_g_vt.eps}
-        \caption{Сопоставление графиков выхода и входа для}
-        \centerline{$k=3$, $g=t$}
+        \caption{Графики входа и выхода при $k=3$, $g(t)=t$}
     \end{minipage}\hfill
     \begin{minipage}{0.5\textwidth}
         \centering \includegraphics[width=\textwidth]{ex3/k3_g_vt_error.eps}
-        \caption{График ошибки для $k=3$, $g=t$}
+        \caption{График ошибки при $k=3$, $g(t)=t$}
         % \centerline{лягушки}
     \end{minipage}\\[1em]
 \end{figure}\noindent\
@@ -526,22 +505,469 @@ $$\
 \begin{figure}[H]
     \begin{minipage}{0.5\textwidth}
         \centering \includegraphics[width=\textwidth]{ex3/k7_g_vt.eps}
-        \caption{Сопоставление графиков выхода и входа для}
-        \centerline{$k=7$, $g=t$}
+        \caption{Графики входа и выхода при $k=7$, $g(t)=t$}
     \end{minipage}\hfill
     \begin{minipage}{0.5\textwidth}
         \centering \includegraphics[width=\textwidth]{ex3/k7_g_vt_error.eps}
-        \caption{График ошибки для $k=7$, $g=t$}
+        \caption{График ошибки при $k=7$, $g(t)=t$}
         % \centerline{лягушки}
     \end{minipage}\\[1em]
 \end{figure}\noindent\
 
+Из полученных графиков можно заключить, что чем выше $k$, тем медленнее будет расти ошибка, при $k \to \infty$ ошибка будет стремиться к линейно растущему задающему воздействию. Однако расти будут и колебания, появляющиеся на рисунке для случая $k = 7$.
+
+\subsection{Выводы}\ 
+
+Система, рассмотренная с пропорциональным регулятором, не может полностью ``уследить'' даже за линейным входом, выход отстаёт от входа. Дело в нулевом порядке астатизма - если его увеличить на хотя бы до первого, можно будет добиться постоянного значения установившейся ошибки для случая с линейно растущим входом.
 
 \section{Задача слежения для системы с астатизмом первого порядка (И-регулятор)}\
 
+В задании рассматривается система, заданная структурной схемой, представленной на рисунке:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\linewidth]{ex4/scheme.png}
+    \caption{Структурная схема с И-регулятором}
+\end{figure}\
+
+Это всё та же система, но с интегральным регулятором $(H(s) = \frac{k}{s})$ вместо пропорционального. У регулятора есть параметр $k$, я буду варьировать значения этого параметра из набора $[0.5, 1, 3]$.\ 
+
+Система обладает первым порядком астатизма, а значит, установившаяся ошибка должна свестись к $0$ при $t \to \infty$ в случае константного входа и к константе в случае линейно растущего входа. 
+
+\subsection{Стационарный режим работы, $g(t) = 1$}\
+
+В стационарном режиме ошибка должна прийти к 0 из-за того, что система обладает первым порядком астатизма, это известно из лекции. Однако покажу это явно:\
+
+$$
+W(s) = W_{\text{s}}(s) H(s) = \frac{5k}{s(s^2+5s+6)}
+$$\
+
+$$
+\underset{g\to e}{W}(s) = \frac{1}{1+W(s)} = \frac{1}{1+\frac{5k}{s(s^2+5s+6)}} = \frac{s(s^2+5s+6)}{s(s^2+5s+6) + 5k}
+$$
+
+$$
+E(s) = \underset{g\to e}{W}(s) \cdot G(s) = \frac{s(s^2+5s+6)}{s(s^2+5s+6) + 5k} \cdot \frac{1}{s} = \frac{s(s^2+5s+6)}{s^2(s^2+5s+6) + 5ks}
+$$
+
+$$
+e_{\text{уст}} = \lim_{t\to +\infty} e(t) = \lim_{s\to 0} sE(s) = \lim_{s\to 0} \frac{s^2(s^2+5s+6)}{s^2(s^2+5s+6) + 5ks} = \lim_{s\to 0} \frac{\cancelto{0}{s}(\cancelto{0}{s^2}+5\cancelto{0}{s}+6)}{\cancelto{0}{s}(\cancelto{0}{s^2}+5\cancelto{0}{s}+6) + 5k} = \frac{0}{5k} = 0.
+$$\
+
+Проведем эксперименты, сравним теорию с симулированной реальностью:
+
+\begin{figure}[H]
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex4/k0.5_g_a.eps}
+        \caption{Графики входа и выхода при $k=0.5$, $g(t)=1$}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex4/k0.5_g_a_error.eps}
+        \caption{График ошибки при $k=0.5$, $g(t)=1$}
+        % \centerline{лягушки}
+    \end{minipage}\\[1em]
+\end{figure}\noindent\
+
+\begin{figure}[H]
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex4/k1_g_a.eps}
+        \caption{Графики входа и выхода при $k=1$, $g(t)=1$}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex4/k1_g_a_error.eps}
+        \caption{График ошибки при $k=1$, $g(t)=1$}
+        % \centerline{лягушки}
+    \end{minipage}\\[1em]
+\end{figure}\noindent\
+
+\begin{figure}[H]
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex4/k3_g_a.eps}
+        \caption{Графики входа и выхода при $k=3$, $g(t)=1$}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex4/k3_g_a_error.eps}
+        \caption{График ошибки при $k=3$, $g(t)=1$}
+        % \centerline{лягушки}
+    \end{minipage}\\[1em]
+\end{figure}\noindent\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\linewidth]{ex4/all_g_a_error.eps}
+    \caption{Сопоставление ошибок при $g(t)=1$}
+\end{figure}\
+
+Видим, что действительно, воздействие регулятора при всех выбранных значениях параметра $k$ делает систему астатической относительно константного воздействия --- ошибка наблюдения действительно стремится к $0$.
+
+\subsection{Режим движения с постоянной скоростью ($g(t) = t$)}\
+
+В этом случае ошибка не должна сойтись к 0 с течением времени, однако должна прийти к некоторому установившемуся значению, зависящему от $k$. Проверим это вычислениями:
+
+$$
+W(s) = W_{\text{s}}(s) H(s) = \frac{5k}{s(s^2+5s+6)}
+$$\
+
+$$
+\underset{g\to e}{W}(s) = \frac{1}{1+W(s)} = \frac{1}{1+\frac{5k}{s(s^2+5s+6)}} = \frac{s(s^2+5s+6)}{s(s^2+5s+6) + 5k}
+$$
+
+$$
+E(s) = \underset{g\to e}{W}(s) \cdot G(s) = \frac{s(s^2+5s+6)}{s(s^2+5s+6) + 5k} \cdot \frac{1}{s^2} = \frac{s(s^2+5s+6)}{s^3(s^2+5s+6) + 5ks^2}
+$$
+
+$$
+e_{\text{уст}} = \lim_{t\to +\infty} e(t) = \lim_{s\to 0} sE(s) = \lim_{s\to 0} \frac{s^2(s^2+5s+6)}{s^3(s^2+5s+6) + 5ks^2} = \lim_{s\to 0} \frac{\cancelto{0}{s^2}+5\cancelto{0}{s}+6}{\cancelto{0}{s}(\cancelto{0}{s^2}+5\cancelto{0}{s}+6) + 5k} = \frac{6}{5k}.
+$$\
+
+Для $k = 0.5$ установившаяся ошибка составит $e_{\text{уст}} = \frac{6}{5\cdot 0.5} = \frac{6}{2.5}=2.4$. Для $k = 1$ --- $e_{\text{уст}} = \frac{6}{5} = 1.2$. Для $k = 3$ --- $e_{\text{уст}} = \frac{6}{5 \cdot 3} = 0.4$. Посмотрим на графики и убедимся в том, что вычисления выполнены корректно:
+
+\begin{figure}[H]
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex4/k0.5_g_vt.eps}
+        \caption{Графики входа и выхода при $k=0.5$, $g(t)=t$}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex4/k0.5_g_vt_error.eps}
+        \caption{График ошибки при $k=0.5$, $g(t)=t$}
+        % \centerline{лягушки}
+    \end{minipage}\\[1em]
+\end{figure}\noindent\
+
+\begin{figure}[H]
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex4/k1_g_vt.eps}
+        \caption{Графики входа и выхода при $k=1$, $g(t)=t$}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex4/k1_g_vt_error.eps}
+        \caption{График ошибки при $k=1$, $g(t)=t$}
+        % \centerline{лягушки}
+    \end{minipage}\\[1em]
+\end{figure}\noindent\
+
+\begin{figure}[H]
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex4/k3_g_vt.eps}
+        \caption{Графики входа и выхода при $k=3$, $g(t)=t$}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex4/k3_g_vt_error.eps}
+        \caption{График ошибки при $k=3$, $g(t)=t$}
+        % \centerline{лягушки}
+    \end{minipage}\\[1em]
+\end{figure}\noindent\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\linewidth]{ex4/all_g_vt_error.eps}
+    \caption{Сопоставление ошибок при $g(t)=t$}
+\end{figure}\
+
+Видим, что снова рассчитанные аналитически установившиеся ошибки совпали с графиками. Система с И-регулятором обладает астатизмом первого порядка, что и подтверждается графиками.
+
+\subsection{Режим движения с постоянным ускорением при $g(t) = 0.45t^2$}\
+
+В этом случае порядок астатизма системы не позволит ей ни сойтись к постоянной ошибке наблюдения, ни, тем более, асимптотически сойтись к задающему воздействию --- $g(t)$ растёт слишком быстро.\ 
+
+\begin{figure}[H]
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex4/k0.5_g_at2.eps}
+        \caption{Графики входа и выхода при $k=0.5$, $g(t)=0.45t^2$}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex4/k0.5_g_at2_error.eps}
+        \caption{График ошибки при $k=0.5$, $g(t)=0.45t^2$}
+        % \centerline{лягушки}
+    \end{minipage}\\[1em]
+\end{figure}\noindent\
+
+\begin{figure}[H]
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex4/k1_g_at2.eps}
+        \caption{Графики входа и выхода при $k=1$, $g(t)=0.45t^2$}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex4/k1_g_at2_error.eps}
+        \caption{График ошибки при $k=1$, $g(t)=0.45t^2$}
+        % \centerline{лягушки}
+    \end{minipage}\\[1em]
+\end{figure}\noindent\
+
+\begin{figure}[H]
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex4/k3_g_at2.eps}
+        \caption{Графики входа и выхода при $k=3$, $g(t)=0.45t^2$}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex4/k3_g_at2_error.eps}
+        \caption{График ошибки при $k=3$, $g(t)=0.45t^2$}
+        % \centerline{лягушки}
+    \end{minipage}\\[1em]
+\end{figure}\noindent\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\linewidth]{ex4/all_g_at2_error.eps}
+    \caption{Сопоставление ошибок при $g(t)=0.45t^2$}
+\end{figure}\
+
+Заметно, что во всех трёх случаях ошибка сходится к линейному росту, и чем больше $k$, тем больше колеблется график ошибки, и $\underset{k \to \infty}{\lim} e_{\text{уст}}(k) = 0$, но $e_{\text{уст}}$ не станет равным нулю ни при каких $k$ из-за порядка астатизма системы.
+
+\subsection{Выводы}\ 
+
+И-регулятор обладает большим порядком астатизма чем у П-регулятора, что позволяет ему сходиться к задающему воздействию большего порядка.
+
 \section{Задача слежения для системы с астатизмом первого порядка (ПИ-регулятор)}\
 
+В задании используется ПИ-регулятор $(H(s) = \frac{k_\text{И}}{s} + k_\text{П})$. Схема с его использованием представлена на рисунке:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\linewidth]{ex5/scheme.png}
+    \caption{Структурная схема с использованием ПИ-регулятора}
+\end{figure}\
+
+Задачу слежения буду решать, выбрав для варьирования коэффициентов  наборы $[0.3, 0.7, 1.2]$ и $[0.5, 1, 2]$ для $k_{\text{И}}$ и $k_\text{П}$ соответственно. 
+
+\subsection{Исследование режима движения с постоянной скоростью}\
+
+Порядок задающего воздействия на единицу больше порядка астатизма системы, значит, ошибка должна прийти к некоторому установившемуся значению, зависящему от $k$. Проверим это вычислениями:
+
+$$
+W(s) = W_{\text{s}}(s) H(s) = \frac{5}{s^2+5s+6} \cdot \left(\frac{k_\text{И}}{s} + k_\text{П}\right) = \frac{5(k_\text{П} s + k_\text{И})}{s(s^2 + 5s + 6)}
+$$\
+
+$$
+\underset{g\to e}{W}(s) = \frac{1}{1+W(s)} = \frac{1}{1+\frac{5(k_\text{П} s + k_\text{И})}{s(s^2 + 5s + 6)}} = \frac{s(s^2+5s+6)}{s(s^2 + 5s + 6) + 5(k_\text{П} s + k_\text{И})}
+$$
+
+$$
+E(s) = \underset{g\to e}{W}(s) \cdot G(s) = \frac{s(s^2+5s+6)}{s(s^2 + 5s + 6) + 5(k_\text{П} s + k_\text{И})} \cdot \frac{1}{s^2} = \frac{s(s^2+5s+6)}{s^3(s^2 + 5s + 6) + 5s^2(k_\text{П} s + k_\text{И})}
+$$
+
+$$
+e_{\text{уст}} = \lim_{t\to +\infty} e(t) = \lim_{s\to 0} sE(s) = \lim_{s\to 0} \frac{s^2(s^2+5s+6)}{s^3(s^2 + 5s + 6) + 5s^2(k_\text{П} s + k_\text{И})} = \lim_{s\to 0} \frac{(\cancelto{0}{s^2}+\cancelto{0}{5s}+6)}{\cancelto{0}{s(s^2 + 5s + 6)} + 5(\cancelto{0}{k_\text{П} s} + k_\text{И})} = \frac{6}{5k_{\text{И}}}.
+$$\
+
+Видим, что коэффициент $k_\text{П}$ не влияет на установившуюся ошибку.\ 
+
+В соответствии с выбранными значениями коэффициентов для $k_{\text{И}} = 0.3$ $e_{\text{уст}} = \frac{6}{5\cdot 0.3} =4$. Для $k = 0.7$ --- $e_{\text{уст}} = \frac{6}{5\cdot 0.7} \approx 1.71$. Для $k = 1.2$ --- $e_{\text{уст}} = \frac{6}{5 \cdot 1.2} = 1$. Посмотрим на графики и убедимся в том, что вычисления выполнены корректно.
+
+\begin{figure}[H]
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex5/ki_0.3_g_vt.eps}
+        \caption{Графики входа и выхода}
+        \centerline{при $k_{\text{И}} = 0.3$, $g(t)=t$}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex5/ki_0.3_g_vt_error.eps}
+        \caption{График ошибки при}
+        \centerline{при $k_{\text{И}} = 0.3$, $g(t)=t$}
+        % \centerline{лягушки}
+    \end{minipage}\\[1em]
+\end{figure}\noindent\
+
+\begin{figure}[H]
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex5/ki_0.7_g_vt.eps}
+        \caption{Графики входа и выхода}
+        \centerline{при $k_{\text{И}} = 0.7$, $g(t)=t$}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex5/ki_0.7_g_vt_error.eps}
+        \caption{График ошибки}
+        \centerline{при $k_{\text{И}} = 0.7$, $g(t)=t$}
+        % \centerline{лягушки}
+    \end{minipage}\\[1em]
+\end{figure}\noindent\
+
+\begin{figure}[H]
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex5/ki_1.2_g_vt.eps}
+        \caption{Графики входа и выхода}
+        \centerline{при $k_{\text{И}} = 1.2$, $g(t)=t$}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex5/ki_1.2_g_vt_error.eps}
+        \caption{График ошибки}
+        \centerline{при $k_{\text{И}} = 1.2$, $g(t)=t$}
+        % \centerline{лягушки}
+    \end{minipage}\\[1em]
+\end{figure}\noindent\
+
+На всех рассмотренных наборах значений коэффициентов $k_{\text{И}}$, $k_{\text{П}}$ аналитические расчёты установившейся ошибки совпадают с моделированием. Также можно сделать выводы о влиянии пропорционального коэффициента $k_{\text{П}}$ и интегрального коэффициента $k_{\text{И}}$ на поведение системы --- чем выше значение интегрального коэффициента, тем быстрее система сходится к установившемуся значению ошибки, и тем сильнее приближается к задающему воздействию. Увеличение $k_{\text{П}}$ также ускоряет реакцию системы (уменьшает время переходного процесса) и приводит к увеличению колебательности системы (как и увеличение $k_{\text{И}}$), и наоборот. То есть если стоит задача минимизации ошибки наблюдения, то максимально повышаем $k_{\text{И}}$, и подбираем значение $k_{\text{П}}$ для уменьшения избыточного перерегулирования так, чтобы система оставалась устойчивой.
+
+
+\subsection{Исследование режима слежения за гармоническим сигналом}\
+
+Теперь в качестве задающего воздействия будет использоваться $g(t) = \sin{(0.45t)} \Rightarrow G(s) = \frac{0.45}{0.45^2 + s^2}$.\
+
+В этом случае ошибка не будет постоянной, и нельзя найти её установившееся значение. Промоделируем схему с соответствующим заданию гармоническим сигналом $g(t) = \sin{(0.45t)}$:
+
+\begin{figure}[H]
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex5/ki_0.3_g_asinwt.eps}
+        \caption{Графики входа и выхода}
+        \centerline{при $k_{\text{И}} = 0.3$, $g(t) = \sin{(0.45t)}$}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex5/ki_0.3_g_asinwt_error.eps}
+        \caption{График ошибки}
+        \centerline{при $k_{\text{И}} = 0.3$, $g(t) = \sin{(0.45t)}$}
+    \end{minipage}\\[1em]
+\end{figure}\noindent\
+
+\begin{figure}[H]
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex5/ki_0.7_g_asinwt.eps}
+        \caption{Графики входа и выхода}
+        \centerline{при $k_{\text{И}} = 0.7$, $g(t) = \sin{(0.45t)}$}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex5/ki_0.7_g_asinwt_error.eps}
+        \caption{График ошибки}
+        \centerline{при $k_{\text{И}} = 0.7$, $g(t) = \sin{(0.45t)}$}
+    \end{minipage}\\[1em]
+\end{figure}\noindent\
+
+\begin{figure}[H]
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex5/ki_1.2_g_asinwt.eps}
+        \caption{Графики входа и выхода}
+        \centerline{при $k_{\text{И}} = 1.2$, $g(t) = \sin{(0.45t)}$}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex5/ki_1.2_g_asinwt_error.eps}
+        \caption{График ошибки}
+        \centerline{при $k_{\text{И}} = 1.2$, $g(t) = \sin{(0.45t)}$}
+    \end{minipage}\\[1em]
+\end{figure}\noindent\
+
+Заметно уменьшение амплитуды гармонической ошибки при увеличении $k_{\text{И}}$ и увеличение колебаний в начале движения при увеличении $k_{\text{П}}$. График ошибки не сходится к прямой из-за гармонического задающего сигнала. Для достижения ошибки, сходящейся к константному значению требуется повысить порядок астатизма системы заменой регулятора.
+
+\subsection{Выводы}\
+
+В результате выполнения задания удалось проследить за линейно растущим входным сигналом с установившейся ошибкой, что подтверждает теоретические выкладки о поведении систем с первым порядком астатизма, рассмотренные на лекции. Если повысить порядок астатизма на 1, удастся свести ошибку наблюдения к нулю в случае линейно растущего задающего воздействия. 
+
 \section{Задача слежения за гармоническим сигналом (регулятор общего вида)}\
+
+В задании рассматривается регулятор общего вида, заданный передаточной функцией
+
+$$
+H(s) = \frac{\sum_{k=0}^{m}b_ks_k}{\sum_{k=0}^{m}a_ks_k}.
+$$\
+
+В качестве задаюшего воздействия в систему подаётся $g(t) = \sin{(0.45t)} \Rightarrow G(s) = \frac{0.45}{0.45^2 + s^2}$. Задача --- синтезировать регулятор. Для её решения найдём передаточную функцию по ошибке, приняв $H(s) = \frac{R(s)}{Q(s)}$. 
+
+$$\underset{g\to e}{W}(s) = \frac{1}{1+W_s(s)H(s)} = \frac{1}{1+\frac{5}{s^2+5s+6}\frac{R(s)}{Q(s)}} = \frac{(s^2+5s+6)Q(s)}{(s^2+5s+6)Q(s)+5R(s)}$$\
+
+Попробуем применить теорему о предельном значении:
+
+$$e_{\text{уст}} = \lim_{t\to +\infty} e(t) = \lim_{s\to 0} s\underset{g\to e}{W}(s) G(s) = \lim_{s\to 0}\frac{0.45(s^2+5s+6)Q(s)}{(0.45^2 + s^2)((s^2+5s+6)Q(s)+5R(s))}$$\
+
+Видим, что теорема не применима из-за множителя $(0.45^2 + s^2)$ в знаменателе, имеющего положительный корень. Введём $Q(s) = Q'(s)(0.45^2 + s^2)$, тогда уравнение примет следующий вид:
+
+$$\lim_{s\to 0}\frac{0.45(s^2+5s+6)Q'(s)\cancel{(0.45^2 + s^2)}}{((s^2+5s+6)Q'(s)(0.45^2 + s^2)+5R(s))\cancel{(0.45^2 + s^2)}} = \lim_{s\to 0}\frac{0.45(s^2+5s+6)Q'(s)}{((s^2+5s+6)Q'(s)(0.45^2 + s^2)+5R(s))}$$.\
+
+Система асимптотически устойчива, если все полюса знаменателя дроби в пределе отрицательны. Пусть $Q'(s) = a_3s + a_2$. Тогда $Q(s) = (0.45^2 + s^2)(a_3s + a_2)$. Примем $R(s)$ того же порядка, что и $Q(s)$: $R(s) = b_3s^3 + b_2s^2+b_1s + b_0$. Тогда знаменатель:
+
+$$(s^2+5s+6)Q'(s)(0.45^2 + s^2)+5R(s) = $$
+$$=(s^2 + 5s + 6)(s^2 + 0.45^2)(a_3 s + a_2) + 5(b_3 s^3 + b_2 s^2 + b_1 s + b_0).$$\
+$$(s^2 + 5s + 6)(s^2 + 0.45^2)= s^2(s^2 + 0.45^2) + 5s(s^2 + 0.45^2) + 6(s^2 + 0.45^2) = s^4 + 5s^3 + (0.45^2 + 6)s^2 + 5\cdot0.45^2 s + 6\cdot0.45^2.$$\
+$$(s^2 + 5s + 6)(s^2 + 0.45^2)(a_3s + a_2)=$$
+$$= a_3(s^5 + 5s^4 + (0.45^2 + 6) s^3 + 5\cdot0.45^2 s^2 + 6\cdot0.45^2 s) + a_2(s^4 + 5s^3 + (0.45^2 + 6) s^2 + 5\cdot0.45^2 s + 6\cdot0.45^2)=$$
+$$=a_3 s^5 + (5a_3 + a_2)s^4 + ((0.45^2 + 6) a_3 + 5a_2)s^3 + (5\cdot0.45^2 a_3 + (0.45^2 + 6) a_2)s^2 + (6\cdot0.45^2 a_3 + 5\cdot0.45^2 a_2)s + 6\cdot0.45^2 a_2.$$\
+
+Получили полином $C(s) = c_5s^5 + c_4s^4+c_3s^3+c_2s^2+c_1s + c_0$, где $c_5 = a_3, c_4 = 5a_3 + a_2, c_3 = (0.45^2 + 6) a_3 + 5a_2 + 5b_3, c_2 = 5\cdot0.45^2 a_3 + (0.45^2 + 6) a_2 + 5b_2, c_1 = 6\cdot0.45^2 a_3 + 5\cdot0.45^2 a_2 + 5b_1, c_0 = (0.45^2 + 6) a_2 + 5b_0.$\ Вычислим для него конкретные параметры $c_i$, воспользовавшись типовым полиномом Баттерворта с коэффициентом подобия $\omega_0 = 1$. Полином Баттерворта пятой степени:
+
+$$
+s^5 + 3.24\omega_0s^4+15.24\omega_0^2s^3+15.24\omega_0^3s^2+3.24\omega_0^4s + \omega^5
+$$\
+
+При коэффициенте подобия $\omega_0 = 1$:
+
+$$
+s^5 + 3.24s^4+15.24s^3+15.24s^2+3.24s + 1
+$$
+
+Сопоставим коэффициенты при равных степенях этого полинома и $C(s)$:
+
+$$
+\begin{cases}
+    a_3 = 1, \\
+    5a_3 + a_2 = 3.24, \\ 
+    (0.45^2 + 6) a_3 + 5a_2 + 5b_3 = 15.24, \\
+    0.45^2 \cdot 5 a_3 + (0.45^2 + 6) a_2 + 5b_2 = 15.24, \\
+    0.45^2 \cdot 6 a_3 + 0.45^2 \cdot 5 a_2 + 5b_1 = 3.24, \\
+    0.45^2 \cdot 6 a_2 + 5b_0 = 1.
+\end{cases} \Leftrightarrow \begin{cases}
+    a_3 = 1, \\
+    a_2 = -1.76, \\ 
+    b_3 = 1.57, \\
+    b_2 = 3.03, \\
+    b_1 = 0.76, \\
+    b_0 = 0.62.
+\end{cases}
+$$
+
+Тогда образ Лапласа регулятора выглядит следующим образом:
+
+$$
+H(s) = \frac{R(s)}{Q(s)} = \frac{b_3s^3+b_2s^2 + b_1s + b_0}{a_3s^3 + a_2s^2 + a_1 s + a_0}.
+$$\ 
+
+Также вспомним, что
+
+$$Q(s) = Q'(s)(0.45^2+s^2) = (a_3s + a_2)(0.45^2+s^2) = a_3s^3 + a_2 s^2 + 0.45^2a_3s + 0.45^2a_2.$$
+
+Подставляя найденные значения коэффициентов, получаем
+
+$$
+H(s) = \frac{1.57s^3 + 3.03s^2 + 0.76s + 0.62}{s^3-1.76s^2+0.2025s-0.3564}.
+$$\ 
+
+Проверим работоспособность синтезированного регулятора, найдя его установившуюся ошибку:
+
+
+$$\underset{g\to e}{W}(s) = \frac{1}{1+W_s(s)H(s)} = \frac{1}{1+\frac{5}{s^2+5s+6}\frac{1.57s^3 + 3.03s^2 + 0.76s + 0.62}{s^3-1.76s^2+0.2025s-0.3564}}=$$
+
+$$ = \frac{(s^3-1.76s^2+0.2025s-0.3564)(s^2+5s+6)}{(s^3-1.76s^2+0.2025s-0.3564)(s^2+5s+6) + 5(1.57s^3 + 3.03s^2 + 0.76s + 0.62)}$$
+
+$$
+e_{\text{уст}} = \lim_{t\to +\infty} e(t) = \lim_{s\to 0} s\underset{g\to e}{W}(s) G(s) =
+$$
+
+$$
+= \lim_{s\to 0}\frac{0.45s(s^3-1.76s^2+0.2025s-0.3564)(s^2+5s+6)}{(s^3-1.76s^2+0.2025s-0.3564)(s^2+5s+6) + 5(1.57s^3 + 3.03s^2 + 0.76s + 0.62)(0.45^2 + s^2)}=
+$$
+
+$$
+= \frac{0}{-0.3654\cdot6\cdot5\cdot0.62\cdot0.45^2} = 0
+$$\ 
+
+Теоретически устойчивость синтезированного регулятора подтверждается. Теперь время провести реальное моделирование:
+
+\begin{figure}[H]
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex6/sin.eps}
+        \caption{Графики входа и выхода}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering \includegraphics[width=\textwidth]{ex6/error_0.135.eps}
+        \caption{График ошибки}
+    \end{minipage}\\[1em]
+\end{figure}\noindent\
+
+Судя по графику, время переходного процесса составило $7.99$ секунд. Так как выбрано $\omega_0 = 1$, то по теореме подобия это время должно соответствовать данному в таблице из материалов практики для 5-го порядка системы ($7.7$). Значения совпадают неидельно.
+
+\subsection{Выводы}\
+
+В задании был синтезирован регулятор, следящий за гармоническим сигналом, проверена его работоспособность. Действия, осуществленные для синтезирования конкретно этого регулятора, по сути совпадают с действиями, необходимыми для синтезирования и других регуляторов. Так что можно заключить, что выполнив задание, я научился синтезировать регуляторы.
+
+\section{Вывод по работе}\ 
+
+Выполнив лабораторную работу, я познакомился с задачами стабилизации и слежения, а также с их решениями, посмотрел на простейшие виды регуляторов, выявил связь между ``подвижностью'' системы и порядком астатизма, научился понимать, какой вид сигнала система может отследить с нулевой установившейся ошибкой, научился аналитически выводить статическую ошибку от внешнего воздействия по передаточным функциям, осознал как синтезировать регуляторы 
 
 \section{Приложение А. Код для выполнения заданий}
 
@@ -590,7 +1016,7 @@ saveas(fig_regulator, string(scriptName) + '\' + 'zamk_fig' + '.eps', 'epsc')
 % y = lsim(sys, u(:,2), t);
 % plot(t, y)
 \end{lstlisting}
-\subsection*{Листинг 1. Код для выполнения задания 1}
+\subsection*{Листинг 2. Код для выполнения задания 2}
 
 \begin{lstlisting}[caption={Код для построения графиков для задания 2}, language=matlab]
 % clear all;
@@ -644,4 +1070,203 @@ saveas(fig_regulator, string(scriptName) + '\' + string(T) + '.eps', 'epsc')
 \end{lstlisting}
 
 
+\subsection*{Листинг 3. Код для выполнения задания 3}
+\begin{lstlisting}[caption={Код для построения графиков для задания 3}, language=matlab]
+% clear all;
+close all;
+
+[~, scriptName] = fileparts(mfilename('fullpath'));
+if ~isfolder(scriptName)
+    mkdir(scriptName);
+end
+
+t = (0:0.01:8)';
+
+% g_strs = {'g_a', 'g_vt', 'g_at2', 'g_asinwt'};
+g_strs = {'g_a', 'g_vt'};
+g_latexs = {'1', 't', '0.45t^2', '\sin{(0.45 t)}'};
+g_variants = [ones(size(t)), t, 0.45.*t.^2, sin(0.45.*t)];
+
+for i = 1:numel(g_strs)
+    g = [t, g_variants(:, i)];
+    g_str = g_strs{i};
+    g_latex = g_latexs{i};
+    for k = [100]
+        fig_regulator = figure;
+        hold on; grid on;
+
+        out = sim('ex3/model_regulator3.slx','StopTime','8');
+        y_model = out.y;
+        error = out.e;
+        plot(t, g(:,2), LineWidth=1.2, DisplayName="$g(t) = " + g_latex + "$")
+        plot(y_model.Time, y_model.Data, LineWidth=1.2, DisplayName="$y_{zamk}(t), k = " + string(k) + "$")
+        xlabel('Время'), ylabel('Амплитуда')
+        legend(Interpreter='latex', Location='best', BackgroundAlpha=.3, FontSize=12, FontName='Computer Modern')
+
+        fig_error = figure;
+        plot(error.Time, error.Data, LineWidth=1.2, DisplayName="$e(t)$")
+        grid on;
+        legend(Interpreter='latex', Location='best', BackgroundAlpha=.3, FontSize=12, FontName='Computer Modern')
+        xlabel('Время'), ylabel('Ошибка')
+        saveas(fig_regulator, string(scriptName) + '\k' + string(k) + '_' + g_str + '.eps', 'epsc')
+        saveas(fig_error, string(scriptName) + '\k' + string(k) + '_' + g_str + '_error.eps', 'epsc')
+    end
+end
+\end{lstlisting}
+
+\subsection*{Листинг 4. Код для выполнения задания 4}
+\begin{lstlisting}[caption={Код для построения графиков для задания 4}, language=matlab]
+% clear all;
+close all;
+
+[~, scriptName] = fileparts(mfilename('fullpath'));
+if ~isfolder(scriptName)
+    mkdir(scriptName);
+end
+
+t = (0:0.01:8)';
+
+% g_strs = {'g_a', 'g_vt', 'g_at2', 'g_asinwt'};
+g_strs = {'g_a', 'g_vt', 'g_at2'};
+g_latexs = {'1', 't', '0.45t^2', '\sin{(0.45 t)}'};
+g_variants = [ones(size(t)), t, 0.45.*t.^2, sin(0.45.*t)];
+
+for i = 1:numel(g_strs)
+    g = [t, g_variants(:, i)];
+    g_str = g_strs{i};
+    g_latex = g_latexs{i};
+    for k = [0.5, 1, 3]
+        fig_regulator = figure;
+        hold on; grid on;
+
+        out = sim('ex4/model_regulator4.slx','StopTime','8');
+        y_model = out.y;
+        error = out.e;
+        plot(t, g(:,2), LineWidth=1.2, DisplayName="$g(t) = " + g_latex + "$")
+        plot(y_model.Time, y_model.Data, LineWidth=1.2, DisplayName="$y_{zamk}(t), k = " + string(k) + "$")
+        xlabel('Время'), ylabel('Амплитуда')
+        legend(Interpreter='latex', Location='best', BackgroundAlpha=.3, FontSize=12, FontName='Computer Modern')
+
+        fig_error = figure;
+        plot(error.Time, error.Data, LineWidth=1.2, DisplayName="$e(t)$")
+        grid on; hold on;
+        if (i == 2)
+            e_steady = error.Data(end);
+            xl = xlim;                     % текущие пределы по X - вектор [x_min, x_max]
+            plot(xl, [e_steady, e_steady], 'k-.', Color='black', DisplayName="$e_{end} = " + string(e_steady) + "$");     % два значения y0 для двух точек
+        end
+        legend(Interpreter='latex', Location='best', BackgroundAlpha=.3, FontSize=12, FontName='Computer Modern')
+        xlabel('Время'), ylabel('Ошибка')
+        saveas(fig_regulator, string(scriptName) + '\k' + string(k) + '_' + g_str + '.eps', 'epsc')
+        saveas(fig_error, string(scriptName) + '\k' + string(k) + '_' + g_str + '_error.eps', 'epsc')
+    end
+end
+\end{lstlisting}
+
+\subsection*{Листинг 5. Код для выполнения задания 5}
+\begin{lstlisting}[caption={Код для построения графиков для задания 5}, language=matlab]
+% clear all;
+close all;
+
+[~, scriptName] = fileparts(mfilename('fullpath'));
+if ~isfolder(scriptName)
+    mkdir(scriptName);
+end
+
+t = (0:0.01:25)';
+
+% g_strs = {'g_a', 'g_vt', 'g_at2', 'g_asinwt'};
+g_strs = {'g_vt', 'g_asinwt'};
+g_latexs = {'t', '\sin{(0.45 t)}'};
+g_variants = [t, sin(0.45.*t)];
+
+for i = 1:numel(g_strs)
+    g = [t, g_variants(:, i)];
+    g_str = g_strs{i};
+    g_latex = g_latexs{i};
+    for k_i = [0.3, 0.7, 1.2]
+        fig_regulator = figure;
+        ax_regulator = gca;
+        fig_error = figure;
+        ax_error = gca;
+        xlabel(ax_regulator, 'Время'), ylabel(ax_regulator, 'Амплитуда')
+        xlabel(ax_error, 'Время'), ylabel(ax_error, 'Ошибка')
+        hold(ax_regulator, 'on'); grid(ax_regulator, 'on');
+        hold(ax_error, 'on'); grid(ax_error, 'on');
+        plot(ax_regulator, t, g(:,2), LineWidth=1.5, DisplayName="$g(t) = " + g_latex + "$", Color='black')
+        for k_p = [0.5, 1, 2]
+            out = sim('ex5/model_regulator5.slx','StopTime','25');
+            y_model = out.y;
+            error = out.e;
+            plot(ax_regulator, y_model.Time, y_model.Data, LineWidth=1.2, DisplayName="$y_{zamk}(t), k_p = " + string(k_p) + "$")
+            legend(Interpreter='latex', Location='best', BackgroundAlpha=.3, FontSize=10, FontName='Computer Modern')
+            plot(ax_error, error.Time, error.Data, LineWidth=1.2, DisplayName="$e(t), k_p = " + string(k_p) + "$")
+        end
+        if (i == 1)
+            e_steady = error.Data(end);
+            xl = xlim(ax_error);                     % текущие пределы по X - вектор [x_min, x_max]
+            plot(ax_error, xl, [e_steady, e_steady], 'k-.', Color='black', DisplayName="$e_{end} = " + string(e_steady) + "$");     % два значения y0 для двух точек
+        end
+        if (i == 2)
+            ylim(ax_regulator, [-1.2, 2.1])
+        end
+        % xlim(ax_error, [0, 25]); xlim(ax_regulator, [0, 25]); 
+        legend(ax_regulator, Interpreter='latex', Location='best', BackgroundAlpha=.3, FontSize=12, FontName='Computer Modern')
+        legend(ax_error, Interpreter='latex', Location='best', BackgroundAlpha=.3, FontSize=12, FontName='Computer Modern')
+        saveas(fig_regulator, string(scriptName) + '\ki_' + string(k_i) + '_' + g_str + '.eps', 'epsc')
+        saveas(fig_error, string(scriptName) + '\ki_' + string(k_i) + '_' + g_str + '_error.eps', 'epsc')
+    end
+end
+\end{lstlisting}
+
+\subsection*{Листинг 6. Код для выполнения задания 6}
+\begin{lstlisting}[caption={Код для построения графиков для задания 6}, language=matlab]
+% clear all;
+close all;
+
+[~, scriptName] = fileparts(mfilename('fullpath'));
+if ~isfolder(scriptName)
+    mkdir(scriptName);
+end
+
+t = (0:0.001:25)';
+
+% g_strs = {'g_a', 'g_vt', 'g_at2', 'g_asinwt'};
+g_strs = {'g_asinwt'};
+g_latexs = {'\sin{(0.45 t)}'};
+g_variants = [sin(0.45.*t)];
+
+for i = 1:numel(g_strs)
+    g = [t, g_variants(:, i)];
+    g_str = g_strs{i};
+    g_latex = g_latexs{i};
+    fig_regulator = figure;
+    ax_regulator = gca;
+    fig_error = figure;
+    ax_error = gca;
+    xlabel(ax_regulator, 'Время'), ylabel(ax_regulator, 'Амплитуда')
+    xlabel(ax_error, 'Время'), ylabel(ax_error, 'Ошибка')
+    hold(ax_regulator, 'on'); grid(ax_regulator, 'on');
+    hold(ax_error, 'on'); grid(ax_error, 'on');
+    plot(ax_regulator, t, g(:,2), LineWidth=1.5, DisplayName="$g(t) = " + g_latex + "$", Color='black')
+    out = sim('ex6/model_regulator6.slx','StopTime','25');
+    y_model = out.y;
+    error = out.e;
+    plot(ax_regulator, y_model.Time, y_model.Data, LineWidth=1.2, DisplayName="$y_{zamk}(t), k_p = " + string(k_p) + "$")
+    legend(Interpreter='latex', Location='best', BackgroundAlpha=.3, FontSize=10, FontName='Computer Modern')
+    h1 = plot(ax_error, error.Time, error.Data, LineWidth=1.2, DisplayName="$e(t), k_p = " + string(k_p) + "$");
+    xl = xlim(ax_error);
+    err_max = max(error.Data);
+    err_min = min(error.Data);
+    difference = (err_max + abs(err_min))*0.135; % время переходного процесса до момента пока не будет погрешность 2%
+    % plot(ax_error, xl, [0, 0], 'k-.', Color='black', DisplayName="$e_{end} = " + string(0) + "$");
+    yline(ax_error,-difference, 'k-.'); % нижняя граница окрестности
+    yline(ax_error, difference, 'k-.'); % верхняя граница окрестности
+    % xlim(ax_error, [0, 25]); xlim(ax_regulator, [0, 25]); 
+    legend(ax_regulator, Interpreter='latex', Location='best', BackgroundAlpha=.3, FontSize=12, FontName='Computer Modern')
+    legend(ax_error, h1, Interpreter='latex', Location='best', BackgroundAlpha=.3, FontSize=12, FontName='Computer Modern')
+    saveas(fig_regulator, string(scriptName) + '\ki_' + string(k_i) + '_' + g_str + '.eps', 'epsc')
+    saveas(fig_error, string(scriptName) + '\ki_' + string(k_i) + '_' + g_str + '_error.eps', 'epsc')
+end
+\end{lstlisting}
 \end{document}

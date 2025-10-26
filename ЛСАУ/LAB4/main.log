@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.10.25)  25 OCT 2025 23:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.10.25)  26 OCT 2025 18:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/main/Downloads/LSAC_LAB4/main.tex
-(c:/Users/main/Downloads/LSAC_LAB4/main.tex
+**c:/Users/main/учеба/github/ITMO/ЛСАУ/LAB4/main.tex
+(c:/Users/main/учеба/github/ITMO/ЛСАУ/LAB4/main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (C:\Program Files\MiKTeX\tex/latex/base\article.cls
@@ -940,17 +940,17 @@ Package epstopdf Info: Source file: <ex1/razomk_fig.eps>
 (epstopdf)             Command: <miktex-epstopdf --outfile=ex1/razomk_fig-eps-converted-to.pdf ex1/razomk_fig.eps>
 (epstopdf)             \includegraphics on input line 192.
 Package epstopdf Info: Output file is already uptodate.
-<ex1/razomk_fig-eps-converted-to.pdf, id=76, 368.37625pt x 293.095pt>
+<ex1/razomk_fig-eps-converted-to.pdf, id=129, 368.37625pt x 293.095pt>
 File: ex1/razomk_fig-eps-converted-to.pdf Graphic file (type pdf)
 <use ex1/razomk_fig-eps-converted-to.pdf>
 Package pdftex.def Info: ex1/razomk_fig-eps-converted-to.pdf  used on input line 192.
 (pdftex.def)             Requested size: 307.2929pt x 244.49417pt.
-<ex1/scheme_main.png, id=77, 1824.8175pt x 816.04875pt>
+<ex1/scheme_main.png, id=130, 1824.8175pt x 816.04875pt>
 File: ex1/scheme_main.png Graphic file (type png)
 <use ex1/scheme_main.png>
 Package pdftex.def Info: ex1/scheme_main.png  used on input line 206.
 (pdftex.def)             Requested size: 332.89412pt x 148.86229pt.
-<ex1/scheme_ws.png, id=78, 1824.8175pt x 816.04875pt>
+<ex1/scheme_ws.png, id=131, 1824.8175pt x 816.04875pt>
 File: ex1/scheme_ws.png Graphic file (type png)
 <use ex1/scheme_ws.png>
 Package pdftex.def Info: ex1/scheme_ws.png  used on input line 212.
@@ -964,7 +964,7 @@ Package fancyhdr Warning: \headheight is too small (0.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
 
 [3 <./ex1/razomk_fig-eps-converted-to.pdf> <./ex1/scheme_main.png (PNG copy)>]
-<ex1/scheme_hs.png, id=96, 1824.8175pt x 816.04875pt>
+<ex1/scheme_hs.png, id=146, 1824.8175pt x 816.04875pt>
 File: ex1/scheme_hs.png Graphic file (type png)
 <use ex1/scheme_hs.png>
 Package pdftex.def Info: ex1/scheme_hs.png  used on input line 218.
@@ -987,7 +987,7 @@ Package epstopdf Info: Source file: <ex1/zamk_fig.eps>
 (epstopdf)             Command: <miktex-epstopdf --outfile=ex1/zamk_fig-eps-converted-to.pdf ex1/zamk_fig.eps>
 (epstopdf)             \includegraphics on input line 258.
 Package epstopdf Info: Output file is already uptodate.
-<ex1/zamk_fig-eps-converted-to.pdf, id=105, 365.365pt x 293.095pt>
+<ex1/zamk_fig-eps-converted-to.pdf, id=155, 365.365pt x 293.095pt>
 File: ex1/zamk_fig-eps-converted-to.pdf Graphic file (type pdf)
 <use ex1/zamk_fig-eps-converted-to.pdf>
 Package pdftex.def Info: ex1/zamk_fig-eps-converted-to.pdf  used on input line 258.
@@ -1008,12 +1008,12 @@ Package epstopdf Info: Source file: <ex2/all.eps>
 (epstopdf)                    date: 2025-10-25 22:42:04
 (epstopdf)                    size: 253518 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=ex2/all-eps-converted-to.pdf ex2/all.eps>
-(epstopdf)             \includegraphics on input line 380.
+(epstopdf)             \includegraphics on input line 364.
 Package epstopdf Info: Output file is already uptodate.
-<ex2/all-eps-converted-to.pdf, id=116, 365.365pt x 293.095pt>
+<ex2/all-eps-converted-to.pdf, id=166, 365.365pt x 293.095pt>
 File: ex2/all-eps-converted-to.pdf Graphic file (type pdf)
 <use ex2/all-eps-converted-to.pdf>
-Package pdftex.def Info: ex2/all-eps-converted-to.pdf  used on input line 380.
+Package pdftex.def Info: ex2/all-eps-converted-to.pdf  used on input line 364.
 (pdftex.def)             Requested size: 332.89412pt x 267.06122pt.
 
 
@@ -1031,12 +1031,12 @@ Package epstopdf Info: Source file: <ex2/0.434.eps>
 (epstopdf)                    date: 2025-10-25 22:42:06
 (epstopdf)                    size: 68323 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=ex2/0.434-eps-converted-to.pdf ex2/0.434.eps>
-(epstopdf)             \includegraphics on input line 388.
+(epstopdf)             \includegraphics on input line 372.
 Package epstopdf Info: Output file is already uptodate.
-<ex2/0.434-eps-converted-to.pdf, id=121, 365.365pt x 293.095pt>
+<ex2/0.434-eps-converted-to.pdf, id=171, 365.365pt x 293.095pt>
 File: ex2/0.434-eps-converted-to.pdf Graphic file (type pdf)
 <use ex2/0.434-eps-converted-to.pdf>
-Package pdftex.def Info: ex2/0.434-eps-converted-to.pdf  used on input line 388.
+Package pdftex.def Info: ex2/0.434-eps-converted-to.pdf  used on input line 372.
 (pdftex.def)             Requested size: 332.89412pt x 267.06122pt.
 
 
@@ -1047,10 +1047,10 @@ Package fancyhdr Warning: \headheight is too small (0.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
 
 [7 <./ex2/all-eps-converted-to.pdf> <./ex2/0.434-eps-converted-to.pdf>]
-<ex3/image.png, id=139, 1824.8175pt x 816.04875pt>
+<ex3/image.png, id=189, 1824.8175pt x 816.04875pt>
 File: ex3/image.png Graphic file (type png)
 <use ex3/image.png>
-Package pdftex.def Info: ex3/image.png  used on input line 404.
+Package pdftex.def Info: ex3/image.png  used on input line 388.
 (pdftex.def)             Requested size: 332.89412pt x 148.86229pt.
 
 
@@ -1068,12 +1068,12 @@ Package epstopdf Info: Source file: <ex3/k1_g_a.eps>
 (epstopdf)                    date: 2025-10-25 22:42:10
 (epstopdf)                    size: 51646 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=ex3/k1_g_a-eps-converted-to.pdf ex3/k1_g_a.eps>
-(epstopdf)             \includegraphics on input line 451.
+(epstopdf)             \includegraphics on input line 435.
 Package epstopdf Info: Output file is already uptodate.
-<ex3/k1_g_a-eps-converted-to.pdf, id=147, 362.35374pt x 293.095pt>
+<ex3/k1_g_a-eps-converted-to.pdf, id=197, 362.35374pt x 293.095pt>
 File: ex3/k1_g_a-eps-converted-to.pdf Graphic file (type pdf)
 <use ex3/k1_g_a-eps-converted-to.pdf>
-Package pdftex.def Info: ex3/k1_g_a-eps-converted-to.pdf  used on input line 451.
+Package pdftex.def Info: ex3/k1_g_a-eps-converted-to.pdf  used on input line 435.
 (pdftex.def)             Requested size: 256.07481pt x 207.13289pt.
 Package epstopdf Info: Source file: <ex3/k1_g_a_error.eps>
 (epstopdf)                    date: 2025-10-25 19:36:20
@@ -1082,15 +1082,15 @@ Package epstopdf Info: Source file: <ex3/k1_g_a_error.eps>
 (epstopdf)                    date: 2025-10-25 22:42:11
 (epstopdf)                    size: 46325 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=ex3/k1_g_a_error-eps-converted-to.pdf ex3/k1_g_a_error.eps>
-(epstopdf)             \includegraphics on input line 456.
+(epstopdf)             \includegraphics on input line 439.
 Package epstopdf Info: Output file is already uptodate.
-<ex3/k1_g_a_error-eps-converted-to.pdf, id=148, 367.3725pt x 293.095pt>
+<ex3/k1_g_a_error-eps-converted-to.pdf, id=198, 367.3725pt x 293.095pt>
 File: ex3/k1_g_a_error-eps-converted-to.pdf Graphic file (type pdf)
 <use ex3/k1_g_a_error-eps-converted-to.pdf>
-Package pdftex.def Info: ex3/k1_g_a_error-eps-converted-to.pdf  used on input line 456.
+Package pdftex.def Info: ex3/k1_g_a_error-eps-converted-to.pdf  used on input line 439.
 (pdftex.def)             Requested size: 256.07481pt x 204.31535pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 450--460
+Underfull \hbox (badness 10000) in paragraph at lines 434--443
 
  []
 
@@ -1101,12 +1101,12 @@ Package epstopdf Info: Source file: <ex3/k3_g_a.eps>
 (epstopdf)                    date: 2025-10-25 22:42:12
 (epstopdf)                    size: 53054 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=ex3/k3_g_a-eps-converted-to.pdf ex3/k3_g_a.eps>
-(epstopdf)             \includegraphics on input line 466.
+(epstopdf)             \includegraphics on input line 449.
 Package epstopdf Info: Output file is already uptodate.
-<ex3/k3_g_a-eps-converted-to.pdf, id=149, 362.35374pt x 293.095pt>
+<ex3/k3_g_a-eps-converted-to.pdf, id=199, 362.35374pt x 293.095pt>
 File: ex3/k3_g_a-eps-converted-to.pdf Graphic file (type pdf)
 <use ex3/k3_g_a-eps-converted-to.pdf>
-Package pdftex.def Info: ex3/k3_g_a-eps-converted-to.pdf  used on input line 466.
+Package pdftex.def Info: ex3/k3_g_a-eps-converted-to.pdf  used on input line 449.
 (pdftex.def)             Requested size: 256.07481pt x 207.13289pt.
 Package epstopdf Info: Source file: <ex3/k3_g_a_error.eps>
 (epstopdf)                    date: 2025-10-25 19:36:20
@@ -1115,15 +1115,15 @@ Package epstopdf Info: Source file: <ex3/k3_g_a_error.eps>
 (epstopdf)                    date: 2025-10-25 22:42:13
 (epstopdf)                    size: 46245 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=ex3/k3_g_a_error-eps-converted-to.pdf ex3/k3_g_a_error.eps>
-(epstopdf)             \includegraphics on input line 471.
+(epstopdf)             \includegraphics on input line 453.
 Package epstopdf Info: Output file is already uptodate.
-<ex3/k3_g_a_error-eps-converted-to.pdf, id=150, 362.35374pt x 293.095pt>
+<ex3/k3_g_a_error-eps-converted-to.pdf, id=200, 362.35374pt x 293.095pt>
 File: ex3/k3_g_a_error-eps-converted-to.pdf Graphic file (type pdf)
 <use ex3/k3_g_a_error-eps-converted-to.pdf>
-Package pdftex.def Info: ex3/k3_g_a_error-eps-converted-to.pdf  used on input line 471.
+Package pdftex.def Info: ex3/k3_g_a_error-eps-converted-to.pdf  used on input line 453.
 (pdftex.def)             Requested size: 256.07481pt x 207.13289pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 465--475
+Underfull \hbox (badness 10000) in paragraph at lines 448--457
 
  []
 
@@ -1134,12 +1134,12 @@ Package epstopdf Info: Source file: <ex3/k7_g_a.eps>
 (epstopdf)                    date: 2025-10-25 22:42:14
 (epstopdf)                    size: 52491 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=ex3/k7_g_a-eps-converted-to.pdf ex3/k7_g_a.eps>
-(epstopdf)             \includegraphics on input line 481.
+(epstopdf)             \includegraphics on input line 463.
 Package epstopdf Info: Output file is already uptodate.
-<ex3/k7_g_a-eps-converted-to.pdf, id=151, 362.35374pt x 293.095pt>
+<ex3/k7_g_a-eps-converted-to.pdf, id=201, 362.35374pt x 293.095pt>
 File: ex3/k7_g_a-eps-converted-to.pdf Graphic file (type pdf)
 <use ex3/k7_g_a-eps-converted-to.pdf>
-Package pdftex.def Info: ex3/k7_g_a-eps-converted-to.pdf  used on input line 481.
+Package pdftex.def Info: ex3/k7_g_a-eps-converted-to.pdf  used on input line 463.
 (pdftex.def)             Requested size: 256.07481pt x 207.13289pt.
 Package epstopdf Info: Source file: <ex3/k7_g_a_error.eps>
 (epstopdf)                    date: 2025-10-25 19:36:20
@@ -1148,15 +1148,15 @@ Package epstopdf Info: Source file: <ex3/k7_g_a_error.eps>
 (epstopdf)                    date: 2025-10-25 22:42:15
 (epstopdf)                    size: 44965 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=ex3/k7_g_a_error-eps-converted-to.pdf ex3/k7_g_a_error.eps>
-(epstopdf)             \includegraphics on input line 486.
+(epstopdf)             \includegraphics on input line 467.
 Package epstopdf Info: Output file is already uptodate.
-<ex3/k7_g_a_error-eps-converted-to.pdf, id=152, 365.365pt x 293.095pt>
+<ex3/k7_g_a_error-eps-converted-to.pdf, id=202, 365.365pt x 293.095pt>
 File: ex3/k7_g_a_error-eps-converted-to.pdf Graphic file (type pdf)
 <use ex3/k7_g_a_error-eps-converted-to.pdf>
-Package pdftex.def Info: ex3/k7_g_a_error-eps-converted-to.pdf  used on input line 486.
+Package pdftex.def Info: ex3/k7_g_a_error-eps-converted-to.pdf  used on input line 467.
 (pdftex.def)             Requested size: 256.07481pt x 205.43343pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 480--490
+Underfull \hbox (badness 10000) in paragraph at lines 462--471
 
  []
 
@@ -1175,12 +1175,12 @@ Package epstopdf Info: Source file: <ex3/k1_g_vt.eps>
 (epstopdf)                    date: 2025-10-25 22:42:16
 (epstopdf)                    size: 73944 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=ex3/k1_g_vt-eps-converted-to.pdf ex3/k1_g_vt.eps>
-(epstopdf)             \includegraphics on input line 502.
+(epstopdf)             \includegraphics on input line 483.
 Package epstopdf Info: Output file is already uptodate.
-<ex3/k1_g_vt-eps-converted-to.pdf, id=180, 354.32375pt x 293.095pt>
+<ex3/k1_g_vt-eps-converted-to.pdf, id=230, 354.32375pt x 293.095pt>
 File: ex3/k1_g_vt-eps-converted-to.pdf Graphic file (type pdf)
 <use ex3/k1_g_vt-eps-converted-to.pdf>
-Package pdftex.def Info: ex3/k1_g_vt-eps-converted-to.pdf  used on input line 502.
+Package pdftex.def Info: ex3/k1_g_vt-eps-converted-to.pdf  used on input line 483.
 (pdftex.def)             Requested size: 256.07481pt x 211.82877pt.
 Package epstopdf Info: Source file: <ex3/k1_g_vt_error.eps>
 (epstopdf)                    date: 2025-10-25 19:36:20
@@ -1189,26 +1189,18 @@ Package epstopdf Info: Source file: <ex3/k1_g_vt_error.eps>
 (epstopdf)                    date: 2025-10-25 22:42:17
 (epstopdf)                    size: 59356 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=ex3/k1_g_vt_error-eps-converted-to.pdf ex3/k1_g_vt_error.eps>
-(epstopdf)             \includegraphics on input line 507.
+(epstopdf)             \includegraphics on input line 487.
 Package epstopdf Info: Output file is already uptodate.
-<ex3/k1_g_vt_error-eps-converted-to.pdf, id=181, 362.35374pt x 293.095pt>
+<ex3/k1_g_vt_error-eps-converted-to.pdf, id=231, 362.35374pt x 293.095pt>
 File: ex3/k1_g_vt_error-eps-converted-to.pdf Graphic file (type pdf)
 <use ex3/k1_g_vt_error-eps-converted-to.pdf>
-Package pdftex.def Info: ex3/k1_g_vt_error-eps-converted-to.pdf  used on input line 507.
+Package pdftex.def Info: ex3/k1_g_vt_error-eps-converted-to.pdf  used on input line 487.
 (pdftex.def)             Requested size: 256.07481pt x 207.13289pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 501--511
+Underfull \hbox (badness 10000) in paragraph at lines 482--491
 
  []
 
-
-Package fancyhdr Warning: \headheight is too small (0.0pt): 
-(fancyhdr)                Make it at least 12.0pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.0pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
-
-[10 <./ex3/k7_g_a-eps-converted-to.pdf> <./ex3/k7_g_a_error-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <ex3/k3_g_vt.eps>
 (epstopdf)                    date: 2025-10-25 19:36:20
 (epstopdf)                    size: 197953 bytes
@@ -1216,12 +1208,12 @@ Package epstopdf Info: Source file: <ex3/k3_g_vt.eps>
 (epstopdf)                    date: 2025-10-25 22:42:19
 (epstopdf)                    size: 74578 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=ex3/k3_g_vt-eps-converted-to.pdf ex3/k3_g_vt.eps>
-(epstopdf)             \includegraphics on input line 515.
+(epstopdf)             \includegraphics on input line 495.
 Package epstopdf Info: Output file is already uptodate.
-<ex3/k3_g_vt-eps-converted-to.pdf, id=197, 354.32375pt x 293.095pt>
+<ex3/k3_g_vt-eps-converted-to.pdf, id=232, 354.32375pt x 293.095pt>
 File: ex3/k3_g_vt-eps-converted-to.pdf Graphic file (type pdf)
 <use ex3/k3_g_vt-eps-converted-to.pdf>
-Package pdftex.def Info: ex3/k3_g_vt-eps-converted-to.pdf  used on input line 515.
+Package pdftex.def Info: ex3/k3_g_vt-eps-converted-to.pdf  used on input line 495.
 (pdftex.def)             Requested size: 256.07481pt x 211.82877pt.
 Package epstopdf Info: Source file: <ex3/k3_g_vt_error.eps>
 (epstopdf)                    date: 2025-10-25 19:36:20
@@ -1230,48 +1222,15 @@ Package epstopdf Info: Source file: <ex3/k3_g_vt_error.eps>
 (epstopdf)                    date: 2025-10-25 22:42:20
 (epstopdf)                    size: 57811 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=ex3/k3_g_vt_error-eps-converted-to.pdf ex3/k3_g_vt_error.eps>
-(epstopdf)             \includegraphics on input line 520.
+(epstopdf)             \includegraphics on input line 499.
 Package epstopdf Info: Output file is already uptodate.
-<ex3/k3_g_vt_error-eps-converted-to.pdf, id=198, 362.35374pt x 293.095pt>
+<ex3/k3_g_vt_error-eps-converted-to.pdf, id=233, 362.35374pt x 293.095pt>
 File: ex3/k3_g_vt_error-eps-converted-to.pdf Graphic file (type pdf)
 <use ex3/k3_g_vt_error-eps-converted-to.pdf>
-Package pdftex.def Info: ex3/k3_g_vt_error-eps-converted-to.pdf  used on input line 520.
+Package pdftex.def Info: ex3/k3_g_vt_error-eps-converted-to.pdf  used on input line 499.
 (pdftex.def)             Requested size: 256.07481pt x 207.13289pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 514--524
-
- []
-
-Package epstopdf Info: Source file: <ex3/k7_g_vt.eps>
-(epstopdf)                    date: 2025-10-25 19:36:20
-(epstopdf)                    size: 196726 bytes
-(epstopdf)             Output file: <ex3/k7_g_vt-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-10-25 22:42:21
-(epstopdf)                    size: 73855 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=ex3/k7_g_vt-eps-converted-to.pdf ex3/k7_g_vt.eps>
-(epstopdf)             \includegraphics on input line 528.
-Package epstopdf Info: Output file is already uptodate.
-<ex3/k7_g_vt-eps-converted-to.pdf, id=199, 354.32375pt x 293.095pt>
-File: ex3/k7_g_vt-eps-converted-to.pdf Graphic file (type pdf)
-<use ex3/k7_g_vt-eps-converted-to.pdf>
-Package pdftex.def Info: ex3/k7_g_vt-eps-converted-to.pdf  used on input line 528.
-(pdftex.def)             Requested size: 256.07481pt x 211.82877pt.
-Package epstopdf Info: Source file: <ex3/k7_g_vt_error.eps>
-(epstopdf)                    date: 2025-10-25 19:36:20
-(epstopdf)                    size: 168866 bytes
-(epstopdf)             Output file: <ex3/k7_g_vt_error-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-10-25 22:42:22
-(epstopdf)                    size: 59646 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=ex3/k7_g_vt_error-eps-converted-to.pdf ex3/k7_g_vt_error.eps>
-(epstopdf)             \includegraphics on input line 533.
-Package epstopdf Info: Output file is already uptodate.
-<ex3/k7_g_vt_error-eps-converted-to.pdf, id=200, 362.35374pt x 293.095pt>
-File: ex3/k7_g_vt_error-eps-converted-to.pdf Graphic file (type pdf)
-<use ex3/k7_g_vt_error-eps-converted-to.pdf>
-Package pdftex.def Info: ex3/k7_g_vt_error-eps-converted-to.pdf  used on input line 533.
-(pdftex.def)             Requested size: 256.07481pt x 207.13289pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 527--537
+Underfull \hbox (badness 10000) in paragraph at lines 494--503
 
  []
 
@@ -1282,11 +1241,768 @@ Package fancyhdr Warning: \headheight is too small (0.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
 
-[11 <./ex3/k1_g_vt-eps-converted-to.pdf> <./ex3/k1_g_vt_error-eps-converted-to.pdf> <./ex3/k3_g_vt-eps-converted-to.pdf> <./ex3/k3_g_vt_error-eps-converted-to.pdf>] (C:\Program Files\MiKTeX\tex/latex/listings\lstlang1.sty
+[10 <./ex3/k7_g_a-eps-converted-to.pdf> <./ex3/k7_g_a_error-eps-converted-to.pdf> <./ex3/k1_g_vt-eps-converted-to.pdf> <./ex3/k1_g_vt_error-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <ex3/k7_g_vt.eps>
+(epstopdf)                    date: 2025-10-25 19:36:20
+(epstopdf)                    size: 196726 bytes
+(epstopdf)             Output file: <ex3/k7_g_vt-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-25 22:42:21
+(epstopdf)                    size: 73855 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex3/k7_g_vt-eps-converted-to.pdf ex3/k7_g_vt.eps>
+(epstopdf)             \includegraphics on input line 507.
+Package epstopdf Info: Output file is already uptodate.
+<ex3/k7_g_vt-eps-converted-to.pdf, id=260, 354.32375pt x 293.095pt>
+File: ex3/k7_g_vt-eps-converted-to.pdf Graphic file (type pdf)
+<use ex3/k7_g_vt-eps-converted-to.pdf>
+Package pdftex.def Info: ex3/k7_g_vt-eps-converted-to.pdf  used on input line 507.
+(pdftex.def)             Requested size: 256.07481pt x 211.82877pt.
+Package epstopdf Info: Source file: <ex3/k7_g_vt_error.eps>
+(epstopdf)                    date: 2025-10-25 19:36:20
+(epstopdf)                    size: 168866 bytes
+(epstopdf)             Output file: <ex3/k7_g_vt_error-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-25 22:42:22
+(epstopdf)                    size: 59646 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex3/k7_g_vt_error-eps-converted-to.pdf ex3/k7_g_vt_error.eps>
+(epstopdf)             \includegraphics on input line 511.
+Package epstopdf Info: Output file is already uptodate.
+<ex3/k7_g_vt_error-eps-converted-to.pdf, id=261, 362.35374pt x 293.095pt>
+File: ex3/k7_g_vt_error-eps-converted-to.pdf Graphic file (type pdf)
+<use ex3/k7_g_vt_error-eps-converted-to.pdf>
+Package pdftex.def Info: ex3/k7_g_vt_error-eps-converted-to.pdf  used on input line 511.
+(pdftex.def)             Requested size: 256.07481pt x 207.13289pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 506--515
+
+ []
+
+<ex4/scheme.png, id=262, 1824.8175pt x 816.04875pt>
+File: ex4/scheme.png Graphic file (type png)
+<use ex4/scheme.png>
+Package pdftex.def Info: ex4/scheme.png  used on input line 529.
+(pdftex.def)             Requested size: 332.89412pt x 148.86229pt.
+
+Package fancyhdr Warning: \headheight is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.0pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
+
+[11 <./ex3/k3_g_vt-eps-converted-to.pdf> <./ex3/k3_g_vt_error-eps-converted-to.pdf> <./ex3/k7_g_vt-eps-converted-to.pdf> <./ex3/k7_g_vt_error-eps-converted-to.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 537.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 537.
+
+Package epstopdf Info: Source file: <ex4/k0.5_g_a.eps>
+(epstopdf)                    date: 2025-10-26 09:06:05
+(epstopdf)                    size: 194619 bytes
+(epstopdf)             Output file: <ex4/k0.5_g_a-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 09:07:05
+(epstopdf)                    size: 65671 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex4/k0.5_g_a-eps-converted-to.pdf ex4/k0.5_g_a.eps>
+(epstopdf)             \includegraphics on input line 561.
+Package epstopdf Info: Output file is already uptodate.
+<ex4/k0.5_g_a-eps-converted-to.pdf, id=289, 362.35374pt x 293.095pt>
+File: ex4/k0.5_g_a-eps-converted-to.pdf Graphic file (type pdf)
+<use ex4/k0.5_g_a-eps-converted-to.pdf>
+Package pdftex.def Info: ex4/k0.5_g_a-eps-converted-to.pdf  used on input line 561.
+(pdftex.def)             Requested size: 256.07481pt x 207.13289pt.
+Package epstopdf Info: Source file: <ex4/k0.5_g_a_error.eps>
+(epstopdf)                    date: 2025-10-26 09:06:05
+(epstopdf)                    size: 168274 bytes
+(epstopdf)             Output file: <ex4/k0.5_g_a_error-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 09:07:07
+(epstopdf)                    size: 59142 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex4/k0.5_g_a_error-eps-converted-to.pdf ex4/k0.5_g_a_error.eps>
+(epstopdf)             \includegraphics on input line 565.
+Package epstopdf Info: Output file is already uptodate.
+<ex4/k0.5_g_a_error-eps-converted-to.pdf, id=290, 365.365pt x 293.095pt>
+File: ex4/k0.5_g_a_error-eps-converted-to.pdf Graphic file (type pdf)
+<use ex4/k0.5_g_a_error-eps-converted-to.pdf>
+Package pdftex.def Info: ex4/k0.5_g_a_error-eps-converted-to.pdf  used on input line 565.
+(pdftex.def)             Requested size: 256.07481pt x 205.43343pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 560--569
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.0pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
+
+[12 <./ex4/scheme.png (PNG copy)>]
+Package epstopdf Info: Source file: <ex4/k1_g_a.eps>
+(epstopdf)                    date: 2025-10-26 09:06:06
+(epstopdf)                    size: 189357 bytes
+(epstopdf)             Output file: <ex4/k1_g_a-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 09:07:08
+(epstopdf)                    size: 64726 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex4/k1_g_a-eps-converted-to.pdf ex4/k1_g_a.eps>
+(epstopdf)             \includegraphics on input line 573.
+Package epstopdf Info: Output file is already uptodate.
+<ex4/k1_g_a-eps-converted-to.pdf, id=298, 362.35374pt x 293.095pt>
+File: ex4/k1_g_a-eps-converted-to.pdf Graphic file (type pdf)
+<use ex4/k1_g_a-eps-converted-to.pdf>
+Package pdftex.def Info: ex4/k1_g_a-eps-converted-to.pdf  used on input line 573.
+(pdftex.def)             Requested size: 256.07481pt x 207.13289pt.
+Package epstopdf Info: Source file: <ex4/k1_g_a_error.eps>
+(epstopdf)                    date: 2025-10-26 09:06:06
+(epstopdf)                    size: 168638 bytes
+(epstopdf)             Output file: <ex4/k1_g_a_error-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 09:07:09
+(epstopdf)                    size: 60647 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex4/k1_g_a_error-eps-converted-to.pdf ex4/k1_g_a_error.eps>
+(epstopdf)             \includegraphics on input line 577.
+Package epstopdf Info: Output file is already uptodate.
+<ex4/k1_g_a_error-eps-converted-to.pdf, id=299, 365.365pt x 293.095pt>
+File: ex4/k1_g_a_error-eps-converted-to.pdf Graphic file (type pdf)
+<use ex4/k1_g_a_error-eps-converted-to.pdf>
+Package pdftex.def Info: ex4/k1_g_a_error-eps-converted-to.pdf  used on input line 577.
+(pdftex.def)             Requested size: 256.07481pt x 205.43343pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 572--581
+
+ []
+
+Package epstopdf Info: Source file: <ex4/k3_g_a.eps>
+(epstopdf)                    date: 2025-10-26 09:06:07
+(epstopdf)                    size: 196630 bytes
+(epstopdf)             Output file: <ex4/k3_g_a-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 09:07:10
+(epstopdf)                    size: 68211 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex4/k3_g_a-eps-converted-to.pdf ex4/k3_g_a.eps>
+(epstopdf)             \includegraphics on input line 585.
+Package epstopdf Info: Output file is already uptodate.
+<ex4/k3_g_a-eps-converted-to.pdf, id=300, 362.35374pt x 293.095pt>
+File: ex4/k3_g_a-eps-converted-to.pdf Graphic file (type pdf)
+<use ex4/k3_g_a-eps-converted-to.pdf>
+Package pdftex.def Info: ex4/k3_g_a-eps-converted-to.pdf  used on input line 585.
+(pdftex.def)             Requested size: 256.07481pt x 207.13289pt.
+Package epstopdf Info: Source file: <ex4/k3_g_a_error.eps>
+(epstopdf)                    date: 2025-10-26 09:06:08
+(epstopdf)                    size: 169849 bytes
+(epstopdf)             Output file: <ex4/k3_g_a_error-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 09:07:11
+(epstopdf)                    size: 61463 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex4/k3_g_a_error-eps-converted-to.pdf ex4/k3_g_a_error.eps>
+(epstopdf)             \includegraphics on input line 589.
+Package epstopdf Info: Output file is already uptodate.
+<ex4/k3_g_a_error-eps-converted-to.pdf, id=301, 365.365pt x 293.095pt>
+File: ex4/k3_g_a_error-eps-converted-to.pdf Graphic file (type pdf)
+<use ex4/k3_g_a_error-eps-converted-to.pdf>
+Package pdftex.def Info: ex4/k3_g_a_error-eps-converted-to.pdf  used on input line 589.
+(pdftex.def)             Requested size: 256.07481pt x 205.43343pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 584--593
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.0pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
+
+[13 <./ex4/k0.5_g_a-eps-converted-to.pdf> <./ex4/k0.5_g_a_error-eps-converted-to.pdf> <./ex4/k1_g_a-eps-converted-to.pdf> <./ex4/k1_g_a_error-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <ex4/all_g_a_error.eps>
+(epstopdf)                    date: 2025-10-26 09:26:26
+(epstopdf)                    size: 465060 bytes
+(epstopdf)             Output file: <ex4/all_g_a_error-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 09:28:13
+(epstopdf)                    size: 162344 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex4/all_g_a_error-eps-converted-to.pdf ex4/all_g_a_error.eps>
+(epstopdf)             \includegraphics on input line 597.
+Package epstopdf Info: Output file is already uptodate.
+<ex4/all_g_a_error-eps-converted-to.pdf, id=329, 365.365pt x 293.095pt>
+File: ex4/all_g_a_error-eps-converted-to.pdf Graphic file (type pdf)
+<use ex4/all_g_a_error-eps-converted-to.pdf>
+Package pdftex.def Info: ex4/all_g_a_error-eps-converted-to.pdf  used on input line 597.
+(pdftex.def)             Requested size: 281.68385pt x 225.97453pt.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 603.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 603.
+
+
+Package fancyhdr Warning: \headheight is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.0pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
+
+[14 <./ex4/k3_g_a-eps-converted-to.pdf> <./ex4/k3_g_a_error-eps-converted-to.pdf> <./ex4/all_g_a_error-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <ex4/k0.5_g_vt.eps>
+(epstopdf)                    date: 2025-10-26 09:06:09
+(epstopdf)                    size: 198840 bytes
+(epstopdf)             Output file: <ex4/k0.5_g_vt-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 09:07:12
+(epstopdf)                    size: 74037 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex4/k0.5_g_vt-eps-converted-to.pdf ex4/k0.5_g_vt.eps>
+(epstopdf)             \includegraphics on input line 627.
+Package epstopdf Info: Output file is already uptodate.
+<ex4/k0.5_g_vt-eps-converted-to.pdf, id=351, 354.32375pt x 293.095pt>
+File: ex4/k0.5_g_vt-eps-converted-to.pdf Graphic file (type pdf)
+<use ex4/k0.5_g_vt-eps-converted-to.pdf>
+Package pdftex.def Info: ex4/k0.5_g_vt-eps-converted-to.pdf  used on input line 627.
+(pdftex.def)             Requested size: 256.07481pt x 211.82877pt.
+Package epstopdf Info: Source file: <ex4/k0.5_g_vt_error.eps>
+(epstopdf)                    date: 2025-10-26 09:06:09
+(epstopdf)                    size: 173879 bytes
+(epstopdf)             Output file: <ex4/k0.5_g_vt_error-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 09:07:13
+(epstopdf)                    size: 61042 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex4/k0.5_g_vt_error-eps-converted-to.pdf ex4/k0.5_g_vt_error.eps>
+(epstopdf)             \includegraphics on input line 631.
+Package epstopdf Info: Output file is already uptodate.
+<ex4/k0.5_g_vt_error-eps-converted-to.pdf, id=352, 362.35374pt x 293.095pt>
+File: ex4/k0.5_g_vt_error-eps-converted-to.pdf Graphic file (type pdf)
+<use ex4/k0.5_g_vt_error-eps-converted-to.pdf>
+Package pdftex.def Info: ex4/k0.5_g_vt_error-eps-converted-to.pdf  used on input line 631.
+(pdftex.def)             Requested size: 256.07481pt x 207.13289pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 626--635
+
+ []
+
+Package epstopdf Info: Source file: <ex4/k1_g_vt.eps>
+(epstopdf)                    date: 2025-10-26 09:06:10
+(epstopdf)                    size: 196058 bytes
+(epstopdf)             Output file: <ex4/k1_g_vt-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 09:07:14
+(epstopdf)                    size: 73060 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex4/k1_g_vt-eps-converted-to.pdf ex4/k1_g_vt.eps>
+(epstopdf)             \includegraphics on input line 639.
+Package epstopdf Info: Output file is already uptodate.
+<ex4/k1_g_vt-eps-converted-to.pdf, id=353, 354.32375pt x 293.095pt>
+File: ex4/k1_g_vt-eps-converted-to.pdf Graphic file (type pdf)
+<use ex4/k1_g_vt-eps-converted-to.pdf>
+Package pdftex.def Info: ex4/k1_g_vt-eps-converted-to.pdf  used on input line 639.
+(pdftex.def)             Requested size: 256.07481pt x 211.82877pt.
+Package epstopdf Info: Source file: <ex4/k1_g_vt_error.eps>
+(epstopdf)                    date: 2025-10-26 09:06:11
+(epstopdf)                    size: 174636 bytes
+(epstopdf)             Output file: <ex4/k1_g_vt_error-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 09:07:15
+(epstopdf)                    size: 62485 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex4/k1_g_vt_error-eps-converted-to.pdf ex4/k1_g_vt_error.eps>
+(epstopdf)             \includegraphics on input line 643.
+Package epstopdf Info: Output file is already uptodate.
+<ex4/k1_g_vt_error-eps-converted-to.pdf, id=354, 362.35374pt x 293.095pt>
+File: ex4/k1_g_vt_error-eps-converted-to.pdf Graphic file (type pdf)
+<use ex4/k1_g_vt_error-eps-converted-to.pdf>
+Package pdftex.def Info: ex4/k1_g_vt_error-eps-converted-to.pdf  used on input line 643.
+(pdftex.def)             Requested size: 256.07481pt x 207.13289pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 638--647
+
+ []
+
+Package epstopdf Info: Source file: <ex4/k3_g_vt.eps>
+(epstopdf)                    date: 2025-10-26 09:06:12
+(epstopdf)                    size: 196568 bytes
+(epstopdf)             Output file: <ex4/k3_g_vt-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 09:07:16
+(epstopdf)                    size: 73723 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex4/k3_g_vt-eps-converted-to.pdf ex4/k3_g_vt.eps>
+(epstopdf)             \includegraphics on input line 651.
+Package epstopdf Info: Output file is already uptodate.
+<ex4/k3_g_vt-eps-converted-to.pdf, id=355, 354.32375pt x 293.095pt>
+File: ex4/k3_g_vt-eps-converted-to.pdf Graphic file (type pdf)
+<use ex4/k3_g_vt-eps-converted-to.pdf>
+Package pdftex.def Info: ex4/k3_g_vt-eps-converted-to.pdf  used on input line 651.
+(pdftex.def)             Requested size: 256.07481pt x 211.82877pt.
+Package epstopdf Info: Source file: <ex4/k3_g_vt_error.eps>
+(epstopdf)                    date: 2025-10-26 09:06:12
+(epstopdf)                    size: 182087 bytes
+(epstopdf)             Output file: <ex4/k3_g_vt_error-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 09:07:17
+(epstopdf)                    size: 67825 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex4/k3_g_vt_error-eps-converted-to.pdf ex4/k3_g_vt_error.eps>
+(epstopdf)             \includegraphics on input line 655.
+Package epstopdf Info: Output file is already uptodate.
+<ex4/k3_g_vt_error-eps-converted-to.pdf, id=356, 362.35374pt x 293.095pt>
+File: ex4/k3_g_vt_error-eps-converted-to.pdf Graphic file (type pdf)
+<use ex4/k3_g_vt_error-eps-converted-to.pdf>
+Package pdftex.def Info: ex4/k3_g_vt_error-eps-converted-to.pdf  used on input line 655.
+(pdftex.def)             Requested size: 256.07481pt x 207.13289pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 650--659
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.0pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
+
+[15 <./ex4/k0.5_g_vt-eps-converted-to.pdf> <./ex4/k0.5_g_vt_error-eps-converted-to.pdf> <./ex4/k1_g_vt-eps-converted-to.pdf> <./ex4/k1_g_vt_error-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <ex4/all_g_vt_error.eps>
+(epstopdf)                    date: 2025-10-26 09:26:28
+(epstopdf)                    size: 461453 bytes
+(epstopdf)             Output file: <ex4/all_g_vt_error-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 09:28:15
+(epstopdf)                    size: 162601 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex4/all_g_vt_error-eps-converted-to.pdf ex4/all_g_vt_error.eps>
+(epstopdf)             \includegraphics on input line 663.
+Package epstopdf Info: Output file is already uptodate.
+<ex4/all_g_vt_error-eps-converted-to.pdf, id=383, 362.35374pt x 293.095pt>
+File: ex4/all_g_vt_error-eps-converted-to.pdf Graphic file (type pdf)
+<use ex4/all_g_vt_error-eps-converted-to.pdf>
+Package pdftex.def Info: ex4/all_g_vt_error-eps-converted-to.pdf  used on input line 663.
+(pdftex.def)             Requested size: 281.68385pt x 227.8484pt.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 669.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 669.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 669.
+
+Package epstopdf Info: Source file: <ex4/k0.5_g_at2.eps>
+(epstopdf)                    date: 2025-10-26 09:06:13
+(epstopdf)                    size: 201742 bytes
+(epstopdf)             Output file: <ex4/k0.5_g_at2-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 09:17:18
+(epstopdf)                    size: 73324 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex4/k0.5_g_at2-eps-converted-to.pdf ex4/k0.5_g_at2.eps>
+(epstopdf)             \includegraphics on input line 675.
+Package epstopdf Info: Output file is already uptodate.
+<ex4/k0.5_g_at2-eps-converted-to.pdf, id=384, 359.3425pt x 293.095pt>
+File: ex4/k0.5_g_at2-eps-converted-to.pdf Graphic file (type pdf)
+<use ex4/k0.5_g_at2-eps-converted-to.pdf>
+Package pdftex.def Info: ex4/k0.5_g_at2-eps-converted-to.pdf  used on input line 675.
+(pdftex.def)             Requested size: 256.07481pt x 208.88153pt.
+Package epstopdf Info: Source file: <ex4/k0.5_g_at2_error.eps>
+(epstopdf)                    date: 2025-10-26 09:06:14
+(epstopdf)                    size: 168704 bytes
+(epstopdf)             Output file: <ex4/k0.5_g_at2_error-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 09:17:19
+(epstopdf)                    size: 59738 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex4/k0.5_g_at2_error-eps-converted-to.pdf ex4/k0.5_g_at2_error.eps>
+(epstopdf)             \includegraphics on input line 679.
+Package epstopdf Info: Output file is already uptodate.
+<ex4/k0.5_g_at2_error-eps-converted-to.pdf, id=385, 359.3425pt x 293.095pt>
+File: ex4/k0.5_g_at2_error-eps-converted-to.pdf Graphic file (type pdf)
+<use ex4/k0.5_g_at2_error-eps-converted-to.pdf>
+Package pdftex.def Info: ex4/k0.5_g_at2_error-eps-converted-to.pdf  used on input line 679.
+(pdftex.def)             Requested size: 256.07481pt x 208.88153pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 674--683
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.0pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
+
+[16 <./ex4/k3_g_vt-eps-converted-to.pdf> <./ex4/k3_g_vt_error-eps-converted-to.pdf> <./ex4/all_g_vt_error-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <ex4/k1_g_at2.eps>
+(epstopdf)                    date: 2025-10-26 09:06:15
+(epstopdf)                    size: 199470 bytes
+(epstopdf)             Output file: <ex4/k1_g_at2-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 09:17:20
+(epstopdf)                    size: 73056 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex4/k1_g_at2-eps-converted-to.pdf ex4/k1_g_at2.eps>
+(epstopdf)             \includegraphics on input line 687.
+Package epstopdf Info: Output file is already uptodate.
+<ex4/k1_g_at2-eps-converted-to.pdf, id=408, 359.3425pt x 293.095pt>
+File: ex4/k1_g_at2-eps-converted-to.pdf Graphic file (type pdf)
+<use ex4/k1_g_at2-eps-converted-to.pdf>
+Package pdftex.def Info: ex4/k1_g_at2-eps-converted-to.pdf  used on input line 687.
+(pdftex.def)             Requested size: 256.07481pt x 208.88153pt.
+Package epstopdf Info: Source file: <ex4/k1_g_at2_error.eps>
+(epstopdf)                    date: 2025-10-26 09:06:15
+(epstopdf)                    size: 169997 bytes
+(epstopdf)             Output file: <ex4/k1_g_at2_error-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 09:17:21
+(epstopdf)                    size: 59571 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex4/k1_g_at2_error-eps-converted-to.pdf ex4/k1_g_at2_error.eps>
+(epstopdf)             \includegraphics on input line 691.
+Package epstopdf Info: Output file is already uptodate.
+<ex4/k1_g_at2_error-eps-converted-to.pdf, id=409, 354.32375pt x 293.095pt>
+File: ex4/k1_g_at2_error-eps-converted-to.pdf Graphic file (type pdf)
+<use ex4/k1_g_at2_error-eps-converted-to.pdf>
+Package pdftex.def Info: ex4/k1_g_at2_error-eps-converted-to.pdf  used on input line 691.
+(pdftex.def)             Requested size: 256.07481pt x 211.82877pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 686--695
+
+ []
+
+Package epstopdf Info: Source file: <ex4/k3_g_at2.eps>
+(epstopdf)                    date: 2025-10-26 09:06:16
+(epstopdf)                    size: 200760 bytes
+(epstopdf)             Output file: <ex4/k3_g_at2-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 09:17:23
+(epstopdf)                    size: 74860 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex4/k3_g_at2-eps-converted-to.pdf ex4/k3_g_at2.eps>
+(epstopdf)             \includegraphics on input line 699.
+Package epstopdf Info: Output file is already uptodate.
+<ex4/k3_g_at2-eps-converted-to.pdf, id=410, 359.3425pt x 293.095pt>
+File: ex4/k3_g_at2-eps-converted-to.pdf Graphic file (type pdf)
+<use ex4/k3_g_at2-eps-converted-to.pdf>
+Package pdftex.def Info: ex4/k3_g_at2-eps-converted-to.pdf  used on input line 699.
+(pdftex.def)             Requested size: 256.07481pt x 208.88153pt.
+Package epstopdf Info: Source file: <ex4/k3_g_at2_error.eps>
+(epstopdf)                    date: 2025-10-26 09:06:16
+(epstopdf)                    size: 169285 bytes
+(epstopdf)             Output file: <ex4/k3_g_at2_error-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 09:17:24
+(epstopdf)                    size: 59443 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex4/k3_g_at2_error-eps-converted-to.pdf ex4/k3_g_at2_error.eps>
+(epstopdf)             \includegraphics on input line 703.
+Package epstopdf Info: Output file is already uptodate.
+<ex4/k3_g_at2_error-eps-converted-to.pdf, id=411, 362.35374pt x 293.095pt>
+File: ex4/k3_g_at2_error-eps-converted-to.pdf Graphic file (type pdf)
+<use ex4/k3_g_at2_error-eps-converted-to.pdf>
+Package pdftex.def Info: ex4/k3_g_at2_error-eps-converted-to.pdf  used on input line 703.
+(pdftex.def)             Requested size: 256.07481pt x 207.13289pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 698--707
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.0pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
+
+[17 <./ex4/k0.5_g_at2-eps-converted-to.pdf> <./ex4/k0.5_g_at2_error-eps-converted-to.pdf> <./ex4/k1_g_at2-eps-converted-to.pdf> <./ex4/k1_g_at2_error-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <ex4/all_g_at2_error.eps>
+(epstopdf)                    date: 2025-10-26 09:26:29
+(epstopdf)                    size: 466650 bytes
+(epstopdf)             Output file: <ex4/all_g_at2_error-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 09:28:16
+(epstopdf)                    size: 166519 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex4/all_g_at2_error-eps-converted-to.pdf ex4/all_g_at2_error.eps>
+(epstopdf)             \includegraphics on input line 711.
+Package epstopdf Info: Output file is already uptodate.
+<ex4/all_g_at2_error-eps-converted-to.pdf, id=438, 359.3425pt x 293.095pt>
+File: ex4/all_g_at2_error-eps-converted-to.pdf Graphic file (type pdf)
+<use ex4/all_g_at2_error-eps-converted-to.pdf>
+Package pdftex.def Info: ex4/all_g_at2_error-eps-converted-to.pdf  used on input line 711.
+(pdftex.def)             Requested size: 281.68385pt x 229.77148pt.
+
+
+Package fancyhdr Warning: \headheight is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.0pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
+
+[18 <./ex4/k3_g_at2-eps-converted-to.pdf> <./ex4/k3_g_at2_error-eps-converted-to.pdf> <./ex4/all_g_at2_error-eps-converted-to.pdf>]
+<ex5/scheme.png, id=460, 1824.8175pt x 816.04875pt>
+File: ex5/scheme.png Graphic file (type png)
+<use ex5/scheme.png>
+Package pdftex.def Info: ex5/scheme.png  used on input line 727.
+(pdftex.def)             Requested size: 332.89412pt x 148.86229pt.
+Package epstopdf Info: Source file: <ex5/ki_0.3_g_vt.eps>
+(epstopdf)                    date: 2025-10-26 11:40:02
+(epstopdf)                    size: 236218 bytes
+(epstopdf)             Output file: <ex5/ki_0.3_g_vt-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 11:41:09
+(epstopdf)                    size: 107306 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex5/ki_0.3_g_vt-eps-converted-to.pdf ex5/ki_0.3_g_vt.eps>
+(epstopdf)             \includegraphics on input line 759.
+Package epstopdf Info: Output file is already uptodate.
+<ex5/ki_0.3_g_vt-eps-converted-to.pdf, id=461, 361.35pt x 293.095pt>
+File: ex5/ki_0.3_g_vt-eps-converted-to.pdf Graphic file (type pdf)
+<use ex5/ki_0.3_g_vt-eps-converted-to.pdf>
+Package pdftex.def Info: ex5/ki_0.3_g_vt-eps-converted-to.pdf  used on input line 759.
+(pdftex.def)             Requested size: 256.07481pt x 207.70534pt.
+Package epstopdf Info: Source file: <ex5/ki_0.3_g_vt_error.eps>
+(epstopdf)                    date: 2025-10-26 11:40:02
+(epstopdf)                    size: 181443 bytes
+(epstopdf)             Output file: <ex5/ki_0.3_g_vt_error-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 11:41:10
+(epstopdf)                    size: 76795 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex5/ki_0.3_g_vt_error-eps-converted-to.pdf ex5/ki_0.3_g_vt_error.eps>
+(epstopdf)             \includegraphics on input line 764.
+Package epstopdf Info: Output file is already uptodate.
+<ex5/ki_0.3_g_vt_error-eps-converted-to.pdf, id=462, 367.3725pt x 293.095pt>
+File: ex5/ki_0.3_g_vt_error-eps-converted-to.pdf Graphic file (type pdf)
+<use ex5/ki_0.3_g_vt_error-eps-converted-to.pdf>
+Package pdftex.def Info: ex5/ki_0.3_g_vt_error-eps-converted-to.pdf  used on input line 764.
+(pdftex.def)             Requested size: 256.07481pt x 204.31535pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 758--769
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.0pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
+
+[19 <./ex5/scheme.png (PNG copy)>]
+Package epstopdf Info: Source file: <ex5/ki_0.7_g_vt.eps>
+(epstopdf)                    date: 2025-10-26 11:40:04
+(epstopdf)                    size: 235496 bytes
+(epstopdf)             Output file: <ex5/ki_0.7_g_vt-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 11:42:41
+(epstopdf)                    size: 108059 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex5/ki_0.7_g_vt-eps-converted-to.pdf ex5/ki_0.7_g_vt.eps>
+(epstopdf)             \includegraphics on input line 773.
+Package epstopdf Info: Output file is already uptodate.
+<ex5/ki_0.7_g_vt-eps-converted-to.pdf, id=470, 361.35pt x 293.095pt>
+File: ex5/ki_0.7_g_vt-eps-converted-to.pdf Graphic file (type pdf)
+<use ex5/ki_0.7_g_vt-eps-converted-to.pdf>
+Package pdftex.def Info: ex5/ki_0.7_g_vt-eps-converted-to.pdf  used on input line 773.
+(pdftex.def)             Requested size: 256.07481pt x 207.70534pt.
+Package epstopdf Info: Source file: <ex5/ki_0.7_g_vt_error.eps>
+(epstopdf)                    date: 2025-10-26 11:40:05
+(epstopdf)                    size: 175092 bytes
+(epstopdf)             Output file: <ex5/ki_0.7_g_vt_error-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 11:42:42
+(epstopdf)                    size: 67923 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex5/ki_0.7_g_vt_error-eps-converted-to.pdf ex5/ki_0.7_g_vt_error.eps>
+(epstopdf)             \includegraphics on input line 778.
+Package epstopdf Info: Output file is already uptodate.
+<ex5/ki_0.7_g_vt_error-eps-converted-to.pdf, id=471, 367.3725pt x 293.095pt>
+File: ex5/ki_0.7_g_vt_error-eps-converted-to.pdf Graphic file (type pdf)
+<use ex5/ki_0.7_g_vt_error-eps-converted-to.pdf>
+Package pdftex.def Info: ex5/ki_0.7_g_vt_error-eps-converted-to.pdf  used on input line 778.
+(pdftex.def)             Requested size: 256.07481pt x 204.31535pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 772--783
+
+ []
+
+Package epstopdf Info: Source file: <ex5/ki_1.2_g_vt.eps>
+(epstopdf)                    date: 2025-10-26 11:40:07
+(epstopdf)                    size: 235296 bytes
+(epstopdf)             Output file: <ex5/ki_1.2_g_vt-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 11:43:10
+(epstopdf)                    size: 108078 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex5/ki_1.2_g_vt-eps-converted-to.pdf ex5/ki_1.2_g_vt.eps>
+(epstopdf)             \includegraphics on input line 787.
+Package epstopdf Info: Output file is already uptodate.
+<ex5/ki_1.2_g_vt-eps-converted-to.pdf, id=472, 361.35pt x 293.095pt>
+File: ex5/ki_1.2_g_vt-eps-converted-to.pdf Graphic file (type pdf)
+<use ex5/ki_1.2_g_vt-eps-converted-to.pdf>
+Package pdftex.def Info: ex5/ki_1.2_g_vt-eps-converted-to.pdf  used on input line 787.
+(pdftex.def)             Requested size: 256.07481pt x 207.70534pt.
+Package epstopdf Info: Source file: <ex5/ki_1.2_g_vt_error.eps>
+(epstopdf)                    date: 2025-10-26 11:40:07
+(epstopdf)                    size: 179149 bytes
+(epstopdf)             Output file: <ex5/ki_1.2_g_vt_error-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 11:43:11
+(epstopdf)                    size: 67049 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex5/ki_1.2_g_vt_error-eps-converted-to.pdf ex5/ki_1.2_g_vt_error.eps>
+(epstopdf)             \includegraphics on input line 792.
+Package epstopdf Info: Output file is already uptodate.
+<ex5/ki_1.2_g_vt_error-eps-converted-to.pdf, id=473, 367.3725pt x 293.095pt>
+File: ex5/ki_1.2_g_vt_error-eps-converted-to.pdf Graphic file (type pdf)
+<use ex5/ki_1.2_g_vt_error-eps-converted-to.pdf>
+Package pdftex.def Info: ex5/ki_1.2_g_vt_error-eps-converted-to.pdf  used on input line 792.
+(pdftex.def)             Requested size: 256.07481pt x 204.31535pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 786--797
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.0pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
+
+[20 <./ex5/ki_0.3_g_vt-eps-converted-to.pdf> <./ex5/ki_0.3_g_vt_error-eps-converted-to.pdf> <./ex5/ki_0.7_g_vt-eps-converted-to.pdf> <./ex5/ki_0.7_g_vt_error-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <ex5/ki_0.3_g_asinwt.eps>
+(epstopdf)                    date: 2025-10-26 11:40:09
+(epstopdf)                    size: 244704 bytes
+(epstopdf)             Output file: <ex5/ki_0.3_g_asinwt-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 12:24:36
+(epstopdf)                    size: 107516 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex5/ki_0.3_g_asinwt-eps-converted-to.pdf ex5/ki_0.3_g_asinwt.eps>
+(epstopdf)             \includegraphics on input line 810.
+Package epstopdf Info: Output file is already uptodate.
+<ex5/ki_0.3_g_asinwt-eps-converted-to.pdf, id=500, 367.3725pt x 291.0875pt>
+File: ex5/ki_0.3_g_asinwt-eps-converted-to.pdf Graphic file (type pdf)
+<use ex5/ki_0.3_g_asinwt-eps-converted-to.pdf>
+Package pdftex.def Info: ex5/ki_0.3_g_asinwt-eps-converted-to.pdf  used on input line 810.
+(pdftex.def)             Requested size: 256.07481pt x 202.91594pt.
+Package epstopdf Info: Source file: <ex5/ki_0.3_g_asinwt_error.eps>
+(epstopdf)                    date: 2025-10-26 11:40:09
+(epstopdf)                    size: 173992 bytes
+(epstopdf)             Output file: <ex5/ki_0.3_g_asinwt_error-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 12:24:37
+(epstopdf)                    size: 75104 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex5/ki_0.3_g_asinwt_error-eps-converted-to.pdf ex5/ki_0.3_g_asinwt_error.eps>
+(epstopdf)             \includegraphics on input line 815.
+Package epstopdf Info: Output file is already uptodate.
+<ex5/ki_0.3_g_asinwt_error-eps-converted-to.pdf, id=501, 367.3725pt x 293.095pt>
+File: ex5/ki_0.3_g_asinwt_error-eps-converted-to.pdf Graphic file (type pdf)
+<use ex5/ki_0.3_g_asinwt_error-eps-converted-to.pdf>
+Package pdftex.def Info: ex5/ki_0.3_g_asinwt_error-eps-converted-to.pdf  used on input line 815.
+(pdftex.def)             Requested size: 256.07481pt x 204.31535pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 809--819
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.0pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
+
+[21 <./ex5/ki_1.2_g_vt-eps-converted-to.pdf> <./ex5/ki_1.2_g_vt_error-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <ex5/ki_0.7_g_asinwt.eps>
+(epstopdf)                    date: 2025-10-26 11:40:11
+(epstopdf)                    size: 244702 bytes
+(epstopdf)             Output file: <ex5/ki_0.7_g_asinwt-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 12:24:38
+(epstopdf)                    size: 108015 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex5/ki_0.7_g_asinwt-eps-converted-to.pdf ex5/ki_0.7_g_asinwt.eps>
+(epstopdf)             \includegraphics on input line 823.
+Package epstopdf Info: Output file is already uptodate.
+<ex5/ki_0.7_g_asinwt-eps-converted-to.pdf, id=517, 367.3725pt x 291.0875pt>
+File: ex5/ki_0.7_g_asinwt-eps-converted-to.pdf Graphic file (type pdf)
+<use ex5/ki_0.7_g_asinwt-eps-converted-to.pdf>
+Package pdftex.def Info: ex5/ki_0.7_g_asinwt-eps-converted-to.pdf  used on input line 823.
+(pdftex.def)             Requested size: 256.07481pt x 202.91594pt.
+Package epstopdf Info: Source file: <ex5/ki_0.7_g_asinwt_error.eps>
+(epstopdf)                    date: 2025-10-26 11:40:12
+(epstopdf)                    size: 174144 bytes
+(epstopdf)             Output file: <ex5/ki_0.7_g_asinwt_error-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 12:24:39
+(epstopdf)                    size: 76352 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex5/ki_0.7_g_asinwt_error-eps-converted-to.pdf ex5/ki_0.7_g_asinwt_error.eps>
+(epstopdf)             \includegraphics on input line 828.
+Package epstopdf Info: Output file is already uptodate.
+<ex5/ki_0.7_g_asinwt_error-eps-converted-to.pdf, id=518, 367.3725pt x 293.095pt>
+File: ex5/ki_0.7_g_asinwt_error-eps-converted-to.pdf Graphic file (type pdf)
+<use ex5/ki_0.7_g_asinwt_error-eps-converted-to.pdf>
+Package pdftex.def Info: ex5/ki_0.7_g_asinwt_error-eps-converted-to.pdf  used on input line 828.
+(pdftex.def)             Requested size: 256.07481pt x 204.31535pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 822--832
+
+ []
+
+Package epstopdf Info: Source file: <ex5/ki_1.2_g_asinwt.eps>
+(epstopdf)                    date: 2025-10-26 11:40:14
+(epstopdf)                    size: 244720 bytes
+(epstopdf)             Output file: <ex5/ki_1.2_g_asinwt-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 12:24:40
+(epstopdf)                    size: 108719 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex5/ki_1.2_g_asinwt-eps-converted-to.pdf ex5/ki_1.2_g_asinwt.eps>
+(epstopdf)             \includegraphics on input line 836.
+Package epstopdf Info: Output file is already uptodate.
+<ex5/ki_1.2_g_asinwt-eps-converted-to.pdf, id=519, 367.3725pt x 291.0875pt>
+File: ex5/ki_1.2_g_asinwt-eps-converted-to.pdf Graphic file (type pdf)
+<use ex5/ki_1.2_g_asinwt-eps-converted-to.pdf>
+Package pdftex.def Info: ex5/ki_1.2_g_asinwt-eps-converted-to.pdf  used on input line 836.
+(pdftex.def)             Requested size: 256.07481pt x 202.91594pt.
+Package epstopdf Info: Source file: <ex5/ki_1.2_g_asinwt_error.eps>
+(epstopdf)                    date: 2025-10-26 11:40:14
+(epstopdf)                    size: 173803 bytes
+(epstopdf)             Output file: <ex5/ki_1.2_g_asinwt_error-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 12:24:42
+(epstopdf)                    size: 75340 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex5/ki_1.2_g_asinwt_error-eps-converted-to.pdf ex5/ki_1.2_g_asinwt_error.eps>
+(epstopdf)             \includegraphics on input line 841.
+Package epstopdf Info: Output file is already uptodate.
+<ex5/ki_1.2_g_asinwt_error-eps-converted-to.pdf, id=520, 367.3725pt x 293.095pt>
+File: ex5/ki_1.2_g_asinwt_error-eps-converted-to.pdf Graphic file (type pdf)
+<use ex5/ki_1.2_g_asinwt_error-eps-converted-to.pdf>
+Package pdftex.def Info: ex5/ki_1.2_g_asinwt_error-eps-converted-to.pdf  used on input line 841.
+(pdftex.def)             Requested size: 256.07481pt x 204.31535pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 835--845
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.0pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
+
+[22 <./ex5/ki_0.3_g_asinwt-eps-converted-to.pdf> <./ex5/ki_0.3_g_asinwt_error-eps-converted-to.pdf> <./ex5/ki_0.7_g_asinwt-eps-converted-to.pdf> <./ex5/ki_0.7_g_asinwt_error-eps-converted-to.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.0pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
+
+[23 <./ex5/ki_1.2_g_asinwt-eps-converted-to.pdf> <./ex5/ki_1.2_g_asinwt_error-eps-converted-to.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.0pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
+
+[24]
+Package epstopdf Info: Source file: <ex6/sin.eps>
+(epstopdf)                    date: 2025-10-26 17:42:22
+(epstopdf)                    size: 113751 bytes
+(epstopdf)             Output file: <ex6/sin-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 17:44:37
+(epstopdf)                    size: 46136 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex6/sin-eps-converted-to.pdf ex6/sin.eps>
+(epstopdf)             \includegraphics on input line 953.
+Package epstopdf Info: Output file is already uptodate.
+<ex6/sin-eps-converted-to.pdf, id=566, 421.575pt x 316.18124pt>
+File: ex6/sin-eps-converted-to.pdf Graphic file (type pdf)
+<use ex6/sin-eps-converted-to.pdf>
+Package pdftex.def Info: ex6/sin-eps-converted-to.pdf  used on input line 953.
+(pdftex.def)             Requested size: 256.07481pt x 192.05975pt.
+Package epstopdf Info: Source file: <ex6/error_0.135.eps>
+(epstopdf)                    date: 2025-10-26 17:53:05
+(epstopdf)                    size: 67413 bytes
+(epstopdf)             Output file: <ex6/error_0.135-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-10-26 17:53:35
+(epstopdf)                    size: 26420 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=ex6/error_0.135-eps-converted-to.pdf ex6/error_0.135.eps>
+(epstopdf)             \includegraphics on input line 957.
+Package epstopdf Info: Output file is already uptodate.
+<ex6/error_0.135-eps-converted-to.pdf, id=567, 421.575pt x 316.18124pt>
+File: ex6/error_0.135-eps-converted-to.pdf Graphic file (type pdf)
+<use ex6/error_0.135-eps-converted-to.pdf>
+Package pdftex.def Info: ex6/error_0.135-eps-converted-to.pdf  used on input line 957.
+(pdftex.def)             Requested size: 256.07481pt x 192.05975pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 952--960
+
+ []
+
+(C:\Program Files\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 550.
-LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 550.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 976.
+LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 976.
  (C:\Program Files\MiKTeX\tex/latex/cyrillic\t2acmtt.fd
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
@@ -1297,7 +2013,7 @@ Package fancyhdr Warning: \headheight is too small (0.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
 
-[12 <./ex3/k7_g_vt-eps-converted-to.pdf> <./ex3/k7_g_vt_error-eps-converted-to.pdf>]
+[25 <./ex6/sin-eps-converted-to.pdf> <./ex6/error_0.135-eps-converted-to.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (0.0pt): 
 (fancyhdr)                Make it at least 12.0pt, for example:
@@ -1305,7 +2021,7 @@ Package fancyhdr Warning: \headheight is too small (0.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
 
-[13]
+[26]
 
 Package fancyhdr Warning: \headheight is too small (0.0pt): 
 (fancyhdr)                Make it at least 12.0pt, for example:
@@ -1313,26 +2029,50 @@ Package fancyhdr Warning: \headheight is too small (0.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
 
-[14] (main.aux)
+[27]
+
+Package fancyhdr Warning: \headheight is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.0pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
+
+[28]
+
+Package fancyhdr Warning: \headheight is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.0pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
+
+[29]
+
+Package fancyhdr Warning: \headheight is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.0pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-12.0pt}.
+
+[30] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 580DD5A9898F94498F0F2A900262CEDE;4381.
+(rerunfilecheck)             Checksum: 825FCDC229562E3DB8FB4AA65EF61702;7157.
  ) 
 Here is how much of TeX's memory you used:
- 27878 strings out of 474485
- 494025 string characters out of 5753551
- 2390542 words of memory out of 5000000
- 49562 multiletter control sequences out of 15000+600000
- 569337 words of font info for 57 fonts, out of 8000000 for 9000
+ 28454 strings out of 474485
+ 508640 string characters out of 5753551
+ 2522542 words of memory out of 5000000
+ 49878 multiletter control sequences out of 15000+600000
+ 573982 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,93p,779b,2654s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\main\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\latt0800.pk> <C:\Users\main\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0500.pk> <C:\Users\main\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1200.pk> <C:\Users\main\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0700.pk> <C:\Users\main\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\main\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati1000.pk> <C:\Users\main\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0900.pk> <C:\Users\main\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1000.pk> <C:\Users\main\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb>
-Output written on main.pdf (14 pages, 1597232 bytes).
+ 84i,12n,93p,1621b,2654s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\main\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\latt0800.pk> <C:\Users\main\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0500.pk> <C:\Users\main\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1200.pk> <C:\Users\main\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0700.pk> <C:\Users\main\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\main\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati1000.pk> <C:\Users\main\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0900.pk> <C:\Users\main\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1000.pk> <C:\Users\main\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb>
+Output written on main.pdf (30 pages, 4607430 bytes).
 PDF statistics:
- 809 PDF objects out of 1000 (max. 8388607)
- 133 named destinations out of 1000 (max. 500000)
- 213 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1445 PDF objects out of 1728 (max. 8388607)
+ 372 named destinations out of 1000 (max. 500000)
+ 478 words of extra memory for PDF output out of 10000 (max. 10000000)
 
