@@ -1,7 +1,8 @@
 \babel@toc {russian}{}\relax 
 \contentsline {section}{\numberline {1}Задача стабилизации с идеальным дифференцирующим звеном}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Выводы}{5}{subsection.1.1}%
 \contentsline {section}{\numberline {2}Задача стабилизации с реальным дифференцирующим звеном}{5}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Вывод}{8}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.1}Выводы}{8}{subsection.2.1}%
 \contentsline {section}{\numberline {3}Задача слежения для системы с астатизмом нулевого порядка (П-регулятор)}{8}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Стационарная желаемая функция}{8}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Функция с постоянной скоростью}{10}{subsection.3.2}%

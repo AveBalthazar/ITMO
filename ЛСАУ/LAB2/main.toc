@@ -1,0 +1,8 @@
+\babel@toc {russian}{}\relax 
+\contentsline {section}{\numberline {1}Свободное движение}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Выводы}{6}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Область устойчивости}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Выводы}{9}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Автономный генератор}{9}{section.3}%
+\contentsline {section}{\numberline {4}Вывод по работе}{11}{section.4}%
+\contentsline {section}{\numberline {5}Приложение А. Код для выполнения заданий}{13}{section.5}%

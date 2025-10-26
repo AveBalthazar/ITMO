@@ -1,0 +1,12 @@
+\babel@toc {russian}{}\relax 
+\contentsline {section}{\numberline {1}Одноканальная система в форме вход-выход}{3}{section.1}%
+\contentsline {section}{\numberline {2}Переход от формы вход-выход к форме вход-состояние-выход}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Математические модели системы}{4}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Общий вид канонических форм}{4}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Математические модели системы в управляемой и наблюдаемой формах}{5}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Структурные схемы для представлений В-С-В и их моделирование}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Выводы}{7}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Многоканальная система в форме вход-выход}{7}{section.3}%
+\contentsline {section}{\numberline {4}Многоканальная система в форме вход-состояние-выход}{10}{section.4}%
+\contentsline {section}{\numberline {5}Выводы}{11}{section.5}%
+\contentsline {section}{\numberline {6}Приложение А. Код для выполнения заданий}{12}{section.6}%

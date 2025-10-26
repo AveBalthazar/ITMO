@@ -1,0 +1,7 @@
+\babel@toc {russian}{}\relax 
+\contentsline {section}{\numberline {1}Вынужденное движение}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Выводы}{6}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Качество переходных процессов}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Выводы}{12}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Вывод по работе}{12}{section.3}%
+\contentsline {section}{\numberline {4}Приложение А. Код для выполнения заданий}{13}{section.4}%

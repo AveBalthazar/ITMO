@@ -1,0 +1,52 @@
+% clear all;
+close all;
+
+[~, scriptName] = fileparts(mfilename('fullpath'));
+if ~isfolder(scriptName)
+    mkdir(scriptName);
+end
+
+t = (0:0.01:25)';
+
+% g_strs = {'g_a', 'g_vt', 'g_at2', 'g_asinwt'};
+g_strs = {'g_vt', 'g_asinwt'};
+g_latexs = {'t', '\sin{(0.45 t)}'};
+g_variants = [t, sin(0.45.*t)];
+
+for i = 1:numel(g_strs)
+    g = [t, g_variants(:, i)];
+    g_str = g_strs{i};
+    g_latex = g_latexs{i};
+    for k_i = [0.3, 0.7, 1.2]
+        fig_regulator = figure;
+        ax_regulator = gca;
+        fig_error = figure;
+        ax_error = gca;
+        xlabel(ax_regulator, 'Время'), ylabel(ax_regulator, 'Амплитуда')
+        xlabel(ax_error, 'Время'), ylabel(ax_error, 'Ошибка')
+        hold(ax_regulator, 'on'); grid(ax_regulator, 'on');
+        hold(ax_error, 'on'); grid(ax_error, 'on');
+        plot(ax_regulator, t, g(:,2), LineWidth=1.5, DisplayName="$g(t) = " + g_latex + "$", Color='black')
+        for k_p = [0.5, 1, 2]
+            out = sim('ex5/model_regulator5.slx','StopTime','25');
+            y_model = out.y;
+            error = out.e;
+            plot(ax_regulator, y_model.Time, y_model.Data, LineWidth=1.2, DisplayName="$y_{zamk}(t), k_p = " + string(k_p) + "$")
+            legend(Interpreter='latex', Location='best', BackgroundAlpha=.3, FontSize=10, FontName='Computer Modern')
+            plot(ax_error, error.Time, error.Data, LineWidth=1.2, DisplayName="$e(t), k_p = " + string(k_p) + "$")
+        end
+        if (i == 1)
+            e_steady = error.Data(end);
+            xl = xlim(ax_error);                     % текущие пределы по X — вектор [x_min, x_max]
+            plot(ax_error, xl, [e_steady, e_steady], 'k-.', Color='black', DisplayName="$e_{end} = " + string(e_steady) + "$");     % два значения y0 для двух точек
+        end
+        if (i == 2)
+            ylim(ax_regulator, [-1.2, 2.1])
+        end
+        % xlim(ax_error, [0, 25]); xlim(ax_regulator, [0, 25]); 
+        legend(ax_regulator, Interpreter='latex', Location='best', BackgroundAlpha=.3, FontSize=12, FontName='Computer Modern')
+        legend(ax_error, Interpreter='latex', Location='best', BackgroundAlpha=.3, FontSize=12, FontName='Computer Modern')
+        saveas(fig_regulator, string(scriptName) + '\ki_' + string(k_i) + '_' + g_str + '.eps', 'epsc')
+        saveas(fig_error, string(scriptName) + '\ki_' + string(k_i) + '_' + g_str + '_error.eps', 'epsc')
+    end
+end

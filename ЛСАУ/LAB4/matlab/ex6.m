@@ -1,0 +1,47 @@
+% clear all;
+close all;
+
+[~, scriptName] = fileparts(mfilename('fullpath'));
+if ~isfolder(scriptName)
+    mkdir(scriptName);
+end
+
+t = (0:0.001:25)';
+
+% g_strs = {'g_a', 'g_vt', 'g_at2', 'g_asinwt'};
+g_strs = {'g_asinwt'};
+g_latexs = {'\sin{(0.45 t)}'};
+g_variants = [sin(0.45.*t)];
+
+for i = 1:numel(g_strs)
+    g = [t, g_variants(:, i)];
+    g_str = g_strs{i};
+    g_latex = g_latexs{i};
+    fig_regulator = figure;
+    ax_regulator = gca;
+    fig_error = figure;
+    ax_error = gca;
+    xlabel(ax_regulator, 'Время'), ylabel(ax_regulator, 'Амплитуда')
+    xlabel(ax_error, 'Время'), ylabel(ax_error, 'Ошибка')
+    hold(ax_regulator, 'on'); grid(ax_regulator, 'on');
+    hold(ax_error, 'on'); grid(ax_error, 'on');
+    plot(ax_regulator, t, g(:,2), LineWidth=1.5, DisplayName="$g(t) = " + g_latex + "$", Color='black')
+    out = sim('ex6/model_regulator6.slx','StopTime','25');
+    y_model = out.y;
+    error = out.e;
+    plot(ax_regulator, y_model.Time, y_model.Data, LineWidth=1.2, DisplayName="$y_{zamk}(t), k_p = " + string(k_p) + "$")
+    legend(Interpreter='latex', Location='best', BackgroundAlpha=.3, FontSize=10, FontName='Computer Modern')
+    h1 = plot(ax_error, error.Time, error.Data, LineWidth=1.2, DisplayName="$e(t), k_p = " + string(k_p) + "$");
+    xl = xlim(ax_error);
+    err_max = max(error.Data);
+    err_min = min(error.Data);
+    difference = (err_max + abs(err_min))*0.135; % время переходного процесса до момента пока не будет погрешность 2%
+    % plot(ax_error, xl, [0, 0], 'k-.', Color='black', DisplayName="$e_{end} = " + string(0) + "$");
+    yline(ax_error,-difference, 'k-.'); % нижняя граница окрестности
+    yline(ax_error, difference, 'k-.'); % верхняя граница окрестности
+    % xlim(ax_error, [0, 25]); xlim(ax_regulator, [0, 25]); 
+    legend(ax_regulator, Interpreter='latex', Location='best', BackgroundAlpha=.3, FontSize=12, FontName='Computer Modern')
+    legend(ax_error, h1, Interpreter='latex', Location='best', BackgroundAlpha=.3, FontSize=12, FontName='Computer Modern')
+    saveas(fig_regulator, string(scriptName) + '\ki_' + string(k_i) + '_' + g_str + '.eps', 'epsc')
+    saveas(fig_error, string(scriptName) + '\ki_' + string(k_i) + '_' + g_str + '_error.eps', 'epsc')
+end

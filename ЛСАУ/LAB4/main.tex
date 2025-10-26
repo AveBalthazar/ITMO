@@ -18,6 +18,7 @@
 \usepackage{listings} % код
 \usepackage{accsupp}
 \usepackage{caption}
+
 \captionsetup[figure]{name=Рисунок}
 \pagestyle{fancy}
 \fancyhf{}
@@ -261,6 +262,10 @@ $$\
 
 Видим, что теперь система асимптотически устойчива с установившимся значением $y_{\text{уст}} = 0$, таким образом получилось стабилизировать неустойчивую разомкнутую систему действием на неё регулятора.
 
+\subsection{Выводы}\
+
+Я нашёл значения параметров регулятора, обеспечивающие асимптотически устойчивую замкнутую систему, и проверил корректность найденных значений моделированием движения --- действительно получилось из неустойчивой системы сделать асимптотически устойчивую.
+
 \section{Задача стабилизации с реальным дифференцирующим звеном}\
 
 В задании аппроксимация производной при помощи блока $\text{Derivative}$ заменяется передаточной функцией
@@ -375,7 +380,7 @@ T_{1, 2} = \frac{-1 \pm \sqrt{13}}{6}.
 
 Видно, что траектория движения системы больше походит на устойчивую по Ляпунову, чем на асимптотическую.
 
-\subsection{Вывод}\
+\subsection{Выводы}\
 
 Я понял, что добавление в регулятор дифференцирующего звена меняет его передаточную функцию, и понял, как определить устойчивость системы исходя из параметра добавленного звена. 
 
@@ -673,35 +678,39 @@ $$\
 \begin{figure}[H]
     \begin{minipage}{0.5\textwidth}
         \centering \includegraphics[width=\textwidth]{ex4/k0.5_g_at2.eps}
-        \caption{Графики входа и выхода при $k=0.5$, $g(t)=0.45t^2$}
+        \caption{Графики входа и выхода}
+        \centerline{при $k=0.5$, $g(t)=0.45t^2$}
     \end{minipage}\hfill
     \begin{minipage}{0.5\textwidth}
         \centering \includegraphics[width=\textwidth]{ex4/k0.5_g_at2_error.eps}
-        \caption{График ошибки при $k=0.5$, $g(t)=0.45t^2$}
-        % \centerline{лягушки}
+        \caption{График ошибки}
+        \centerline{при $k=0.5$, $g(t)=0.45t^2$}
     \end{minipage}\\[1em]
 \end{figure}\noindent\
 
 \begin{figure}[H]
     \begin{minipage}{0.5\textwidth}
         \centering \includegraphics[width=\textwidth]{ex4/k1_g_at2.eps}
-        \caption{Графики входа и выхода при $k=1$, $g(t)=0.45t^2$}
+        \caption{Графики входа и выхода}
+        \centerline{при $k=1$, $g(t)=0.45t^2$}
     \end{minipage}\hfill
     \begin{minipage}{0.5\textwidth}
         \centering \includegraphics[width=\textwidth]{ex4/k1_g_at2_error.eps}
-        \caption{График ошибки при $k=1$, $g(t)=0.45t^2$}
-        % \centerline{лягушки}
+        \caption{График ошибки}
+        \centerline{при $k=1$, $g(t)=0.45t^2$}
     \end{minipage}\\[1em]
 \end{figure}\noindent\
 
 \begin{figure}[H]
     \begin{minipage}{0.5\textwidth}
         \centering \includegraphics[width=\textwidth]{ex4/k3_g_at2.eps}
-        \caption{Графики входа и выхода при $k=3$, $g(t)=0.45t^2$}
+        \caption{Графики входа и выхода}
+        \centerline{при $k=3$, $g(t)=0.45t^2$}
     \end{minipage}\hfill
     \begin{minipage}{0.5\textwidth}
         \centering \includegraphics[width=\textwidth]{ex4/k3_g_at2_error.eps}
-        \caption{График ошибки при $k=3$, $g(t)=0.45t^2$}
+        \caption{График ошибки}
+        \centerline{при $k=3$, $g(t)=0.45t^2$}
         % \centerline{лягушки}
     \end{minipage}\\[1em]
 \end{figure}\noindent\
