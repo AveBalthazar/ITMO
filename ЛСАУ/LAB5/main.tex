@@ -1,0 +1,198 @@
+\documentclass[a4paper]{article}
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel} 
+\usepackage[left=15mm, top=15mm, right=15mm, bottom=42mm, nohead, nofoot]{geometry}
+\usepackage{blindtext}  % рыба-текст
+\usepackage{graphicx}  % изобржаения
+\usepackage{float} % плавающие объекты
+\usepackage{wrapfig}  % изобржаения
+\usepackage{tikz} % графика
+\usepackage{xcolor} % определение цветов
+\usepackage{nicefrac} % красивые дроби
+\usepackage{cancel} % сокращение
+\usepackage{amsmath,amsfonts,amssymb} % математический пакет
+\usepackage{hyperref}  % гиперссылки
+\usepackage{fancybox,fancyhdr} % хедер и футер
+\usepackage{listings} % код
+\usepackage{accsupp}
+\usepackage{caption}
+
+\captionsetup[figure]{name=Рисунок}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Лабораторная работа №5}
+\fancyhead[R]{\textit{Типовые динамические звенья}}
+\fancyfoot[C]{\thepage}
+\headsep=8mm
+\footskip=20mm
+
+\definecolor{urlcolor}{HTML}{3454D1}
+\definecolor{linkcolor}{HTML}{3454D1}
+\hypersetup{pdfstartview=FitH, linkcolor=linkcolor, urlcolor=urlcolor, colorlinks=true}
+
+\definecolor{strings}{rgb}{0,0.6,0}
+\definecolor{comments}{rgb}{0,0.3,0}
+\definecolor{numbers}{rgb}{0.5,0.5,0.5}
+\definecolor{keywords}{rgb}{0.09,0.61,0.95}
+\definecolor{background}{rgb}{0.97,0.97,0.97}
+\newcommand{\noncopynumber}[1]{%
+    \BeginAccSupp{method=escape,ActualText={}}%
+    #1%
+    \EndAccSupp{}%
+}
+\lstdefinestyle{codestyle}{
+    backgroundcolor=\color{background},
+    commentstyle=\color{comments},
+    keywordstyle=\color{keywords},
+    stringstyle=\color{strings},
+    numberstyle=\tiny\color{numbers}\noncopynumber,
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    inputencoding=utf8,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    extendedchars=true,
+    literate=
+    {а}{{\cyra}}1
+    {б}{{\cyrb}}1
+    {в}{{\cyrv}}1
+    {г}{{\cyrg}}1
+    {д}{{\cyrd}}1
+    {е}{{\cyre}}1
+    {ж}{{\cyrzh}}1
+    {з}{{\cyrz}}1
+    {и}{{\cyri}}1
+    {й}{{\cyrishrt}}1
+    {к}{{\cyrk}}1
+    {л}{{\cyrl}}1
+    {м}{{\cyrm}}1
+    {н}{{\cyrn}}1
+    {о}{{\cyro}}1
+    {п}{{\cyrp}}1
+    {р}{{\cyrr}}1
+    {с}{{\cyrs}}1
+    {т}{{\cyrt}}1
+    {у}{{\cyru}}1
+    {ф}{{\cyrf}}1
+    {х}{{\cyrh}}1
+    {ц}{{\cyrc}}1
+    {ч}{{\cyrch}}1
+    {ш}{{\cyrsh}}1
+    {щ}{{\cyrshch}}1
+    {ъ}{{\cyrhrdsn}}1
+    {ы}{{\cyrery}}1
+    {ь}{{\cyrsftsn}}1
+    {э}{{\cyrerev}}1
+    {ю}{{\cyryu}}1
+    {я}{{\cyrya}}1
+    {А}{{\CYRA}}1
+    {Б}{{\CYRB}}1
+    {В}{{\CYRV}}1
+    {Г}{{\CYRG}}1
+    {Д}{{\CYR96}}1
+    {Е}{{\CYRE}}1
+    {Ж}{{\CYRZH}}1
+    {З}{{\CYRZ}}1
+    {И}{{\CYRI}}1
+    {Й}{{\CYRISHRT}}1
+    {К}{{\CYRK}}1
+    {Л}{{\CYRL}}1
+    {М}{{\CYRM}}1
+    {Н}{{\CYRN}}1
+    {О}{{\CYRO}}1
+    {П}{{\CYRP}}1
+    {Р}{{\CYRR}}1
+    {С}{{\CYRS}}1
+    {Т}{{\CYRT}}1
+    {У}{{\CYRU}}1
+    {Ф}{{\CYRF}}1
+    {Х}{{\CYRH}}1
+    {Ц}{{\CYRC}}1
+    {Ч}{{\CYRCH}}1
+    {Ш}{{\CYRSH}}1
+    {Щ}{{\CYRSHCH}}1
+    {Ъ}{{\CYRHRDSN}}1
+    {Ы}{{\CYRERY}}1
+    {Ь}{{\CYRSFTSN}}1
+    {Э}{{\CYREREV}}1
+    {Ю}{{\CYRYU}}1
+    {Я}{{\CYRYA}}1
+}
+
+\lstset{style=codestyle}
+
+\addto\captionsrussian{
+  \renewcommand{\contentsname}
+    {\centering Содержание}
+}
+
+
+\newlength{\tempheight}
+\newcommand{\Let}{
+\mathbin{\text{\settoheight{\tempheight}{\mathstrut}\raisebox{0.4\pgflinewidth}{
+\tikz[baseline=0.5ex,line cap=round,line join=round] \draw (0,0) --++ (0.3em,0) --++ (0,2.3ex) --++ (-0.3em,0);
+}}}}
+\newcommand*\squared[1]{\tikz[baseline=(char.base)]{
+            \node[shape=rectangle,draw,inner sep=4pt] (char) {#1};}}
+\newcommand*\msquared[1]{\tikz[baseline=(char.base)]{
+            \node[shape=rectangle,draw,inner sep=4pt] (char) {$\displaystyle #1$};}}
+\newcommand{\at}{\biggr\rvert}
+\newcommand{\shiftright}[3]{\makebox[#2][r]{\makebox[#1][l]{#3}}}
+\newcommand{\e}{\;\text{e}}
+\let\oldint\int
+\def\int{\oldint\limits}
+\DeclareRobustCommand{\divby}{%
+  \mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\newcommand\NB{\textbf{N\kern-0.32em\textcolor{red}{B}}}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        Федеральное государственное автономное образовательное \\ учреждение высшего образования \\[6pt]
+        САНКТ-ПЕТЕРБУРГСКИЙ НАЦИОНАЛЬНЫЙ \\ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ ИТМО \\[16pt]
+        Факультет систем управления и робототехники \\[26em]
+        Лабораторная работа №5\\[0.5em]
+        \textbf{ТИПОВЫЕ ДИНАМИЧЕСКИЕ ЗВЕНЬЯ}
+    \end{center}\,\\[10em]
+    \begin{flushright}
+        Студент: Заводин Е.Ю.\\
+        Лин САУ R23 бак 1.1.1 \\[0.5em]
+        Преподаватели: Перегудин А.А.\\
+        Пашенко А.В.
+    \end{flushright}\,\\[6em]
+    \begin{center}
+        {\small Санкт-Петербург \\ 2025}
+    \end{center}
+\end{titlepage}
+\setcounter{page}{2}
+\tableofcontents\newpage
+
+\section{Исследование ДПТ}\
+
+
+
+\section{Исследование ДПТ 2.0}\
+
+\section{Исследование ``Конденсируй-умножай''}\
+
+\section{Исследование пружинки}\
+
+\section{Исследование ``Что ты такое''}\
+
+\subsection*{Листинг 1. Код для выполнения задания 1}
+\begin{lstlisting}[caption={Код для построения графиков для задания 1}, language=matlab]
+
+\end{lstlisting}
+\end{document}
