@@ -1,0 +1,503 @@
+\documentclass[a4paper]{article}
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel} 
+\usepackage[left=15mm, top=15mm, right=15mm, bottom=42mm, nohead, nofoot]{geometry}
+\usepackage{blindtext}  % рыба-текст
+\usepackage{graphicx}  % изобржаения
+\usepackage{float} % плавающие объекты
+\usepackage{wrapfig}  % изобржаения
+\usepackage{tikz} % графика
+\usepackage{xcolor} % определение цветов
+\usepackage{nicefrac} % красивые дроби
+\usepackage{cancel} % сокращение
+\usepackage{amsmath,amsfonts,amssymb} % математический пакет
+\usepackage{hyperref}  % гиперссылки
+\usepackage{fancybox,fancyhdr} % хедер и футер
+\usepackage{listings} % код
+\usepackage{accsupp}
+\usepackage{caption}
+
+\captionsetup[figure]{name=Рисунок}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Лабораторная работа №5}
+\fancyhead[R]{\textit{Типовые динамические звенья}}
+\fancyfoot[C]{\thepage}
+\headsep=8mm
+\footskip=20mm
+
+\definecolor{urlcolor}{HTML}{3454D1}
+\definecolor{linkcolor}{HTML}{3454D1}
+\hypersetup{pdfstartview=FitH, linkcolor=linkcolor, urlcolor=urlcolor, colorlinks=true}
+
+\definecolor{strings}{rgb}{0,0.6,0}
+\definecolor{comments}{rgb}{0,0.3,0}
+\definecolor{numbers}{rgb}{0.5,0.5,0.5}
+\definecolor{keywords}{rgb}{0.09,0.61,0.95}
+\definecolor{background}{rgb}{0.97,0.97,0.97}
+\newcommand{\noncopynumber}[1]{%
+    \BeginAccSupp{method=escape,ActualText={}}%
+    #1%
+    \EndAccSupp{}%
+}
+\lstdefinestyle{codestyle}{
+    backgroundcolor=\color{background},
+    commentstyle=\color{comments},
+    keywordstyle=\color{keywords},
+    stringstyle=\color{strings},
+    numberstyle=\tiny\color{numbers}\noncopynumber,
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    inputencoding=utf8,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    extendedchars=true,
+    literate=
+    {а}{{\cyra}}1
+    {б}{{\cyrb}}1
+    {в}{{\cyrv}}1
+    {г}{{\cyrg}}1
+    {д}{{\cyrd}}1
+    {е}{{\cyre}}1
+    {ж}{{\cyrzh}}1
+    {з}{{\cyrz}}1
+    {и}{{\cyri}}1
+    {й}{{\cyrishrt}}1
+    {к}{{\cyrk}}1
+    {л}{{\cyrl}}1
+    {м}{{\cyrm}}1
+    {н}{{\cyrn}}1
+    {о}{{\cyro}}1
+    {п}{{\cyrp}}1
+    {р}{{\cyrr}}1
+    {с}{{\cyrs}}1
+    {т}{{\cyrt}}1
+    {у}{{\cyru}}1
+    {ф}{{\cyrf}}1
+    {х}{{\cyrh}}1
+    {ц}{{\cyrc}}1
+    {ч}{{\cyrch}}1
+    {ш}{{\cyrsh}}1
+    {щ}{{\cyrshch}}1
+    {ъ}{{\cyrhrdsn}}1
+    {ы}{{\cyrery}}1
+    {ь}{{\cyrsftsn}}1
+    {э}{{\cyrerev}}1
+    {ю}{{\cyryu}}1
+    {я}{{\cyrya}}1
+    {А}{{\CYRA}}1
+    {Б}{{\CYRB}}1
+    {В}{{\CYRV}}1
+    {Г}{{\CYRG}}1
+    {Д}{{\CYR96}}1
+    {Е}{{\CYRE}}1
+    {Ж}{{\CYRZH}}1
+    {З}{{\CYRZ}}1
+    {И}{{\CYRI}}1
+    {Й}{{\CYRISHRT}}1
+    {К}{{\CYRK}}1
+    {Л}{{\CYRL}}1
+    {М}{{\CYRM}}1
+    {Н}{{\CYRN}}1
+    {О}{{\CYRO}}1
+    {П}{{\CYRP}}1
+    {Р}{{\CYRR}}1
+    {С}{{\CYRS}}1
+    {Т}{{\CYRT}}1
+    {У}{{\CYRU}}1
+    {Ф}{{\CYRF}}1
+    {Х}{{\CYRH}}1
+    {Ц}{{\CYRC}}1
+    {Ч}{{\CYRCH}}1
+    {Ш}{{\CYRSH}}1
+    {Щ}{{\CYRSHCH}}1
+    {Ъ}{{\CYRHRDSN}}1
+    {Ы}{{\CYRERY}}1
+    {Ь}{{\CYRSFTSN}}1
+    {Э}{{\CYREREV}}1
+    {Ю}{{\CYRYU}}1
+    {Я}{{\CYRYA}}1
+}
+
+\lstset{style=codestyle}
+
+\addto\captionsrussian{
+  \renewcommand{\contentsname}
+    {\centering Содержание}
+}
+
+
+\newlength{\tempheight}
+% \newcommand{\Let}{
+% \mathbin{\text{\settoheight{\tempheight}{\mathstrut}\raisebox{0.4\pgflinewidth}{
+% \tikz[baseline=0.5ex,line cap=round,line join=round] \draw (0,0) --++ (0.3em,0) --++ (0,2.3ex) --++ (-0.3em,0);
+% }}}}
+\newcommand*\squared[1]{\tikz[baseline=(char.base)]{
+            \node[shape=rectangle,draw,inner sep=4pt] (char) {#1};}}
+\newcommand*\msquared[1]{\tikz[baseline=(char.base)]{
+            \node[shape=rectangle,draw,inner sep=4pt] (char) {$\displaystyle #1$};}}
+\newcommand{\at}{\biggr\rvert}
+\newcommand{\shiftright}[3]{\makebox[#2][r]{\makebox[#1][l]{#3}}}
+\newcommand{\e}{\;\text{e}}
+\let\oldint\int
+\def\int{\oldint\limits}
+\DeclareRobustCommand{\divby}{%
+  \mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\newcommand\NB{\textbf{N\kern-0.32em\textcolor{red}{B}}}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        Федеральное государственное автономное образовательное \\ учреждение высшего образования \\[6pt]
+        САНКТ-ПЕТЕРБУРГСКИЙ НАЦИОНАЛЬНЫЙ \\ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ ИТМО \\[16pt]
+        Факультет систем управления и робототехники \\[26em]
+        Лабораторная работа №5\\[0.5em]
+        \textbf{ТИПОВЫЕ ДИНАМИЧЕСКИЕ ЗВЕНЬЯ}
+    \end{center}\,\\[10em]
+    \begin{flushright}
+        Студент: Заводин Е.Ю.\\
+        Лин САУ R23 бак 1.1.1 \\[0.5em]
+        Преподаватели: Перегудин А.А.\\
+        Пашенко А.В.
+    \end{flushright}\,\\[6em]
+    \begin{center}
+        {\small Санкт-Петербург \\ 2025}
+    \end{center}
+\end{titlepage}
+\setcounter{page}{2}
+\tableofcontents\newpage
+
+\section{Задача исследования типовых динамических звеньев}\
+
+В работе исследуются реальные объекты --- находятся их передаточные функции, сопоставляются с типовыми звеньями, временные и частотные характеристики объектов моделируются и сравниваются с конкретными теоретическими для найденных типовых звеньев. 
+
+\subsection{ДПТ}\
+
+Рассмотрим ДПТ независимого возбуждения, задаваемый формулами
+
+\[
+J\dot{\omega} = M, M = k_mI, I = \frac{U + \varepsilon_i}{R}, \varepsilon_i = -k_e\omega. 
+\]\
+
+Считая $U$ входом, $\omega$ --- выходом, сведу формулы к одному линейному дифференциальному уравнению:
+
+\[
+J\dot{\omega} = k_m \frac{U-k_e\omega}{R} = \frac{Uk_e}{R} - \frac{k_mk_e\omega}{R}
+\]
+
+\[
+J\dot{\omega} + \frac{k_mk_e \omega}{R} = \frac{k_m}{R} U
+\]
+
+\[
+\frac{JR}{k_m}\dot{\omega} + k_e\omega = U
+\]
+
+\[
+\frac{\omega}{U} = W(s) = \frac{1}{\frac{JR}{k_m}s + k_e} = \frac{1}{k_e} \frac{1}{\frac{JR}{k_ek_m}s + 1}
+\]
+
+\[
+W(s) = \frac{k}{Ts+1}, T = \frac{JR}{k_ek_m}, K = \frac{1}{k_e}
+\]\ 
+
+Получил передаточную функцию в стандартизированном виде, соответствующую реальному усилительному звену. Выделю действительную и мнимую части этой передаточной функции:
+
+\[
+W(s) = \frac{k}{Ts+1} \Rightarrow W(j\omega) = \frac{k}{T(j\omega)+1}
+\]
+
+\[
+W(j\omega) = \frac{k(T(j\omega)-1)}{(T(j\omega)+1)(T(j\omega)-1)} = \frac{-K}{-1-\omega^2} + i\frac{KT\omega}{-1-\omega^2} = \frac{K}{1+\omega^2} + i\frac{-KT\omega}{1+\omega^2}.
+\]\
+
+Пусть $P(\omega) = \frac{K}{1+\omega^2}$, $Q(\omega) = \frac{-KT\omega}{1+\omega^2}$. Рассчитаю АЧХ такой передаточной функции:
+
+\[
+A(\omega) = \sqrt{\frac{(KT\omega)^2 + K^2}{(1+\omega^2)^2}}.
+\]\
+
+Фазово-частотная характеристика может быть найдена по следующей формуле:
+
+\[
+\varphi(\omega) = \text{atan}2(Q(\omega), P(\omega)).
+\]\ 
+
+У двигателя постоянного тока активное сопротивление обмоток ротора $R$, момент инерции ротора $J$ и конструктивные постоянные $k_e, k_m$ при реальном моделировании являются положительными, также буду считать, что $\omega$ принимает только неотрицательные значения (в отрицательной области для вещественной функции результат преобразования Лапласа будет симметричен результату в положительной области). Исходя из этого, коэффициент усиления и постоянная времени
+
+\[
+T = \frac{JR}{k_ek_m} > 0, K = \frac{1}{k_e} > 0.
+\]\ 
+
+Тогда числитель действительной части передаточной функции всегда положителен, как и знаменатель, а значит, $P(\omega) > 0$. Числитель мнимой части передаточной функции же всегда отрицателен, а знаменатель всегда положителен, следовательно, $Q(\omega) < 0$. Исходя из этих соображений, комплексное число $W(j\omega) = P(\omega) +jQ(\omega)$ находится в четвёртом квадранте, а значит, вместо $\text{atan}2{(Q(\omega), P(\omega))}$ можем использовать $\arctan{\left(\frac{Q(\omega)}{P(\omega)}\right)}$:
+
+\[
+\arctan{\left(\frac{Q(\omega)}{P(\omega)}\right)} = \arctan{\left(\frac{\frac{-KT\omega}{1+\omega^2}}{\frac{K}{1+\omega^2}}\right)} = 
+\arctan{\left(\frac{-KT\omega}{K}\right)} = 
+\arctan{-T\omega} = -\arctan{T\omega}
+\]
+
+\subsection{ДПТ 2.0}\
+
+Рассмотрим уравнения для полной модели ДПТ независимого возбуждения: 
+
+\[
+J\dot{\omega} = M, M = k_mI, I = \frac{U + \varepsilon}{R}, \varepsilon = \varepsilon_i + \varepsilon_s, \varepsilon_i = -k_e\omega, \varepsilon_s = -L\dot{I}. 
+\]\
+
+Считая $U$ входом, $\omega$ --- выходом, сведём формулы к одному линейному дифференциальному уравнению:
+
+\[
+J\dot{\omega} = k_m \frac{U-k_e\omega -L\dot{I}}{R} = \left.\frac{k_m}{R}U - \frac{k_mk_e\omega}{R}\omega - \frac{L\dot{I}k_m}{R}\right|\cdot \frac{R}{k_m}
+\]
+
+\[
+\frac{JR}{k_m}\dot\omega+k_e\omega + L\dot I = U
+\]
+
+\[
+J\dot\omega = k_mI \Rightarrow I = \frac{J\dot \omega}{k_m}, \dot I = \frac{J\ddot \omega}{k_m}
+\]
+
+\[
+\frac{JL}{k_m}\ddot\omega +\frac{JR}{k_m}\dot\omega + k_e\omega = U \Leftrightarrow \ddot \omega +\frac{R}{L}\dot \omega +\frac{k_ek_m}{J}\omega = \frac{k_m}{J}U
+\]\
+
+Переведу получившееся уравнение в пространство изображений Лаплпаса:
+
+\[
+s^2\Omega(s) +\frac{R}{L}s\Omega(s) + \frac{k_e k_m}{J}\Omega(s) = \frac{k_m}{J}U(s)
+\]
+
+\[
+W(s) = \frac{U(s)}{\Omega(s)} = \frac{\frac{k_m}{J}}{s^2 + \frac{R}{L}s + \frac{k_ek_m}{J}} = \frac{\frac{1}{k_e}}{\frac{J}{k_ek_m}s^2+\frac{RJ}{k_ek_mL}s + 1}
+\]\
+
+\[
+W(s) = \frac{K}{T^2s^2 + 2T\xi s + 1}, K = \frac{1}{k_e}, T = \sqrt{\frac{J}{k_ek_m}}, \xi = \frac{TR}{2L}
+\]\
+
+Получена передаточная функция в стандартизированном виде, соответствующая колебательному звену. Для выделения действительной и мнимой части сперва перейду к частотной передаточной функции:
+
+\[
+W(s) = \frac{K}{T^2s^2 + 2T\xi s + 1} \Rightarrow W(j\omega) = \frac{K}{T^2(j\omega)^2 + 2T\xi (j\omega) + 1}
+\]
+
+\[
+W(j\omega) = \frac{K(T^2(j\omega)^2 + 1 - 2T\xi (j\omega))}{(T^2(j\omega)^2 + 2T\xi (j\omega) + 1)(T^2(j\omega)^2 + 1 - 2T\xi (j\omega))} = \frac{K(-T^2\omega^2 + 1 - 2T\xi (j\omega))}{(-T^2\omega^2 + 1 + j2T\xi \omega)(-T^2\omega^2 + 1 - j2T\xi \omega)} = 
+\]
+
+\[
+= \frac{K(-T^2\omega^2 + 1 - 2T\xi (j\omega))}{(1-T^2\omega^2)^2+(2T\xi\omega)^2} = \frac{K-KT^2\omega^2}{(1-T^2\omega^2)^2+(2T\xi\omega)^2} +j\frac{-2KT\xi \omega}{(1-T^2\omega^2)^2+(2T\xi\omega)^2}.
+\]\
+
+Пусть $P(\omega) = \frac{K-KT^2\omega^2}{(1-T^2\omega^2)^2+(2T\xi\omega)^2}, Q(\omega) = \frac{-2KT\xi \omega}{(1-T^2\omega^2)^2+(2T\xi\omega)^2}.$ Рассчитаю амплитудно-частотную характеристику:
+
+\[
+A(\omega) = \sqrt{\left(\frac{-2KT\xi \omega}{(1-T^2\omega^2)^2+(2T\xi\omega)^2}\right)^2 + \left(\frac{K-KT^2\omega^2}{(1-T^2\omega^2)^2+(2T\xi\omega)^2}\right)^2} = \sqrt{\frac{4K^2T^2\xi^2\omega^2 + K^2-2K^2T^2\omega^2 + K^2T^4\omega^4}{\left((1-T^2\omega^2)^2+(2T\xi\omega)^2\right)^2}}=
+\]
+
+\[=
+K\sqrt{\frac{4T^2\xi^2\omega^2-2T^2\omega^2 + T^4\omega^4 + 1}{\left((1-T^2\omega^2)^2+(2T\xi\omega)^2\right)^2}} = K\sqrt{\frac{T^2\omega^2(4\xi^2-2 + T^2\omega^2) + 1}{\left((1-T^2\omega^2)^2+(2T\xi\omega)^2\right)^2}}.
+\]\
+
+Фазо-частотная характеристика будет определяться следующим образом:
+
+\[
+\varphi(\omega) = \text{atan2}(Q(\omega), P(\omega)) = \text{atan2}\left(\frac{-2KT\xi \omega}{(1-T^2\omega^2)^2+(2T\xi\omega)^2}, \frac{K-KT^2\omega^2}{(1-T^2\omega^2)^2+(2T\xi\omega)^2}\right)
+\]\
+
+Расположение $W(j\omega) = P(\omega) +jQ(\omega)$ на комплексной плоскости, а значит, и оценка фазовой частотной характеристики определяется в зависимости от того, положительные ли значения принимают $P(\omega)$ и $Q(\omega)$.\
+
+Знаменатели $P(\omega)$ и $Q(\omega)$ всегда положительны. Тогда знаки вещественной и мнимой части $W(j\omega)$ определяются их числителями --- $Q(\omega) < 0$ (т.к. $K, T, \xi > 0$), знак $P(\omega)$ меняется в зависимости от значения $\omega$.\
+
+Рассмотрим $P(\omega) > 0$:
+
+\[
+\frac{1-T^2\omega^2}{\left((1-T^2\omega^2)^2+(2T\xi\omega)^2\right)^2} > 0 \Leftrightarrow 1-T^2\omega^2 > 0 \Leftrightarrow \omega< \frac{1}{T}
+\]
+Тогда $P(\omega) > 0$ при $\omega >\frac{1}{T}$, $P(\omega) = 0$ при $\omega = \frac{1}{T}$. следовательно:\
+
+При $0 \leq \omega < \frac{1}{T}$ $W(j\omega)$ находится в четвертом квадранте, значит, 
+\[
+\varphi(\omega) = \text{atan2}(Q(\omega), P(\omega)) = \arctan\left(\frac{Q(\omega)}{P(\omega)}\right) = -\arctan\!\left( \frac{2T\xi\omega}{1 - T^2\omega^2} \right).
+\]\
+
+При $\omega = \frac{1}{T}$ $W(j\omega)$ $P(\omega) = Q(\omega) = 0 \Rightarrow \varphi = -\frac{\pi}{2}.$\
+
+При $\omega > \frac{1}{T}$ $W(j\omega)$ в третьем квадранте, а значит, 
+
+\[
+\varphi(\omega) = \text{atan2}(Q(\omega), P(\omega)) = \arctan\left(\frac{Q(\omega)}{P(\omega)}\right) + \pi = -\arctan\!\left( \frac{2T\xi\omega}{1 - T^2\omega^2} \right) + \pi.
+\]
+Итого:
+\[
+\varphi(\omega) = \begin{cases}
+    -\arctan\!\left( \frac{2T\xi\omega}{1 - T^2\omega^2} \right), &\omega \in [0, \frac{1}{T}) \\
+    -\frac{\pi}{2}, &\omega = \frac{1}{T} \\
+    -\arctan\!\left( \frac{2T\xi\omega}{1 - T^2\omega^2} \right) + \pi, &\omega \in (\frac{1}{T}, +\infty) \\
+\end{cases}
+\]
+
+\subsection{Конденсируй-умножай}\
+
+В задании рассматривается уравнение конденсатора 
+
+\[
+I = C \frac{dU}{dt}
+\]
+с $I(t)$ в качестве входа и $U(t)$ в качестве выхода.
+
+Для вывода передаточной функции представлю уравнение в виде
+
+\[
+C\dot U = I
+\]
+
+Тогда передаточная функция выглядит следующим образом:
+
+\[
+W(s) = \frac{1}{Cs}
+\]
+
+Она представима в стандартизированной форме:
+
+\[
+W(s) = \frac{K}{s}, K = \frac{1}{C}
+\]
+
+Функция сопоставима с идеальным интегрирующим звеном. Ёмкость конденсатора --- величина неотрицательная, соответственно и $K > 0$. Для определения АЧХ и ФЧХ перейду к частотной передаточной функции и разобью её на вещественную и мнимую составляющие:
+
+\[
+W(s) = \frac{K}{s} \Leftrightarrow W(j\omega) = \frac{K}{j\omega}
+\]
+
+\[
+W(j\omega) = \frac{-jK\omega}{(j\omega)(-j\omega)} = \frac{-jK\omega}{\omega^2} = \frac{-jK}{\omega}.
+\]
+
+В этом случае действительная составляющая $P(\omega)$ равна $0$, значит, $W(j\omega) = P(\omega) + jQ(\omega)$ --- чисто мнимое число, при этом $Q(\omega) < 0$. Найду АЧХ:
+
+\[
+A(\omega) = \sqrt{W(j\omega)^2} = \sqrt{\left(\frac{-jK}{\omega}\right)^2} = \frac{K}{\omega}.
+\]
+
+ФЧХ же в этом случае будет определяться так:
+
+\[
+\varphi(\omega) = \text{atan2}\left(\frac{-K}{\omega}, 0\right) = -\frac{\pi}{2}.
+\]
+
+\subsection{Пружинка}\
+
+В задании рассматривается пружинный маятник, представленный на рисунке:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\linewidth]{ex4/scheme.png}
+    \caption{Пружинный маятник}
+\end{figure}\
+
+Его движение задаётся следующими уравнениями:
+
+\[
+F_\text{упр} = -kx, F = ma.
+\]
+
+Входом этой системы считается некая внешняя сила $F_\text{ext}$, направленная соосно движению маятника, а выходом --- траектория движения $x(t)$. Так как $a = \ddot x$:
+
+\[
+F_{ext}(t) = m \ddot{x} + k x
+\]
+
+Переходим к пространству изображений Лапласа:
+
+\[
+m s^2 X(s) + k X(s) = F_{\text{ext}}(s)
+\]
+
+\[
+X(s) \left(m s^2 + k\right) = F_{\text{ext}}(s)
+\]
+
+\[
+W(s) = \frac{X(s)}{F_{\text{ext}}(s)} = \frac{1}{m s^2 + k} = \frac{1}{k}\frac{1}{\frac{m}{k}s^2 + 1}
+\]
+
+В стандартизированной форме:
+
+\[
+W(s) = \frac{K}{T^2s^2+1}, K = \frac{1}{k}, T^2 = \frac{m}{k}
+\]
+
+Получаем консервативное звено. Найдём АЧХ и ФЧХ, перейдя к частотной передаточной функции:
+
+\[
+W(s) = \frac{K}{T^2s^2+1} \Rightarrow W(j\omega) = \frac{K}{T^2(j\omega)^2+1} = \frac{K}{-T^2\omega^2+1}
+\]
+
+В этом случае в качестве $W(j\omega)$ получается вещественное число. Тогда АЧХ --- просто его модуль:
+
+\[
+A(\omega) = \left|W(j\omega)\right| = \left|\frac{K}{-T^2\omega^2+1}\right|.
+\]
+
+Заметно, что АЧХ имеет разрыв в точке $\omega_0 = \frac{1}{T}$, и ФЧХ также не определена на этой частоте из-за наличия резонанса (знаменатель становится равен нулю). При этом частотная передаточная функция положительна, если $0 < \omega \leq \omega_0$, и отрицательна при $\omega > \omega_0$. Имея $Q(\omega) = 0, P(\omega) = \frac{K}{-T^2\omega^2+1}$, получаем:
+
+\[
+\text{atan2}(Q(\omega), P(\omega)) = \arctan{\left(\frac{0}{P(\omega)}\right)} = 0.
+\]
+
+\[
+\begin{cases}
+    0, & 0 < \omega \leq \frac{1}{T} \\
+    \pi, & \omega > \frac{1}{T}.
+\end{cases}
+\]
+
+\subsection{Что ты такое?}\
+
+В задании рассматривается схема регулятора на операционном усилителе, представленная на рисунке:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\linewidth]{ex5/scheme.png}
+    \caption{Принципиальная схема регулятора на операционном усилителе}
+\end{figure}\
+
+Считая входом системы $U_\text{ВХ}(t)$, а выходом --- $U_\text{ВЫХ}(t)$, можем рассмотреть преобразования, выполняемые над входным сигналом более подробно:\
+
+На входном резисторе сопротивлением $R_1$ при подаче напряжения появляется ток $I(t) = \frac{U_\text{ВХ}(t)}{R_1}$. Далее этот ток попадает на конденсатор с отрицательной обратной связью ёмкостью $C$, и, зная что ток, проходящий через конденсатор такой ёмкости, равен $I(t) = C\frac{du(t)}{dt}$, можем рассчитать напряжение на нём: 
+
+\[
+u(t) = u(0) + \frac{1}{C}\int_0^{t} I(x)dx.
+\]
+
+Воспользуемся полученным ранее значением $I(t) = \frac{U_\text{ВХ}(t)}{R_1}$ и примем начальное условие $u(0) = 0$, тогда $u(t) = \frac{1}{C}\int_0^{t} \frac{U_\text{ВХ}(x)}{R_1}dx = \frac{1}{R_1C}\int_0^{t} U_\text{ВХ}(x)dx$. Далее сигнал идёт на резистор $R_2$, который 
+
+\section{Вывод по работе}\ 
+
+Выполнив лабораторную работу, я познакомился с задачами стабилизации и слежения, а также с их решениями, посмотрел на простейшие виды регуляторов, выявил связь между ``подвижностью'' системы и порядком астатизма, научился понимать, какой вид сигнала система может отследить с нулевой установившейся ошибкой, научился аналитически выводить статическую ошибку от внешнего воздействия по передаточным функциям, осознал как синтезировать регуляторы 
+
+\section{Приложение А. Код для выполнения заданий}
+
+\subsection*{Листинг 1. Код для выполнения задания 1}
+
+\begin{lstlisting}[caption={Код для построения графиков для задания 1}, language=matlab]
+% clear all;
+close all;
+% plot(t, y)
+\end{lstlisting}
+\end{document}
