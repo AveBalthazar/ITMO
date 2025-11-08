@@ -2,8 +2,16 @@
 \contentsline {section}{\numberline {1}Задача исследования типовых динамических звеньев}{3}{section.1}%
 \contentsline {subsection}{\numberline {1.1}ДПТ}{3}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}ДПТ 2.0}{4}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Конденсируй-умножай}{5}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Пружинка}{6}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Что ты такое?}{7}{subsection.1.5}%
-\contentsline {section}{\numberline {2}Вывод по работе}{8}{section.2}%
-\contentsline {section}{\numberline {3}Приложение А. Код для выполнения заданий}{8}{section.3}%
+\contentsline {subsubsection}{\numberline {1.2.1}Частотные характеристики}{5}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Временные характеристики}{5}{subsubsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.3}Конденсируй-умножай}{7}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Частотные характеристики}{7}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Временные характеристики}{8}{subsubsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.4}Пружинка}{8}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}Частотные характеристики}{9}{subsubsection.1.4.1}%
+\contentsline {subsubsection}{\numberline {1.4.2}Временные характеристики}{9}{subsubsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.5}Что ты такое?}{9}{subsection.1.5}%
+\contentsline {subsubsection}{\numberline {1.5.1}Частотные характеристики}{10}{subsubsection.1.5.1}%
+\contentsline {subsubsection}{\numberline {1.5.2}Временные характеристики}{11}{subsubsection.1.5.2}%
+\contentsline {section}{\numberline {2}Вывод по работе}{11}{section.2}%
+\contentsline {section}{\numberline {3}Приложение А. Код для выполнения заданий}{11}{section.3}%

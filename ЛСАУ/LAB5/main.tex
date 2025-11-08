@@ -289,7 +289,21 @@ W(s) = \frac{U(s)}{\Omega(s)} = \frac{\frac{k_m}{J}}{s^2 + \frac{R}{L}s + \frac{
 W(s) = \frac{K}{T^2s^2 + 2T\xi s + 1}, K = \frac{1}{k_e}, T = \sqrt{\frac{J}{k_ek_m}}, \xi = \frac{TR}{2L}
 \]\
 
-Получена передаточная функция в стандартизированном виде, соответствующая колебательному звену. Для выделения действительной и мнимой части сперва перейду к частотной передаточной функции:
+Получена передаточная функция в стандартизированном виде. Для определения конкретного типа звена объекта найду дискриминант знаменателя передаточной функции объекта, подставив параметры $T, \xi$ в соответствии со своим вариантом:
+
+\[T = \sqrt{\frac{J}{k_ek_m}} = \sqrt{\frac{0.0031}{0.3612\cdot0.3612}} \approx 0.1541,\]
+
+\[
+\xi = \frac{TR}{2L} = \frac{0.154\cdot4.7237}{2\cdot1.0567} \approx 0.3445.
+\]
+
+Тогда, 
+
+\[
+D = (2T\xi)^2 - 4(T^2) = (2\cdot0.1541\cdot0.3445)^2-4\cdot0.1541^2 = (0.0858)^2 - 4\cdot 0.0237 \approx -0.009
+\]
+
+Получается что корни знаменателя комплексно-сопряженные, а значит, функция соответствует колебательному звену. Для выделения действительной и мнимой части сперва перейду к частотной передаточной функции:
 
 \[
 W(s) = \frac{K}{T^2s^2 + 2T\xi s + 1} \Rightarrow W(j\omega) = \frac{K}{T^2(j\omega)^2 + 2T\xi (j\omega) + 1}
@@ -303,7 +317,11 @@ W(j\omega) = \frac{K(T^2(j\omega)^2 + 1 - 2T\xi (j\omega))}{(T^2(j\omega)^2 + 2T
 = \frac{K(-T^2\omega^2 + 1 - 2T\xi (j\omega))}{(1-T^2\omega^2)^2+(2T\xi\omega)^2} = \frac{K-KT^2\omega^2}{(1-T^2\omega^2)^2+(2T\xi\omega)^2} +j\frac{-2KT\xi \omega}{(1-T^2\omega^2)^2+(2T\xi\omega)^2}.
 \]\
 
-Пусть $P(\omega) = \frac{K-KT^2\omega^2}{(1-T^2\omega^2)^2+(2T\xi\omega)^2}, Q(\omega) = \frac{-2KT\xi \omega}{(1-T^2\omega^2)^2+(2T\xi\omega)^2}.$ Рассчитаю амплитудно-частотную характеристику:
+Пусть $P(\omega) = \frac{K-KT^2\omega^2}{(1-T^2\omega^2)^2+(2T\xi\omega)^2}, Q(\omega) = \frac{-2KT\xi \omega}{(1-T^2\omega^2)^2+(2T\xi\omega)^2}.$ 
+
+\subsubsection{Частотные характеристики}\
+
+Рассчитаю амплитудно-частотную характеристику:
 
 \[
 A(\omega) = \sqrt{\left(\frac{-2KT\xi \omega}{(1-T^2\omega^2)^2+(2T\xi\omega)^2}\right)^2 + \left(\frac{K-KT^2\omega^2}{(1-T^2\omega^2)^2+(2T\xi\omega)^2}\right)^2} = \sqrt{\frac{4K^2T^2\xi^2\omega^2 + K^2-2K^2T^2\omega^2 + K^2T^4\omega^4}{\left((1-T^2\omega^2)^2+(2T\xi\omega)^2\right)^2}}=
@@ -319,7 +337,7 @@ K\sqrt{\frac{4T^2\xi^2\omega^2-2T^2\omega^2 + T^4\omega^4 + 1}{\left((1-T^2\omeg
 \varphi(\omega) = \text{atan2}(Q(\omega), P(\omega)) = \text{atan2}\left(\frac{-2KT\xi \omega}{(1-T^2\omega^2)^2+(2T\xi\omega)^2}, \frac{K-KT^2\omega^2}{(1-T^2\omega^2)^2+(2T\xi\omega)^2}\right)
 \]\
 
-Расположение $W(j\omega) = P(\omega) +jQ(\omega)$ на комплексной плоскости, а значит, и оценка фазовой частотной характеристики определяется в зависимости от того, положительные ли значения принимают $P(\omega)$ и $Q(\omega)$.\
+Расположение $W(j\omega) = P(\omega) +jQ(\omega)$ на комплексной плоскости, а значит, и оценка фазовой частотной характеристики, определяется в зависимости от того, положительные ли значения принимают $P(\omega)$ и $Q(\omega)$.\
 
 Знаменатели $P(\omega)$ и $Q(\omega)$ всегда положительны. Тогда знаки вещественной и мнимой части $W(j\omega)$ определяются их числителями --- $Q(\omega) < 0$ (т.к. $K, T, \xi > 0$), знак $P(\omega)$ меняется в зависимости от значения $\omega$.\
 
@@ -351,6 +369,110 @@ K\sqrt{\frac{4T^2\xi^2\omega^2-2T^2\omega^2 + T^4\omega^4 + 1}{\left((1-T^2\omeg
 \end{cases}
 \]
 
+\subsubsection{Временные характеристики}\
+
+Весовая функция:
+
+\[
+w(t) = \mathcal{L}^{-1}\left\{W(s)\right\} = \mathcal{L}^{-1}\left\{\frac{K}{T^2s^2 + 2T\xi s + 1}\right\}.
+\]
+
+Для сверки с таблицей готовых преобразований Лапласа приведу к стандартному виду с единицей в качестве коэффициента перед старшей степенью $s$:
+
+\[
+\frac{K}{T^2s^2 + 2T\xi s + 1} = \frac{K}{T^2(s^2 + \frac{2\xi}{T}s + \frac{1}{T^2})}
+\]
+
+В знаменателе можно вывести полный квадрат:
+
+\[
+T^2\left(s^2 + \frac{2\xi}{T}s + \frac{1}{T^2}\right) = T^2\left((s + \frac{\xi}{T})^2 + \frac{1-\xi^2}{T^2}\right)
+\]
+
+Для моего случая $\xi \approx 0.3445 > 0$ можно безболезненно внести замену $\frac{\xi}{T} = a, \frac{1-\xi^2}{T^2} = \omega^2$:
+
+\[
+W(s) = \frac{K}{T^2}\frac{1}{\left((s + a)^2 + \omega^2\right)}
+\]
+
+Преобразуем по свойству линейности:
+
+\[
+\frac{1}{(s + a)^2 + \omega^2} = \frac{1}{\omega} \cdot \frac{\omega}{(s + a)^2 + \omega^2}
+\]
+
+Известно табличное преобразование Лапласа, похожее на получившееся выражение:
+
+\[
+\mathcal{L}\{\text{e}^{-at}\sin{(\omega t)}\} = \frac{\omega}{(s+a)^2+\omega^2}
+\]
+
+Так как $\frac{1}{\omega}$ --- константа, то, опять же, по свойству линейности:
+
+\[
+\mathcal{L}\left\{\frac{K}{T^2}\frac{1}{\omega}\text{e}^{-at}\sin{(\omega t)}\right\} = \frac{K}{T^2}\frac{1}{\omega}\frac{\omega}{(s+a)^2+\omega^2} = W(s).
+\]
+
+Значит,
+
+\[
+w(t) = \mathcal{L}^{-1}\left\{W(s)\right\} = \mathcal{L}^{-1}\left\{\frac{K}{T^2}\frac{1}{\omega}\frac{\omega}{(s+a)^2+\omega^2}\right\} = \frac{K}{T^2}\frac{1}{\omega}\text{e}^{-at}\sin{(\omega t)}.
+\]
+
+Подставил введённые замены $\frac{\xi}{T} = a, \frac{1-\xi^2}{T^2} = \omega^2$:
+
+\[
+w(t) = \mathcal{L}^{-1}\left\{W(s)\right\} = \frac{K}{T}\frac{1}{\frac{\sqrt{1-\xi^2}}{T}}\text{e}^{-\frac{\xi}{T}t}\sin{\left(\frac{\sqrt{1-\xi^2}}{T} t\right)} = \frac{K}{T\sqrt{1-\xi^2}}\text{e}^{-\frac{\xi}{T}t}\sin{\left(\frac{\sqrt{1-\xi^2}}{T} t\right)}.
+\]
+
+Переходная функция:
+
+\[
+y_{s.r.}(t) = \mathcal{L}^{-1}\left\{\frac{W(s)}{s}\right\}.
+\]
+
+Используя полученные при вычислении весовой функции преобразования, получаю при $a = \frac{\xi}{T}, \omega = \sqrt{\frac{1-\xi^2}{T^2}}$:
+
+\[
+\frac{W(s)}{s} = \frac{1}{s}\frac{K}{T^2}\frac{1}{\left((s + a)^2 + \omega^2\right)}.
+\]
+
+Тогда, по свойству интегрирования:
+
+\[
+y_{s.r.}(t) = \mathcal{L}^{-1}\left\{\frac{W(s)}{s}\right\} = \mathcal{L}^{-1}\left\{\frac{1}{s}\frac{K}{T^2}\frac{1}{\left((s + a)^2 + \omega^2\right)}\right\} = \int_{0^-}^{t}\frac{K}{T^2}\frac{1}{\omega}\text{e}^{-ax}\sin{(\omega x)}dx = \frac{K}{T^2\omega}\int_{0^-}^{t}\text{e}^{-ax}\sin{(\omega x)}dx
+\]
+
+Рассмотрю неопределенный интеграл $\int\text{e}^{-ax}\sin{(\omega x)}dx$:
+
+\[
+\int\text{e}^{-ax}\sin{(\omega x)}dx = \bigg[\int \text{fg}' = \text{fg} - \int \text{f}'\text{g}, \, \, f = \sin{(\omega x)}, g' = \text{e}^{-a x}\bigg] = -\frac{\text{e}^{-ax}\sin{(\omega x)}}{a} - \int - \frac{\omega\text{e}^{-ax}\cos{(\omega x)}}{a}dx.
+\]
+
+Проинтегрирую по частям ещё раз:
+
+\[
+-\frac{\text{e}^{-ax}\sin{(\omega x)}}{a} - \int - \frac{\omega\text{e}^{-ax}\cos{(\omega x)}}{a}dx = \bigg[\text{f} = \omega \cos{(\omega x), \, \, \text{g}' = -\frac{\text{e}^{-ax}}{a}}\bigg] = -\frac{\text{e}^{-ax}\sin{(\omega x)}}{a} - \left( -\frac{\omega \text{e}^{-ax}\cos{\omega x}}{a^2} - \int -\frac{\omega^2\text{e}^{-ax}\sin{(\omega x)}}{a^2} dx \right)
+\]
+
+Исходный рассматриваемый интеграл снова появляется в правой части выражения, таким образом решаем уравнение по $\int\text{e}^{-ax}\sin{(\omega x)}dx$:
+
+\[
+F(x) = -\frac{\text{e}^{-ax} \left(a \sin\left({\omega}x\right) + \omega \cos\left(\omega x\right)\right)}{{\omega}^{2} + a^{2}} + C
+\]
+
+Первообразная найдена, можно посчитать определенный интеграл:
+
+\[
+y_{s.r.}(t) = \frac{K}{T^2\omega}\int_{0^-}^{t}\text{e}^{-ax}\sin{(\omega x)}dx = F(t) - F(0^-) = \frac{K}{T^2\omega}\left(\frac{\omega}{{\omega}^{2} + a^{2}} - \frac{a \sin\left(t{\omega}\right) + {\omega} \cos\left(t{\omega}\right)}{\mathrm{e}^{at} {\omega}^{2} + a^{2} \mathrm{e}^{at}}\right) = 
+\]
+
+\[
+\frac{K}{T^2\omega({\omega}^{2} + a^{2})}\left(\omega - \text{e}^{-1}(a \sin\left(t{\omega}\right) + {\omega} \cos\left(t{\omega}\right))\right)
+\]
+
+подставить a и w
+
 \subsection{Конденсируй-умножай}\
 
 В задании рассматривается уравнение конденсатора 
@@ -378,7 +500,11 @@ W(s) = \frac{1}{Cs}
 W(s) = \frac{K}{s}, K = \frac{1}{C}
 \]
 
-Функция сопоставима с идеальным интегрирующим звеном. Ёмкость конденсатора --- величина неотрицательная, соответственно и $K > 0$. Для определения АЧХ и ФЧХ перейду к частотной передаточной функции и разобью её на вещественную и мнимую составляющие:
+Функция сопоставима с идеальным интегрирующим звеном. Ёмкость конденсатора --- величина неотрицательная, соответственно и $K > 0$. 
+
+\subsubsection{Частотные характеристики}\
+
+Для определения АЧХ и ФЧХ перейду к частотной передаточной функции и разобью её на вещественную и мнимую составляющие:
 
 \[
 W(s) = \frac{K}{s} \Leftrightarrow W(j\omega) = \frac{K}{j\omega}
@@ -398,6 +524,20 @@ A(\omega) = \sqrt{W(j\omega)^2} = \sqrt{\left(\frac{-jK}{\omega}\right)^2} = \fr
 
 \[
 \varphi(\omega) = \text{atan2}\left(\frac{-K}{\omega}, 0\right) = -\frac{\pi}{2}.
+\]
+
+\subsubsection{Временные характеристики}\ 
+
+Весовая функция для уравнения конденсатора:
+
+\[
+w(t) = \mathcal{L}^{-1}\{W(s)\} = \mathcal{L}^{-1}\left\{\frac{K}{s}\right\} = K\cdot\mathcal{L}^{-1}\left\{\frac{1}{s}\right\} = K
+\]
+
+Переходная функция:
+
+\[
+y_{s.r.}(t) = \mathcal{L}^{-1}\left\{\frac{W(s)}{s}\right\} = \mathcal{L}^{-1}\left\{\frac{K}{s^2}\right\} = K\cdot\mathcal{L}^{-1}\left\{\frac{1}{s^2}\right\} = Kt
 \]
 
 \subsection{Пружинка}\
@@ -442,7 +582,11 @@ W(s) = \frac{X(s)}{F_{\text{ext}}(s)} = \frac{1}{m s^2 + k} = \frac{1}{k}\frac{1
 W(s) = \frac{K}{T^2s^2+1}, K = \frac{1}{k}, T^2 = \frac{m}{k}
 \]
 
-Получаем консервативное звено. Найдём АЧХ и ФЧХ, перейдя к частотной передаточной функции:
+Получаем консервативное звено. 
+
+\subsubsection{Частотные характеристики}\
+
+Найдём АЧХ и ФЧХ, перейдя к частотной передаточной функции:
 
 \[
 W(s) = \frac{K}{T^2s^2+1} \Rightarrow W(j\omega) = \frac{K}{T^2(j\omega)^2+1} = \frac{K}{-T^2\omega^2+1}
@@ -467,6 +611,37 @@ A(\omega) = \left|W(j\omega)\right| = \left|\frac{K}{-T^2\omega^2+1}\right|.
 \end{cases}
 \]
 
+
+\subsubsection{Временные характеристики}\
+
+Для поиска весовой функции сведу передаточную функцию до табличного значения:
+
+\[
+W(s) = \frac{K}{T^2 s^2 + 1} = \frac{K}{T^2} \cdot \frac{1}{s^2 + \frac{1}{T^2}} = \frac{K}{T} \cdot \frac{1/T}{s^2 + (1/T)^2}
+\]
+
+\[
+w(t) = \mathcal{L}^{-1}\left\{ \frac{\omega}{s^2 + \omega^2} \right\} = \sin(\omega t) \Rightarrow w(t) = \frac{K}{T} \sin\!\left( \frac{t}{T} \right)
+\]
+
+Переходная функция:
+
+\[
+w_{s.r}(t) = \mathcal{L}^{-1}\left\{ \frac{W(s)}{s} \right\} = \mathcal{L}^{-1}\left\{ \frac{K}{s(T^2 s^2 + 1)} \right\}
+\]
+
+Разложу на элементарные дроби:
+
+\[
+\frac{K}{s(T^2 s^2 + 1)} = K \left( \frac{1}{s} - s\frac{T^2}{T^2 s + 1} \right)
+\]
+
+\(\mathcal{L}^{-1}\{1/s\} = 1\), \(\mathcal{L}^{-1}\left\{ s\dfrac{1}{s + (1/T)^2} \right\} = \cos{\left( \dfrac{t}{T} \right)}\), тогда:
+
+\[
+w_{s.r}(t) = K\mathcal{L}^{-1}\left\{ \frac{1}{s} - \frac{T^2 s}{T^2 s^2 + 1} \right\} = K\left(1 - \cos\!\left( \frac{t}{T} \right)\right).
+\]
+
 \subsection{Что ты такое?}\
 
 В задании рассматривается схема регулятора на операционном усилителе, представленная на рисунке:
@@ -487,10 +662,72 @@ u(t) = u(0) + \frac{1}{C}\int_0^{t} I(x)dx.
 
 Воспользуемся полученным ранее значением $I(t) = \frac{U_\text{ВХ}(t)}{R_1}$ и примем начальное условие $u(0) = 0$, тогда $u(t) = \frac{1}{C}\int_0^{t} \frac{U_\text{ВХ}(x)}{R_1}dx = \frac{1}{R_1C}\int_0^{t} U_\text{ВХ}(x)dx$. В пространстве изображений Лапласа по свойству интегрирования после прохождения конденсатора выходом будет являться $Z(s) = \frac{1}{R_1Cs}$ Далее сигнал идёт на последовательно подключенный резистор $R_2$, и выходом по обратной связи будет являться $W(s) = \frac{1}{R_1Cs} + R_2\cdot I(s) = \frac{1}{R_1Cs} + \frac{R_2}{R_1} = \frac{1 + R_2 Cs}{R_1 Cs}$.
 
+Получается изодромное звено. Так как передаточная функция этого регулятора состоит из двух слагаемых, интегрирующего $\frac{1}{R_1Cs}$ и пропорционального $\frac{R_2}{R_1}$, то регулятор пропорционально-интегральный (ПИ).
+
 Передаточная функция объекта найдена, можно привести её к стандартизированной форме:
 
 \[
-W(s) = \frac{1 + R_2 Cs}{R_1 Cs} = 
+W(s) = \frac{1 + R_2 Cs}{R_1 Cs} = \frac{1}{R_1C}\frac{R_2Cs + 1}{s} = \frac{K(Ts + 1)}{s}, K = \frac{1}{R_1C}, T = R_2C.
+\]
+
+\subsubsection{Частотные характеристики}\
+
+Для нахождения АЧХ и ФЧХ переведу уравнение в частотную область:
+
+\[
+W(s) = \frac{K(Ts + 1)}{s} \Rightarrow W(j\omega) = \frac{K(T(j\omega) + 1)}{(j\omega)}
+\]
+
+Домножу числитель и знаменатель на сопряженное:
+
+\[
+W(j\omega) = \frac{K(-T(j\omega)^2 - (j\omega))}{-(j\omega)(j\omega)} = \frac{KT\omega^2 - jK\omega}{\omega^2} = \frac{KT\omega^2}{\omega^2} + j\frac{-K\omega}{\omega^2} = KT + j\frac{-K}{\omega}
+\]
+
+Пусть $P(\omega) = KT$, $Q(\omega) = -\frac{K}{\omega}$. Тогда АЧХ:
+
+\[
+A(\omega) = \sqrt{P(\omega)^2 + Q(\omega)^2} = \sqrt{K^2T^2 + \frac{K^2}{\omega^2}} = K\sqrt{T^2 + \frac{1}{\omega^2}}
+\]
+
+Также вычислю и ФЧХ:
+
+\[
+\varphi(\omega) = \text{atan2}(Q(\omega), P(\omega) = \text{atan2}\left(-\frac{K}{\omega}, KT\right))
+\]
+
+$K = \frac{1}{R_1C} > 0$, так как сопротивление резистора и ёмкость конденсатора --- величины положительные. $T = R_2C > 0$ по той же причине, а значит, $Q(\omega) = -\frac{K}{\omega} < 0 \ \,\forall \ \omega > 0$, и $P(\omega) = KT > 0$. Следовательно, $W(\omega) = P(\omega) + jQ(\omega)$ всегда расположено во втором квадранте. В этом случае $\text{atan2}(Q(\omega), P(\omega)) = \pi + \arctan{\left(\frac{Q(\omega)}{P(\omega)}\right)}$. Тогда:
+
+\[
+\varphi(\omega) = \pi + \arctan{\left(\frac{Q(\omega)}{P(\omega)}\right)} = \pi + \arctan{\left( \frac{-\frac{K}{\omega}}{KT}\right)} = \pi + \arctan{\left(\frac{-1}{T\omega}\right)} = \pi + \arctan{\left(\frac{-1}{T\omega}\right)} = \pi - \arctan{\left(\frac{1}{T\omega}\right)}.
+\]
+
+\subsubsection{Временные характеристики}\
+
+Разложу передаточную функцию для удобного нахождения весовой функции:
+
+\[
+W(s) = \frac{K(Ts + 1)}{s} = KT + \frac{K}{s}
+\]
+
+\[
+w(t) = \mathcal{L}^{-1}\{W(s)\} = KT\,\delta(t)  + K
+\]
+
+Передаточная функция $y_{s.r.}(t)$ всё также является реакцией системы на единичный скачок, образ Лапласа которого --- $\frac{1}{s}$:
+
+\[
+y_{s.r.}(t) = \mathcal{L}^{-1}\left\{ \frac{W(s)}{s} \right\}
+\]
+
+\[
+\frac{W(s)}{s} = \frac{K(Ts + 1)}{s^2} = K \left( \frac{T}{s} + \frac{1}{s^2} \right)
+\]
+
+\(\mathcal{L}^{-1}\{1/s\} = 1\), \(\mathcal{L}^{-1}\{1/s^2\} = t\), следовательно:
+
+\[
+y_{s.r.}(t) = K\bigl( T + t \bigr)
 \]
 
 \section{Вывод по работе}\ 
