@@ -1168,10 +1168,10 @@ L(\omega) = 20 \lg A(\omega) = 20 \lg \left( K \sqrt{T^2 + \frac{1}{\omega^2}} \
 \varphi(\omega) = \text{atan2}(Q(\omega), P(\omega) = \text{atan2}\left(-\frac{K}{\omega}, KT\right))
 \]
 
-$K = \frac{1}{R_1C} > 0$, так как сопротивление резистора и ёмкость конденсатора --- величины положительные. $T = R_2C > 0$ по той же причине, а значит, $Q(\omega) = -\frac{K}{\omega} < 0 \ \,\forall \ \omega > 0$, и $P(\omega) = KT > 0$. Следовательно, $W(\omega) = P(\omega) + jQ(\omega)$ всегда расположено во втором квадранте. В этом случае $\text{atan2}(Q(\omega), P(\omega)) = \pi + \arctan{\left(\frac{Q(\omega)}{P(\omega)}\right)}$. Тогда:
+$K = \frac{1}{R_1C} > 0$, так как сопротивление резистора и ёмкость конденсатора --- величины положительные. $T = R_2C > 0$ по той же причине, а значит, $Q(\omega) = -\frac{K}{\omega} < 0 \ \,\forall \ \omega > 0$, и $P(\omega) = KT > 0$. Следовательно, $W(\omega) = P(\omega) + jQ(\omega)$ всегда расположено во втором квадранте. В этом случае $\text{atan2}(Q(\omega), P(\omega)) = \arctan{\left(\frac{Q(\omega)}{P(\omega)}\right)}$. Тогда:
 
 \[
-\varphi(\omega) = \pi + \arctan{\left(\frac{Q(\omega)}{P(\omega)}\right)} = \pi + \arctan{\left( \frac{-\frac{K}{\omega}}{KT}\right)} = \pi + \arctan{\left(\frac{-1}{T\omega}\right)} = \pi + \arctan{\left(\frac{-1}{T\omega}\right)} = \pi - \arctan{\left(\frac{1}{T\omega}\right)}.
+\varphi(\omega) = \arctan{\left(\frac{Q(\omega)}{P(\omega)}\right)} = \arctan{\left( \frac{-\frac{K}{\omega}}{KT}\right)} = \arctan{\left(\frac{-1}{T\omega}\right)} = \arctan{\left(\frac{-1}{T\omega}\right)} = \arctan{\left(\frac{1}{T\omega}\right)}.
 \]
 
 Подставляя значения исходных данных для своего варианта, получаю 
@@ -1189,7 +1189,7 @@ L(\omega) = 20 \lg \left(4.955\cdot10^{-7}\sqrt{6054548^2 + \frac{1}{\omega^2}}\
 \]
 
 \[
-\varphi(\omega) = \pi - \text{arctan}\left(\frac{1}{6054548\omega}\right).
+\varphi(\omega) = \text{arctan}\left(\frac{1}{6054548\omega}\right).
 \]
 
 \subsubsection*{Моделирование}\
